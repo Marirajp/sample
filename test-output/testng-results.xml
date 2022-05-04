@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="7" total="40" passed="33" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Items price is same in PDP and Cart Page i.e Cart Price : 1540.15 = PDP Price : 1540.15]]>
+    </line>
+    <line>
+      <![CDATA[Able to Add items by searching them ]]>
+    </line>
+    <line>
+      <![CDATA[Items are added from cart to Reorder List selected]]>
+    </line>
+    <line>
+      <![CDATA[Checkout]]>
+    </line>
+    <line>
+      <![CDATA[Items in Cart are all added to Checkout Page successfully]]>
+    </line>
+    <line>
+      <![CDATA[Items added to bulk order as expected]]>
+    </line>
+    <line>
+      <![CDATA[Items added to bulk order as expected]]>
+    </line>
+    <line>
+      <![CDATA[Items added to bulk order as expected]]>
+    </line>
+    <line>
+      <![CDATA[Items added to cart]]>
+    </line>
+    <line>
+      <![CDATA[Items are uploaded]]>
+    </line>
+    <line>
+      <![CDATA[Valid Items are uploaded]]>
+    </line>
+    <line>
+      <![CDATA[Able to create new reorder pad]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-05-04T17:07:28 IST" name="Suite" finished-at="2022-05-04T17:23:16 IST" duration-ms="948612">
+    <groups>
+    </groups>
+    <test started-at="2022-05-04T17:07:28 IST" name="Test" finished-at="2022-05-04T17:23:16 IST" duration-ms="948612">
+      <class name="SRSproject.SRSproject.CheckoutPageTest">
+        <test-method signature="CartToCheckout_Validation()[pri:1, instance:SRSproject.SRSproject.CheckoutPageTest@6aa8e115]" started-at="2022-05-04T17:12:36 IST" name="CartToCheckout_Validation" description="Cart to Checkout Redirection " finished-at="2022-05-04T17:13:24 IST" duration-ms="47927" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Checkout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CartToCheckout_Validation -->
+        <test-method signature="Date_Validation()[pri:2, instance:SRSproject.SRSproject.CheckoutPageTest@6aa8e115]" started-at="2022-05-04T17:13:24 IST" name="Date_Validation" description="Date Picker validation and other basic info updation " finished-at="2022-05-04T17:13:27 IST" duration-ms="3686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Date_Validation -->
+        <test-method signature="ProductList_Validation()[pri:3, instance:SRSproject.SRSproject.CheckoutPageTest@6aa8e115]" started-at="2022-05-04T17:13:27 IST" name="ProductList_Validation" description="Product Listing in checkout as per the list in cart" finished-at="2022-05-04T17:13:29 IST" duration-ms="1377" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items in Cart are all added to Checkout Page successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ProductList_Validation -->
+      </class> <!-- SRSproject.SRSproject.CheckoutPageTest -->
+      <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test">
+        <test-method signature="Change_Shito_Validation()[pri:1, instance:SRSproject.SRSproject.ChangeBranch_shipto_Test@7b993c65]" started-at="2022-05-04T17:21:57 IST" name="Change_Shito_Validation" description="Changing Shipto" finished-at="2022-05-04T17:22:59 IST" duration-ms="62592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Change_Shito_Validation -->
+        <test-method signature="ChangeBranch_Validation()[pri:2, instance:SRSproject.SRSproject.ChangeBranch_shipto_Test@7b993c65]" started-at="2022-05-04T17:22:59 IST" name="ChangeBranch_Validation" description="Changing Branch" finished-at="2022-05-04T17:23:16 IST" duration-ms="17024" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeBranch_Validation -->
+      </class> <!-- SRSproject.SRSproject.ChangeBranch_shipto_Test -->
+      <class name="SRSproject.SRSproject.CartPageTest">
+        <test-method signature="MiniCartToCartPage_Redirection()[pri:1, instance:SRSproject.SRSproject.CartPageTest@72ef8d15]" started-at="2022-05-04T17:10:44 IST" name="MiniCartToCartPage_Redirection" description="Minicart to cartpage redirection" finished-at="2022-05-04T17:11:33 IST" duration-ms="48868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MiniCartToCartPage_Redirection -->
+        <test-method signature="ProductInformationValidation()[pri:2, instance:SRSproject.SRSproject.CartPageTest@72ef8d15]" started-at="2022-05-04T17:11:33 IST" name="ProductInformationValidation" description="Pricing validaiton" finished-at="2022-05-04T17:11:54 IST" duration-ms="20987" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items price is same in PDP and Cart Page i.e Cart Price : 1540.15 = PDP Price : 1540.15]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ProductInformationValidation -->
+        <test-method signature="CartSubtotalValidationfn()[pri:3, instance:SRSproject.SRSproject.CartPageTest@72ef8d15]" started-at="2022-05-04T17:11:54 IST" name="CartSubtotalValidationfn" description="Subtotal validation" finished-at="2022-05-04T17:11:54 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CartSubtotalValidationfn -->
+        <test-method signature="CartUpdateValidation()[pri:4, instance:SRSproject.SRSproject.CartPageTest@72ef8d15]" started-at="2022-05-04T17:11:54 IST" name="CartUpdateValidation" description="Updating cart Validation" finished-at="2022-05-04T17:12:02 IST" duration-ms="8203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CartUpdateValidation -->
+        <test-method signature="AddItemToCart_Validation()[pri:5, instance:SRSproject.SRSproject.CartPageTest@72ef8d15]" started-at="2022-05-04T17:12:02 IST" name="AddItemToCart_Validation" description="Adding item to cart using search option in cart page" finished-at="2022-05-04T17:12:12 IST" duration-ms="10332" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Able to Add items by searching them ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddItemToCart_Validation -->
+        <test-method signature="Reorder_Validation()[pri:6, instance:SRSproject.SRSproject.CartPageTest@72ef8d15]" started-at="2022-05-04T17:12:12 IST" name="Reorder_Validation" description="Adding items to an reorder list" finished-at="2022-05-04T17:12:36 IST" duration-ms="23331" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items are added from cart to Reorder List selected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Reorder_Validation -->
+      </class> <!-- SRSproject.SRSproject.CartPageTest -->
+      <class name="SRSproject.SRSproject.QuickOrderPadTest">
+        <test-method signature="Quick_OrderPad_Validation()[pri:1, instance:SRSproject.SRSproject.QuickOrderPadTest@5e21e98f]" started-at="2022-05-04T17:13:29 IST" name="Quick_OrderPad_Validation" description="Add item from Quick order to by searching item" finished-at="2022-05-04T17:14:30 IST" duration-ms="61056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_Validation -->
+        <test-method signature="Quick_OrderPad_FileUpload_Validation()[pri:2, instance:SRSproject.SRSproject.QuickOrderPadTest@5e21e98f]" started-at="2022-05-04T17:14:30 IST" name="Quick_OrderPad_FileUpload_Validation" description="Uploading a CSV file and validating" finished-at="2022-05-04T17:15:35 IST" duration-ms="65277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_FileUpload_Validation -->
+        <test-method signature="Quick_OrderPad_UploadedtoBulkOrder_Validation()[pri:3, instance:SRSproject.SRSproject.QuickOrderPadTest@5e21e98f]" started-at="2022-05-04T17:15:35 IST" name="Quick_OrderPad_UploadedtoBulkOrder_Validation" description="Validating item added from csv to the bulkorder page" finished-at="2022-05-04T17:15:51 IST" duration-ms="16125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_UploadedtoBulkOrder_Validation -->
+        <test-method signature="Quick_OrderPad_InvalidFileUpload_Validation()[pri:4, instance:SRSproject.SRSproject.QuickOrderPadTest@5e21e98f]" started-at="2022-05-04T17:15:51 IST" name="Quick_OrderPad_InvalidFileUpload_Validation" description="Uploading CSV file that has Invalid items" finished-at="2022-05-04T17:16:34 IST" duration-ms="43115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_InvalidFileUpload_Validation -->
+      </class> <!-- SRSproject.SRSproject.QuickOrderPadTest -->
+      <class name="SRSproject.SRSproject.ReorderPage_Test">
+        <test-method signature="ReorderPage_Redirection()[pri:1, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:18:38 IST" name="ReorderPage_Redirection" finished-at="2022-05-04T17:19:11 IST" duration-ms="33056" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReorderPage_Redirection -->
+        <test-method signature="UploadFile_Redirection()[pri:2, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:19:11 IST" name="UploadFile_Redirection" finished-at="2022-05-04T17:19:33 IST" duration-ms="21771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadFile_Redirection -->
+        <test-method signature="SaveAnReorderList_Validation()[pri:3, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:19:33 IST" name="SaveAnReorderList_Validation" finished-at="2022-05-04T17:19:41 IST" duration-ms="8613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveAnReorderList_Validation -->
+        <test-method signature="CreateNewReorder_Redirection()[pri:4, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:19:41 IST" name="CreateNewReorder_Redirection" finished-at="2022-05-04T17:19:58 IST" duration-ms="16922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewReorder_Redirection -->
+        <test-method signature="CreateNew_ReorderPad_Validation()[pri:5, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:19:58 IST" name="CreateNew_ReorderPad_Validation" finished-at="2022-05-04T17:20:12 IST" duration-ms="13779" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Able to create new reorder pad]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateNew_ReorderPad_Validation -->
+        <test-method signature="View_Validation()[pri:6, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:20:12 IST" name="View_Validation" finished-at="2022-05-04T17:21:15 IST" duration-ms="63295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- View_Validation -->
+        <test-method signature="InvalidFile_Validation()[pri:8, instance:SRSproject.SRSproject.ReorderPage_Test@23202fce]" started-at="2022-05-04T17:21:15 IST" name="InvalidFile_Validation" finished-at="2022-05-04T17:21:57 IST" duration-ms="41481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidFile_Validation -->
+      </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
+      <class name="SRSproject.SRSproject.BulkOrderPadTest">
+        <test-method signature="BulOrder_Redirection()[pri:1, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:16:34 IST" name="BulOrder_Redirection" finished-at="2022-05-04T17:17:05 IST" duration-ms="30845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BulOrder_Redirection -->
+        <test-method signature="AddItemtoBulkOrder_Validation()[pri:2, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:17:05 IST" name="AddItemtoBulkOrder_Validation" finished-at="2022-05-04T17:17:32 IST" duration-ms="26401" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to bulk order as expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddItemtoBulkOrder_Validation -->
+        <test-method signature="AddNewLineItem_Validation()[pri:3, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:17:32 IST" name="AddNewLineItem_Validation" finished-at="2022-05-04T17:17:50 IST" duration-ms="18332" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to bulk order as expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddNewLineItem_Validation -->
+        <test-method signature="UpdateQunatity_Validation()[pri:4, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:17:50 IST" name="UpdateQunatity_Validation" finished-at="2022-05-04T17:17:51 IST" duration-ms="1142" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to bulk order as expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UpdateQunatity_Validation -->
+        <test-method signature="AddAll_ItemToCart_Validation()[pri:5, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:17:51 IST" name="AddAll_ItemToCart_Validation" finished-at="2022-05-04T17:17:52 IST" duration-ms="1105" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to cart]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddAll_ItemToCart_Validation -->
+        <test-method signature="ListofItem_Validation()[pri:6, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:17:52 IST" name="ListofItem_Validation" finished-at="2022-05-04T17:18:17 IST" duration-ms="25343" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items are uploaded]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ListofItem_Validation -->
+        <test-method signature="InValid_FileUpload_Validation()[pri:7, instance:SRSproject.SRSproject.BulkOrderPadTest@1df8b5b8]" started-at="2022-05-04T17:18:17 IST" name="InValid_FileUpload_Validation" finished-at="2022-05-04T17:18:38 IST" duration-ms="20315" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Valid Items are uploaded]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- InValid_FileUpload_Validation -->
+      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
+      <class name="SRSproject.SRSproject.ProductDetailPageTest">
+        <test-method signature="PDP_RegisterRedirection_GuestValidation()[pri:1, instance:SRSproject.SRSproject.ProductDetailPageTest@39b43d60]" started-at="2022-05-04T17:09:05 IST" name="PDP_RegisterRedirection_GuestValidation" description="Register now link redirection" finished-at="2022-05-04T17:09:41 IST" duration-ms="35909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PDP_RegisterRedirection_GuestValidation -->
+        <test-method signature="AddingItemToCart()[pri:2, instance:SRSproject.SRSproject.ProductDetailPageTest@39b43d60]" started-at="2022-05-04T17:09:41 IST" name="AddingItemToCart" description="Adding Item to Cart" finished-at="2022-05-04T17:10:44 IST" duration-ms="63122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddingItemToCart -->
+      </class> <!-- SRSproject.SRSproject.ProductDetailPageTest -->
+      <class name="SRSproject.SRSproject.ProductListPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SRSproject.SRSproject.ProductListPageTest@205d38da]" started-at="2022-05-04T17:07:24 IST" name="setUp" finished-at="2022-05-04T17:07:28 IST" duration-ms="3856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="PLP_RegisterRedirection_GuestValidation()[pri:1, instance:SRSproject.SRSproject.ProductListPageTest@205d38da]" started-at="2022-05-04T17:07:28 IST" name="PLP_RegisterRedirection_GuestValidation" description="Register now link redirection" finished-at="2022-05-04T17:07:58 IST" duration-ms="30206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PLP_RegisterRedirection_GuestValidation -->
+        <test-method signature="AddToCart_Validation()[pri:2, instance:SRSproject.SRSproject.ProductListPageTest@205d38da]" started-at="2022-05-04T17:07:58 IST" name="AddToCart_Validation" description="Adding Item to Cart" finished-at="2022-05-04T17:09:05 IST" duration-ms="66801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCart_Validation -->
+      </class> <!-- SRSproject.SRSproject.ProductListPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
