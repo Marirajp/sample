@@ -41,7 +41,7 @@ public class LoginTest extends BaseTest {
 
 		// Object exp1 = prop.get("PCSLoginPageURL");
 		// Object exp2 = prop.get("PCSLoginPagePoolURL");
-		Assert.assertEquals(URL, prop.get("Homepage_url"));
+		Assert.assertEquals(URL, prop.get("Homepage_logurl"));
 		Hp.confirmLogin(); 
 		// assertTrue(FIS_URL.equals(exp1) || FIS_URL.equals(exp2));
 

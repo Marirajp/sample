@@ -1,6 +1,7 @@
 package Listeners;
 
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -8,6 +9,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Properties;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -29,6 +31,8 @@ import SRSproject.SRSproject.BasePage;
 
 public class ExtentReport extends BasePage implements ITestListener
 {
+	
+	
 	public static final String OUTPUT_FOLDER = "./build/";
 	public static final String FILE_NAME = "SRS-TestExecutionReport.html";
 
@@ -36,6 +40,8 @@ public class ExtentReport extends BasePage implements ITestListener
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 
 	public static ExtentReports init() {
+		
+		
 		
 		Path path = Paths.get(OUTPUT_FOLDER);
 		// if directory exists?
@@ -50,7 +56,9 @@ public class ExtentReport extends BasePage implements ITestListener
 		
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
 		htmlReporter.config().setDocumentTitle("TestExecutionReport");
-		htmlReporter.config().setReportName("Automation Test Results Of: QPS");//String property = prop.getProperty("site");
+		
+	
+		htmlReporter.config().setReportName("Automation Test Results Of:Conely");//
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		htmlReporter.config().setTheme(Theme.STANDARD);
 

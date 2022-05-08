@@ -168,25 +168,31 @@ float MultipliedPrice= ActualPrice * quantity;
 	public void AddItemToCart_Validation() throws Exception
 
 	{
+		Thread.sleep(10000);
 		WebElement SearchField = Cp.Searcfield();
-//		waitUntilElementVisibility(SearchField);
-//		SearchField.click();
-		waitUntilElementVisibility(SearchField);
+		 Thread.sleep(5000);
+		SearchField.click();
 		SearchField.sendKeys(prop.getProperty("KeywordSearch"));
-		 Thread.sleep(10000);
+		 Thread.sleep(8000);
 		List <WebElement>  listele1= driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
 		
 		 
-//		listele1.size();
+		listele1.size();
 		
+		 Thread.sleep(5000);
+		 WebDriverWait wait= new WebDriverWait(driver, 80);
 		
-		 WebDriverWait wait= new WebDriverWait(driver, 50);
 		 wait.until(ExpectedConditions.visibilityOf(listele1.get(1)));
 		listele1.get(1).click();
 		
 		
 		Cp.AddToCart().click();
-		Reporter.log("Able to Add items by searching them ",true);
+		
+		String a = SearchField.getText();
+		System.out.print(a);
+		String b="";
+		
+		Assert.assertEquals(b, a);
 		
 		
 		

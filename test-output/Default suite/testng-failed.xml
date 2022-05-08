@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test">
+      <class name="SRSproject.LoginTests.UnApprovedLoginTest">
         <methods>
-          <include name="ChangeBranch_Validation"/>
           <include name="setUp"/>
-          <include name="Change_Shito_Validation"/>
+          <include name="UnApprovedLoginValidationPCS"/>
         </methods>
-      </class> <!-- SRSproject.SRSproject.ChangeBranch_shipto_Test -->
+      </class> <!-- SRSproject.LoginTests.UnApprovedLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

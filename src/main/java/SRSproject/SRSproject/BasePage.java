@@ -27,15 +27,15 @@ public class BasePage
 
 	//PCS
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_pcs.properties";
-	//	public static String configpath="src/main/java/config_staging2/configuration_staging2_pcs.properties";
-//		public static String configpath ="src/main/java/config_prod/config_prod_pcs.properties";
+		public static String configpath="src/main/java/config_staging2/configuration_staging2_pcs.properties";
+	//	public static String configpath ="src/main/java/config_prod/config_prod_pcs.properties";
 	//	public static String configpath ="src/main/java/config/configuration_pcs.properties"; //QA
 	
 	
 	//QPS
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_qps.properties";
 	//	public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
-	  public static String configpath ="src/main/java/config_prod/config_prod_qps.properties";
+	//  public static String configpath ="src/main/java/config_prod/config_prod_qps.properties";
     
 	//glb
 	//	public static String configpath ="src/main/java/config_prod/config_prod_glb.properties";
@@ -55,13 +55,13 @@ public class BasePage
 
 		
 	//APS 
-//	public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+	//public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
     
 	//TPS 
-//	public static String configpath ="src/main/java/config_prod/config_prod_Tps.properties";
+	//public static String configpath ="src/main/java/config_prod/config_prod_Tps.properties";
 	
 	//Conely
-	//public static String configpath = "src/main/java/config_prod/configuration_pro_conley.properties;
+	//public static String configpath = "src/main/java/config_prod/configuration_pro_conley.properties";
 
 	//Emsco
 	//public static String configpath ="src/main/java/config_prod/configuration_pro_emscp.properties";

@@ -20,7 +20,7 @@ public class BaseTest extends BasePage {
 //	public void setUp() throws IOException {
 //		initializtion();
 //	}
-//
+
 //	@AfterMethod
 //	public void tearDown() {
 //		driver.close(); 

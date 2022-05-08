@@ -188,8 +188,9 @@ public class BulkOrderPage extends BasePage {
 //		waitUntilElementVisibility(UploadCsv);
 		UploadCsv.click();
 		 Thread.sleep(2000);
-		
-		file.sendKeys(prop.getProperty("valid_csvfile"));
+		 file .sendKeys(System.getProperty("user.dir") + prop.getProperty("valid_csvfile"));
+
+//		file.sendKeys(prop.getProperty("valid_csvfile"));
 
 		
 		
@@ -229,8 +230,8 @@ public class BulkOrderPage extends BasePage {
 		
 		UploadCsv.click();
 		 Thread.sleep(2000);
-		
-		file.sendKeys(prop.getProperty("Invalid_csvfile"));
+		 file .sendKeys(System.getProperty("user.dir") + prop.getProperty("Invalid_csvfile"));
+//		file.sendKeys(prop.getProperty("Invalid_csvfile"));
 
 		
 		

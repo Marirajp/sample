@@ -16,7 +16,7 @@ public class UnApprovedLoginTest extends BaseTest {
 	LoginPage Lp;
 	HomePage_Global Hpg;
 
-	@Test(priority = 1,enabled = false)
+	@Test(priority = 1)
 	public void UnApprovedLoginValidationPCS() throws InterruptedException {
 
 		HomePage_Global Hpg = new HomePage_Global(driver);
@@ -35,7 +35,7 @@ public class UnApprovedLoginTest extends BaseTest {
 		//driver.close();
 	}
 
-	@Test()
+	@Test(enabled = false)
 	public void UnApprovedLoginValidationQPS() throws InterruptedException, IOException {
 		//BasePage.initializtion();
 		HomePage_Global Hpg = new HomePage_Global(driver);
