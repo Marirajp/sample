@@ -28,7 +28,7 @@ public class CartPage extends BasePage {
 	@FindBy(xpath="(//button[@title='Checkout'])[3]") WebElement proceedToCheckout;
 	@FindBy(xpath="(//div[@class='product attribute sku'])[2]") WebElement MFGLabel;
 	@FindBy(xpath="(//strong[@class='product-item-name'])[9]") WebElement NeedHelpmsg;
-	
+	@FindBy(xpath="//a[@class='action showcart']//i[1]") WebElement MiniCart;
 	@FindBy(xpath="//tbody[1]/tr[1]/td[2]/span[1]/span[1]/span[1]") WebElement firstProductOfCart;
 	@FindBy(xpath="//*[@id=\"shopping-cart-table\"]/tbody[1]/tr[1]/td[1]/div/strong/a") WebElement FirstProductName;
 	
@@ -43,7 +43,7 @@ public class CartPage extends BasePage {
 @FindBy(css="#shopping-cart-table>tbody>tr>td.qty>div") List<WebElement> qtyLineItem;
 	
 	@FindBy(css="#shopping-cart-table>tbody>tr>td>div>strong") List<WebElement> itemName;
-	
+	@FindBy(xpath="(//div[@class='cart-count-wrapper']//span)[1]") WebElement NoofItems;
 
 	
 	@FindBy(xpath="(//input[@class='input-text qty'])[1]") WebElement qtyField;
@@ -118,7 +118,11 @@ public class CartPage extends BasePage {
 	{
 		return itemName;
 	}
-	
+	public WebElement clickcart() throws Exception {
+		
+		MiniCart.click();
+		return MiniCart;
+	}
 	public ArrayList<String> getItemName1()
 	{
 		// List<String> a1 = new ArrayList();
@@ -195,6 +199,13 @@ public class CartPage extends BasePage {
 	{
 		return  viewcart;
 		
+		
+		}
+	public String NoofItems()
+	{
+		String text = NoofItems.getText();
+		return text;
+				
 		
 		}
 	

@@ -39,7 +39,7 @@ public class BulkOrderPage extends BasePage {
 	@FindBy(xpath = "//div[@class='amqorder-item amqorder-sku']") List<WebElement> PartNo_List;
 	@FindBy(xpath = "//button[text()='Accept']") WebElement Accept;
 	@FindBy(xpath = "/html/body/div[2]/main/div[4]/div/aside/div/div[1]/h5") WebElement ItemsImported;
-
+    @FindBy(xpath = "(//button[text()='Add All Items To Cart'])[3]") WebElement Addallitems ;
 	public BulkOrderPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -174,7 +174,12 @@ public class BulkOrderPage extends BasePage {
 	    .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 	return AddAll_ItemsToCart;
 	}
-	
+	public WebElement  Addallitems() throws InterruptedException
+	{
+		((JavascriptExecutor) driver)
+	    .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+	return Addallitems;
+	}
 	
 
 	public BulkOrderPage Fileupload() throws Exception
@@ -240,7 +245,7 @@ public class BulkOrderPage extends BasePage {
 		UploadNow.click();
 		Thread.sleep(5000);
  String No_of_itemsimported= ItemsImported.getText();
-	Thread.sleep(5000);
+	Thread.sleep(8000);
 			Accept.click();
 			
 			return No_of_itemsimported;

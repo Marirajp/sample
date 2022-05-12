@@ -6,13 +6,18 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SRSproject.SRSproject.CartPageTest">
+      <class name="SRSproject.SRSproject.ReorderPage_Test">
         <methods>
-          <include name="Reorder_Validation"/>
           <include name="setUp"/>
-          <include name="AddItemToCart_Validation"/>
+          <include name="InvalidFile_Validation"/>
         </methods>
-      </class> <!-- SRSproject.SRSproject.CartPageTest -->
+      </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
+      <class name="SRSproject.SRSproject.BulkOrderPadTest">
+        <methods>
+          <include name="InValid_FileUpload_Validation"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -42,7 +42,9 @@ public class CheckoutPage extends BasePage {
 	
 	@FindBy(xpath = "/html/body/div[2]/main/div[2]/div/div[2]/div[4]/ol/li[4]/div[1]/div[2]/form/div[3]/div/button/span/span") WebElement Nextstep_shipping;
 	
-	@FindBy(xpath = "//input[@id='agreement_checkmo_3']") WebElement Terms_checkBx;
+	@FindBy(xpath = "(//input[@type='checkbox']/following-sibling::label)[2]") WebElement Terms_checkBx;
+	@FindBy(xpath=("//button[@data-role='action']//span[1]")) WebElement Close;
+			//*[@id=\"checkout-payment-method-load\"]/div/div/div[2]/div/div[2]/div[2]/div
 	
 	@FindBy(xpath="//span[text()='Place Order']") WebElement PlaceOrder;
 	
@@ -58,7 +60,13 @@ public class CheckoutPage extends BasePage {
 	
 	@FindBy(xpath="//span[text()='By submitting this order, I agree to the Online Terms & Conditions of Sale']") WebElement Text;
 	@FindBy(xpath="//span[@class='checkout-product product-item-details']") WebElement reviewlab;
-
+    @FindBy(xpath ="(//input[@type='checkbox'])[2]") WebElement Checkbox;
+    @FindBy(xpath="(//button[contains(@class,'action secondary')])[1]") WebElement Holdorder;
+    @FindBy(xpath="//button[contains(@class,'action secondary')]/following-sibling::button[1]") WebElement Placeorder;
+    
+    
+    
+    
 	public CheckoutPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -100,7 +108,22 @@ public void PO_Number()
 		PO_field.sendKeys("Ab123");
 		
 	}
-
+public void checkbox() throws Exception {
+	((JavascriptExecutor) driver)
+    .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+	waitUntilElementVisibility(Checkbox);
+	Checkbox.click();
+	
+}
+public void Holdorder() throws Exception {
+WebElement findElement = driver.findElement(By.cssSelector("button[class='action secondary checkout']"));
+	
+	jsClick(findElement);
+}
+public void Placeoder() throws Exception {
+	waitUntilElementVisibility(Placeorder);
+	Placeorder.click();
+}
 
 
 /*public void Address1()
@@ -225,20 +248,22 @@ public void scroll() throws InterruptedException
 	 js.executeScript("arguments[0].scrollIntoView();", reviewlab);
 	 reviewlab.click();
 	 ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,7000)");
-	 js.executeScript("arguments[0].scrollIntoView();", Terms_checkBx);
-	 Terms_checkBx.click();
+//	 js.executeScript("arguments[0].scrollIntoView();", Terms_checkBx);
+//	 Terms_checkBx.click();
 	
 
 	
 }
 
 
-public WebElement Terms_Check()
+public WebElement Terms_Check() throws Exception
 
 {
+	WebElement findElement = driver.findElement(By.cssSelector("div#checkout-payment-method-load>div>div>div:nth-of-type(2)>div>div:nth-of-type(2)>div:nth-of-type(2)>div>div>div>label"));
 	
-	
-	return  Terms_checkBx;
+	jsClick(findElement);
+	//Close.click();
+	return  findElement;
 	
 }
 

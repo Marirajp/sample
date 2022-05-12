@@ -123,7 +123,9 @@ public class CartPageTest  extends BaseTest
 		{
 			Assert.assertTrue(true);
 			System.out.println("the line item total " +sum+" = "+"the cart subtotal displayed " +subtotal);
-		}
+		}else
+			System.out.println(subtotal + "Total is not same ");
+		System.out.println( sum+ "Total is not same ");
 		
 	}
 
