@@ -7,8 +7,12 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +28,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.bytebuddy.implementation.bytecode.ByteCodeAppender.Size;
 
 public class BasePage
 { 
@@ -101,10 +106,10 @@ public class BasePage
 			
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
+				
 				driver = new ChromeDriver();
 				
-				DesiredCapabilities caps = new DesiredCapabilities();
-				caps.setCapability("resolution", "1024x768");
+				
 
 //			WebDriverManager.chromedriver().setup();
 //			driver = new ChromeDriver();
@@ -121,8 +126,11 @@ public class BasePage
 		}
 		
 	//	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
+		
+		((JavascriptExecutor)driver).executeScript("window.resizeTo(screen.width, screen.height)");
+		driver.manage().window().setPosition(new Point(0, 0));
+		driver.manage().window().setSize(new Dimension(1500,1800)); 
+		driver.findElement(By.tagName("body")).sendKeys(Keys.F11);
 		driver.get(prop.getProperty("url"));
 		tdriver.set(driver);
 		return getDriver();
