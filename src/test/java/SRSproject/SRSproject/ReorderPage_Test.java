@@ -70,6 +70,8 @@ public class ReorderPage_Test  extends BaseTest
 		Rp.ReorderNameField().sendKeys(prop.getProperty("Reorder_Name1"));
 		Thread.sleep(400);
 		Rp.Save_button().click();
+		Thread.sleep(3000);
+		Rp.Proceed_Btn().click();
 		
 }
 	
@@ -100,7 +102,7 @@ public class ReorderPage_Test  extends BaseTest
 	{
 		Thread.sleep(8000);
 		Rp= new Reorder_Page(driver);
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		Rp.Create_New_ReorderPad().click();
 		String Reorder_DetailPage= driver.getCurrentUrl();
 		Assert.assertEquals(Reorder_DetailPage, prop.getProperty("ReOrder_Detai_URL"));
@@ -120,6 +122,7 @@ public class ReorderPage_Test  extends BaseTest
 			Thread.sleep(400);
 			
 			Rp.Save_button().click();
+			Rp.Proceed_Btn().click();
 				
 			
 			
@@ -143,7 +146,7 @@ public class ReorderPage_Test  extends BaseTest
 //		Rp.View_Click();
 		Rp.Add_All_Items().click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 	
 		String Success_msg= Rp.Items_addtocart_msg();
 		Assert.assertEquals(Success_msg.contains("successfully added to your Cart"), true);

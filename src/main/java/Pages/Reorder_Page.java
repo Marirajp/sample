@@ -33,7 +33,7 @@ public class Reorder_Page extends BasePage {
 	
 	@FindBy(xpath="//div[@id='swal2-content']") WebElement Notification;
 	@FindBy(xpath="//button[@class='swal2-close']") WebElement close_btn;
-	@FindBy(xpath="//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/a[1]") WebElement CreateNew_Pad;
+	@FindBy(xpath="//div[@class='reorderpad-help-text']/following-sibling::a[1]") WebElement CreateNew_Pad;
 	
 	@FindBy(xpath="(//input[@id='id-items0sku'])[1]") WebElement Product_input;
 	
@@ -45,7 +45,7 @@ public class Reorder_Page extends BasePage {
 //	@FindBy(xpath = "//div[@id='modal-content-44']//div[1]") WebElement Success_msg;
 	@FindBy(css = "body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > button") WebElement Pop_close;
 	@FindBy(css ="body > div.modals-wrapper > aside.modal-popup.message-modal-container._show > div.modal-inner-wrap > header > button") WebElement close;
-	
+	@FindBy(xpath="(//button[@class='action-primary'])[3]") WebElement Proceed_Btn ;
 	
 	public Reorder_Page(WebDriver driver)
 	{
@@ -124,6 +124,10 @@ public  WebElement ReorderNameField()
 		return Save_btn;
 	}
 	
+	public WebElement Proceed_Btn() {
+		return Proceed_Btn ;
+	}
+	
 public String  ItemsNotAdded_Notification() 
 	
 	{
@@ -147,7 +151,7 @@ public  void EnterProduct() throws InterruptedException
 {
 	 Product_input.sendKeys(prop.getProperty("KeywordSearch"));
 
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 //		WebElement Item=driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div[1]/div[2]/form/div[4]/fieldset/div[2]/div/ul[1]/li[1]/a"));
 		WebElement Item=driver.findElement(By.xpath("(//li[@class='ui-menu-item']//span)[1]"));	
 		WebDriverWait wait = new WebDriverWait(driver, 2000);

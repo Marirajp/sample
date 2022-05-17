@@ -51,9 +51,11 @@ public class BaseClass {
 		public static WebDriver getbrowser(String browsername) throws Exception {
 			try {
 				if (browsername.equalsIgnoreCase("chrome")) {
+					
 					System.setProperty("webdriver.chrome.driver",
 							System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 					driver = new ChromeDriver();
+					driver.manage().window().maximize();
 					
 				} else if (browsername.equalsIgnoreCase("ie")) {
 					System.setProperty("webdriver.ie.driver",
@@ -79,8 +81,10 @@ public class BaseClass {
 		public static WebDriver getUrl(String url) throws Exception {
 			try {
 				driver.get(url);
-				driver.manage().window().maximize();
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+//				driver.manage().window().maximize();
+//				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
 				return driver ;
 			} catch (Exception e) {
 			e.printStackTrace();

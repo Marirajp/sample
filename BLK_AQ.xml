@@ -7,9 +7,8 @@
   <test thread-count="5" name="Test">
     <classes>
 
-  <class name="SRSproject.SRSproject.ProductDetailPageTest"/>
- <class name="SRSproject.SRSproject.BulkOrderPadTest"/>
-
+   <class name="SRSproject.SRSproject.QuickOrderPadTest"/>
+      <class name="SRSproject.SRSproject.BulkOrderPadTest"/>
     
     </classes>
   </test> <!-- Test -->

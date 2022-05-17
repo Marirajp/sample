@@ -1,16 +1,26 @@
 package Listeners;
 
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Properties;
+import java.util.logging.Logger;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,6 +28,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
@@ -35,7 +46,10 @@ public class ExtentReport extends BasePage implements ITestListener
 	
 	public static final String OUTPUT_FOLDER = "./build/";
 	public static final String FILE_NAME = "SRS-TestExecutionReport.html";
+	
 
+	String concatenate = ".";
+	
 	public static ExtentReports extent = init();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 
@@ -58,7 +72,7 @@ public class ExtentReport extends BasePage implements ITestListener
 		htmlReporter.config().setDocumentTitle("TestExecutionReport");
 		
 	
-		htmlReporter.config().setReportName("Automation Test Results Of: Conely" );//
+		htmlReporter.config().setReportName("Automation Test Results Of: Aqua-gon " );//
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
@@ -121,9 +135,16 @@ public class ExtentReport extends BasePage implements ITestListener
 		test.get().fail("<details><summary><b><font color=red>" +
 						"Exception Occured, click to see details:"+ "</font></b></summary>" +
 						exceptionMessage.replaceAll(",", "<br>") + "</details> \n");
+		
 		try {
+		
+			
 			test.get().fail("<b><font color=red>" + "Screenshot of failure" + "</font></b>",
 					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
+			
+			test.get().fail("Snapshot below: " + test.get().addScreenCaptureFromPath(getScreenshot()));
+			 
+		
 
 			test.get().log(Status.INFO,result.getThrowable());
 			test.get().log(Status.INFO,result.getThrowable());
@@ -149,6 +170,8 @@ public class ExtentReport extends BasePage implements ITestListener
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
 	}
+	 
+	
 
 
 }

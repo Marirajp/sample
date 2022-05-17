@@ -1,46 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="7" total="40" passed="28" failed="5" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Items price is same in PDP and Cart Page i.e Cart Price : 1552.72 = PDP Price : 1552.72]]>
+      <![CDATA[Items price is same in PDP and Cart Page i.e Cart Price : 182.36 = PDP Price : 182.36]]>
     </line>
     <line>
       <![CDATA[Items are added from cart to Reorder List selected]]>
     </line>
+    <line>
+      <![CDATA[Checkout]]>
+    </line>
+    <line>
+      <![CDATA[Items in Cart are all added to Checkout Page successfully]]>
+    </line>
+    <line>
+      <![CDATA[Items added to bulk order as expected]]>
+    </line>
+    <line>
+      <![CDATA[Items added to bulk order as expected]]>
+    </line>
+    <line>
+      <![CDATA[Items added to bulk order as expected]]>
+    </line>
+    <line>
+      <![CDATA[Items added to cart]]>
+    </line>
+    <line>
+      <![CDATA[Items are uploaded]]>
+    </line>
+    <line>
+      <![CDATA[Valid Items are uploaded]]>
+    </line>
   </reporter-output>
-  <suite started-at="2022-05-11T17:48:36 IST" name="Default suite" finished-at="2022-05-11T17:50:56 IST" duration-ms="139737">
+  <suite started-at="2022-05-17T12:51:17 IST" name="Suite" finished-at="2022-05-17T13:08:09 IST" duration-ms="1012342">
     <groups>
     </groups>
-    <test started-at="2022-05-11T17:48:36 IST" name="Default test" finished-at="2022-05-11T17:50:56 IST" duration-ms="139737">
-      <class name="SRSproject.SRSproject.CartPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:48:33 IST" name="setUp" finished-at="2022-05-11T17:48:36 IST" duration-ms="3408" status="PASS">
+    <test started-at="2022-05-17T12:51:17 IST" name="Test" finished-at="2022-05-17T13:08:09 IST" duration-ms="1012342">
+      <class name="SRSproject.SRSproject.CheckoutPageTest">
+        <test-method signature="CartToCheckout_Validation()[pri:1, instance:SRSproject.SRSproject.CheckoutPageTest@7d94beb9]" started-at="2022-05-17T12:58:28 IST" name="CartToCheckout_Validation" description="Cart to Checkout Redirection " finished-at="2022-05-17T12:59:17 IST" duration-ms="49534" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Checkout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CartToCheckout_Validation -->
+        <test-method signature="Date_Validation()[pri:2, instance:SRSproject.SRSproject.CheckoutPageTest@7d94beb9]" started-at="2022-05-17T12:59:17 IST" name="Date_Validation" description="Date Picker validation and other basic info updation " finished-at="2022-05-17T12:59:22 IST" duration-ms="4627" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="MiniCartToCartPage_Redirection()[pri:1, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:48:36 IST" name="MiniCartToCartPage_Redirection" description="Minicart to cartpage redirection" finished-at="2022-05-11T17:49:31 IST" duration-ms="54850" status="PASS">
+        </test-method> <!-- Date_Validation -->
+        <test-method signature="ProductList_Validation()[pri:3, instance:SRSproject.SRSproject.CheckoutPageTest@7d94beb9]" started-at="2022-05-17T12:59:22 IST" name="ProductList_Validation" description="Product Listing in checkout as per the list in cart" finished-at="2022-05-17T12:59:23 IST" duration-ms="1617" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items in Cart are all added to Checkout Page successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ProductList_Validation -->
+      </class> <!-- SRSproject.SRSproject.CheckoutPageTest -->
+      <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test">
+        <test-method signature="Change_Shito_Validation()[pri:1, instance:SRSproject.SRSproject.ChangeBranch_shipto_Test@3fa247d1]" started-at="2022-05-17T13:07:15 IST" name="Change_Shito_Validation" description="Changing Shipto" finished-at="2022-05-17T13:07:52 IST" duration-ms="36486" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class='customer-header-panel-item-value'])[4]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4e93da68928d41755cf10ac01a6447d3
+*** Element info: {Using=xpath, value=(//span[@class='customer-header-panel-item-value'])[4]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//span[@class='customer-header-panel-item-value'])[4]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:58062}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4e93da68928d41755cf10ac01a6447d3
+*** Element info: {Using=xpath, value=(//span[@class='customer-header-panel-item-value'])[4]}
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy11.getText(Unknown Source)
+at Pages.HomePage.ChangeShipTo(HomePage.java:378)
+at SRSproject.SRSproject.ChangeBranch_shipto_Test.Change_Shito_Validation(ChangeBranch_shipto_Test.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Change_Shito_Validation -->
+        <test-method signature="ChangeBranch_Validation()[pri:2, instance:SRSproject.SRSproject.ChangeBranch_shipto_Test@3fa247d1]" started-at="2022-05-17T13:07:52 IST" name="ChangeBranch_Validation" description="Changing Branch" finished-at="2022-05-17T13:08:09 IST" duration-ms="17311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeBranch_Validation -->
+      </class> <!-- SRSproject.SRSproject.ChangeBranch_shipto_Test -->
+      <class name="SRSproject.SRSproject.CartPageTest">
+        <test-method signature="MiniCartToCartPage_Redirection()[pri:1, instance:SRSproject.SRSproject.CartPageTest@609bcfb6]" started-at="2022-05-17T12:55:29 IST" name="MiniCartToCartPage_Redirection" description="Minicart to cartpage redirection" finished-at="2022-05-17T12:56:58 IST" duration-ms="89231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MiniCartToCartPage_Redirection -->
-        <test-method signature="ProductInformationValidation()[pri:2, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:49:31 IST" name="ProductInformationValidation" description="Pricing validaiton" finished-at="2022-05-11T17:49:56 IST" duration-ms="24586" status="PASS">
+        <test-method signature="ProductInformationValidation()[pri:2, instance:SRSproject.SRSproject.CartPageTest@609bcfb6]" started-at="2022-05-17T12:56:58 IST" name="ProductInformationValidation" description="Pricing validaiton" finished-at="2022-05-17T12:57:26 IST" duration-ms="28030" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Items price is same in PDP and Cart Page i.e Cart Price : 1552.72 = PDP Price : 1552.72]]>
+              <![CDATA[Items price is same in PDP and Cart Page i.e Cart Price : 182.36 = PDP Price : 182.36]]>
             </line>
           </reporter-output>
         </test-method> <!-- ProductInformationValidation -->
-        <test-method signature="CartSubtotalValidationfn()[pri:3, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:49:56 IST" name="CartSubtotalValidationfn" description="Subtotal validation" finished-at="2022-05-11T17:49:56 IST" duration-ms="313" status="PASS">
+        <test-method signature="CartSubtotalValidationfn()[pri:3, instance:SRSproject.SRSproject.CartPageTest@609bcfb6]" started-at="2022-05-17T12:57:26 IST" name="CartSubtotalValidationfn" description="Subtotal validation" finished-at="2022-05-17T12:57:27 IST" duration-ms="671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CartSubtotalValidationfn -->
-        <test-method signature="CartUpdateValidation()[pri:4, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:49:56 IST" name="CartUpdateValidation" description="Updating cart Validation" finished-at="2022-05-11T17:50:04 IST" duration-ms="8239" status="PASS">
+        <test-method signature="CartUpdateValidation()[pri:4, instance:SRSproject.SRSproject.CartPageTest@609bcfb6]" started-at="2022-05-17T12:57:27 IST" name="CartUpdateValidation" description="Updating cart Validation" finished-at="2022-05-17T12:57:35 IST" duration-ms="8499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CartUpdateValidation -->
-        <test-method signature="AddItemToCart_Validation()[pri:5, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:50:04 IST" name="AddItemToCart_Validation" description="Adding item to cart using search option in cart page" finished-at="2022-05-11T17:50:33 IST" duration-ms="28346" status="PASS">
+        <test-method signature="AddItemToCart_Validation()[pri:5, instance:SRSproject.SRSproject.CartPageTest@609bcfb6]" started-at="2022-05-17T12:57:35 IST" name="AddItemToCart_Validation" description="Adding item to cart using search option in cart page" finished-at="2022-05-17T12:58:04 IST" duration-ms="28677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddItemToCart_Validation -->
-        <test-method signature="Reorder_Validation()[pri:6, instance:SRSproject.SRSproject.CartPageTest@428640fa]" started-at="2022-05-11T17:50:33 IST" name="Reorder_Validation" description="Adding items to an reorder list" finished-at="2022-05-11T17:50:56 IST" duration-ms="23375" status="PASS">
+        <test-method signature="Reorder_Validation()[pri:6, instance:SRSproject.SRSproject.CartPageTest@609bcfb6]" started-at="2022-05-17T12:58:04 IST" name="Reorder_Validation" description="Adding items to an reorder list" finished-at="2022-05-17T12:58:28 IST" duration-ms="23625" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Items are added from cart to Reorder List selected]]>
@@ -48,6 +170,409 @@
           </reporter-output>
         </test-method> <!-- Reorder_Validation -->
       </class> <!-- SRSproject.SRSproject.CartPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="SRSproject.SRSproject.QuickOrderPadTest">
+        <test-method signature="Quick_OrderPad_Validation()[pri:1, instance:SRSproject.SRSproject.QuickOrderPadTest@560348e6]" started-at="2022-05-17T12:59:23 IST" name="Quick_OrderPad_Validation" description="Add item from Quick order to by searching item" finished-at="2022-05-17T13:00:27 IST" duration-ms="63542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_Validation -->
+        <test-method signature="Quick_OrderPad_FileUpload_Validation()[pri:2, instance:SRSproject.SRSproject.QuickOrderPadTest@560348e6]" started-at="2022-05-17T13:00:27 IST" name="Quick_OrderPad_FileUpload_Validation" description="Uploading a CSV file and validating" finished-at="2022-05-17T13:01:34 IST" duration-ms="66676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_FileUpload_Validation -->
+        <test-method signature="Quick_OrderPad_UploadedtoBulkOrder_Validation()[pri:3, instance:SRSproject.SRSproject.QuickOrderPadTest@560348e6]" started-at="2022-05-17T13:01:34 IST" name="Quick_OrderPad_UploadedtoBulkOrder_Validation" description="Validating item added from csv to the bulkorder page" finished-at="2022-05-17T13:01:50 IST" duration-ms="16179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_UploadedtoBulkOrder_Validation -->
+        <test-method signature="Quick_OrderPad_InvalidFileUpload_Validation()[pri:4, instance:SRSproject.SRSproject.QuickOrderPadTest@560348e6]" started-at="2022-05-17T13:01:50 IST" name="Quick_OrderPad_InvalidFileUpload_Validation" description="Uploading CSV file that has Invalid items" finished-at="2022-05-17T13:02:32 IST" duration-ms="42279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quick_OrderPad_InvalidFileUpload_Validation -->
+      </class> <!-- SRSproject.SRSproject.QuickOrderPadTest -->
+      <class name="SRSproject.SRSproject.ReorderPage_Test">
+        <test-method signature="ReorderPage_Redirection()[pri:1, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:04:56 IST" name="ReorderPage_Redirection" finished-at="2022-05-17T13:05:30 IST" duration-ms="34111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReorderPage_Redirection -->
+        <test-method signature="UploadFile_Redirection()[pri:2, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:05:30 IST" name="UploadFile_Redirection" finished-at="2022-05-17T13:05:52 IST" duration-ms="22198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadFile_Redirection -->
+        <test-method signature="SaveAnReorderList_Validation()[pri:3, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:05:52 IST" name="SaveAnReorderList_Validation" finished-at="2022-05-17T13:06:04 IST" duration-ms="11657" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//button[@class='action-primary'])[3]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+*** Element info: {Using=xpath, value=(//button[@class='action-primary'])[3]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//button[@class='action-primary'])[3]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+*** Element info: {Using=xpath, value=(//button[@class='action-primary'])[3]}
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+at SRSproject.SRSproject.ReorderPage_Test.SaveAnReorderList_Validation(ReorderPage_Test.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveAnReorderList_Validation -->
+        <test-method signature="CreateNewReorder_Redirection()[pri:4, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:06:04 IST" name="CreateNewReorder_Redirection" finished-at="2022-05-17T13:06:20 IST" duration-ms="16012" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='reorderpad-help-text']/following-sibling::a[1]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+*** Element info: {Using=xpath, value=//div[@class='reorderpad-help-text']/following-sibling::a[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='reorderpad-help-text']/following-sibling::a[1]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+*** Element info: {Using=xpath, value=//div[@class='reorderpad-help-text']/following-sibling::a[1]}
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+at SRSproject.SRSproject.ReorderPage_Test.CreateNewReorder_Redirection(ReorderPage_Test.java:106)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewReorder_Redirection -->
+        <test-method signature="CreateNew_ReorderPad_Validation()[pri:5, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:06:20 IST" name="CreateNew_ReorderPad_Validation" finished-at="2022-05-17T13:06:27 IST" duration-ms="7075" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy11.sendKeys(Unknown Source)
+at Pages.Reorder_Page.EnterProduct(Reorder_Page.java:152)
+at SRSproject.SRSproject.ReorderPage_Test.CreateNew_ReorderPad_Validation(ReorderPage_Test.java:120)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNew_ReorderPad_Validation -->
+        <test-method signature="View_Validation()[pri:6, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:06:28 IST" name="View_Validation" finished-at="2022-05-17T13:06:33 IST" duration-ms="5019" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//a[text()[normalize-space()='View']])[1]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+*** Element info: {Using=xpath, value=(//a[text()[normalize-space()='View']])[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[text()[normalize-space()='View']])[1]"}
+  (Session info: chrome=101.0.4951.54)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'L295-W-MARIRAJP', ip: '192.168.58.173', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:56769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bf41d17fe39f97dd27dd1d7c0e3debd7
+*** Element info: {Using=xpath, value=(//a[text()[normalize-space()='View']])[1]}
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+at Pages.Reorder_Page.View_Click(Reorder_Page.java:167)
+at SRSproject.SRSproject.ReorderPage_Test.View_Validation(ReorderPage_Test.java:145)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- View_Validation -->
+        <test-method signature="InvalidFile_Validation()[pri:8, instance:SRSproject.SRSproject.ReorderPage_Test@2a7ed1f]" started-at="2022-05-17T13:06:33 IST" name="InvalidFile_Validation" finished-at="2022-05-17T13:07:15 IST" duration-ms="42417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidFile_Validation -->
+      </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
+      <class name="SRSproject.SRSproject.BulkOrderPadTest">
+        <test-method signature="BulOrder_Redirection()[pri:1, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:02:32 IST" name="BulOrder_Redirection" finished-at="2022-05-17T13:03:09 IST" duration-ms="37339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BulOrder_Redirection -->
+        <test-method signature="AddItemtoBulkOrder_Validation()[pri:2, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:03:09 IST" name="AddItemtoBulkOrder_Validation" finished-at="2022-05-17T13:03:36 IST" duration-ms="26352" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to bulk order as expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddItemtoBulkOrder_Validation -->
+        <test-method signature="AddNewLineItem_Validation()[pri:3, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:03:36 IST" name="AddNewLineItem_Validation" finished-at="2022-05-17T13:03:54 IST" duration-ms="18308" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to bulk order as expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddNewLineItem_Validation -->
+        <test-method signature="UpdateQunatity_Validation()[pri:4, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:03:54 IST" name="UpdateQunatity_Validation" finished-at="2022-05-17T13:03:55 IST" duration-ms="1159" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to bulk order as expected]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- UpdateQunatity_Validation -->
+        <test-method signature="AddAll_ItemToCart_Validation()[pri:5, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:03:55 IST" name="AddAll_ItemToCart_Validation" finished-at="2022-05-17T13:03:56 IST" duration-ms="1068" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items added to cart]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddAll_ItemToCart_Validation -->
+        <test-method signature="ListofItem_Validation()[pri:6, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:03:56 IST" name="ListofItem_Validation" finished-at="2022-05-17T13:04:32 IST" duration-ms="36195" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Items are uploaded]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ListofItem_Validation -->
+        <test-method signature="InValid_FileUpload_Validation()[pri:7, instance:SRSproject.SRSproject.BulkOrderPadTest@4ea5b703]" started-at="2022-05-17T13:04:32 IST" name="InValid_FileUpload_Validation" finished-at="2022-05-17T13:04:56 IST" duration-ms="23200" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Valid Items are uploaded]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- InValid_FileUpload_Validation -->
+      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
+      <class name="SRSproject.SRSproject.ProductDetailPageTest">
+        <test-method signature="PDP_RegisterRedirection_GuestValidation()[pri:1, instance:SRSproject.SRSproject.ProductDetailPageTest@72ade7e3]" started-at="2022-05-17T12:53:30 IST" name="PDP_RegisterRedirection_GuestValidation" description="Register now link redirection" finished-at="2022-05-17T12:54:14 IST" duration-ms="43865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PDP_RegisterRedirection_GuestValidation -->
+        <test-method signature="AddingItemToCart()[pri:2, instance:SRSproject.SRSproject.ProductDetailPageTest@72ade7e3]" started-at="2022-05-17T12:54:14 IST" name="AddingItemToCart" description="Adding Item to Cart" finished-at="2022-05-17T12:55:29 IST" duration-ms="74817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddingItemToCart -->
+      </class> <!-- SRSproject.SRSproject.ProductDetailPageTest -->
+      <class name="SRSproject.SRSproject.ProductListPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SRSproject.SRSproject.ProductListPageTest@42e25b0b]" started-at="2022-05-17T12:51:05 IST" name="setUp" finished-at="2022-05-17T12:51:17 IST" duration-ms="11960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="PLP_RegisterRedirection_GuestValidation()[pri:1, instance:SRSproject.SRSproject.ProductListPageTest@42e25b0b]" started-at="2022-05-17T12:51:17 IST" name="PLP_RegisterRedirection_GuestValidation" description="Register now link redirection" finished-at="2022-05-17T12:52:10 IST" duration-ms="52808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PLP_RegisterRedirection_GuestValidation -->
+        <test-method signature="AddToCart_Validation()[pri:2, instance:SRSproject.SRSproject.ProductListPageTest@42e25b0b]" started-at="2022-05-17T12:52:10 IST" name="AddToCart_Validation" description="Adding Item to Cart" finished-at="2022-05-17T12:53:30 IST" duration-ms="80276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCart_Validation -->
+      </class> <!-- SRSproject.SRSproject.ProductListPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -62,7 +62,7 @@ public class ProductDetailPage  {
 		
 			wait.until(ExpectedConditions.visibilityOf(PartLabel));
 			 wait.until(ExpectedConditions.visibilityOf(AddToCart));
-	      Thread.sleep(3000);
+	      Thread.sleep(5000);
 			AddToCart.click();
 			
 				wait.until(ExpectedConditions.visibilityOf(text));

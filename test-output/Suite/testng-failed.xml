@@ -6,18 +6,21 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test">
+        <methods>
+          <include name="setUp"/>
+          <include name="Change_Shito_Validation"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.ChangeBranch_shipto_Test -->
       <class name="SRSproject.SRSproject.ReorderPage_Test">
         <methods>
+          <include name="View_Validation"/>
           <include name="setUp"/>
-          <include name="InvalidFile_Validation"/>
+          <include name="SaveAnReorderList_Validation"/>
+          <include name="CreateNewReorder_Redirection"/>
+          <include name="CreateNew_ReorderPad_Validation"/>
         </methods>
       </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
-      <class name="SRSproject.SRSproject.BulkOrderPadTest">
-        <methods>
-          <include name="InValid_FileUpload_Validation"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

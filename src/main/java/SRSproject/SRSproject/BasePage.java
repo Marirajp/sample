@@ -14,8 +14,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -37,17 +42,17 @@ public class BasePage
 	
 	//QPS
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_qps.properties";
-		public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
+	//	public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
 	//  public static String configpath ="src/main/java/config_prod/config_prod_qps.properties";
     
 	//glb
 	//	public static String configpath ="src/main/java/config_prod/config_prod_glb.properties";
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_glb.properties";
-	//	public static String configpath= "src/main/java/config_staging2/configuration_staging2_glb.properties";
+	//  public static String configpath= "src/main/java/config_staging2/configuration_staging2_glb.properties";
 	
 	//Aqua-gon
 	//public static String configpath="src/main/java/config_staging2/configuration_staging2_Aquagon.properties";
-	//public static String configpath="src/main/java/config_prod/config_prod_Aquagon.properties";
+	public static String configpath="src/main/java/config_prod/config_prod_Aquagon.properties";
 		
 	//PEP	
 	//public static String configpath="src/main/java/config_staging2/configuration_staging2_PEP.properties";
@@ -58,7 +63,7 @@ public class BasePage
 
 		
 	//APS 
-	//public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+     //public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
     
 	//TPS 
 	//public static String configpath ="src/main/java/config_prod/config_prod_Tps.properties";
@@ -138,9 +143,13 @@ public class BasePage
 	public String getScreenshot() throws IOException, InterruptedException
 	{
 		
+		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		String path = System.getProperty("user.dir") + "/build/screenshots/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
+		String absolutePath = destination.getAbsolutePath();
+		
+		
 
 		try {
 			FileUtils.copyFile(src, destination);
@@ -148,8 +157,9 @@ public class BasePage
 			System.out.println("screenshot captured failed...");
 		}
 
-		return path;
+		return absolutePath;
 	}
+	
 	public static String   Reportname() {
 		prop = new Properties();
 		return prop.getProperty("site");
@@ -167,6 +177,52 @@ public class BasePage
 	        js.executeScript("arguments[0].scrollIntoView(true);", element);
 	       js.executeScript("arguments[0].click()", element);
 	    }
+
+	public static WebDriver getbrowser(String browsername) throws Exception {
+		try {
+			if (browsername.equalsIgnoreCase("chrome")) {
+				
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
+				driver = new ChromeDriver();
+				driver.manage().window().maximize();
+				
+			} else if (browsername.equalsIgnoreCase("ie")) {
+				System.setProperty("webdriver.ie.driver",
+						System.getProperty("user.dir") + "\\Driver\\IEDriverServer.exe");
+				driver = new InternetExplorerDriver();
+				
+			}else if (browsername.equalsIgnoreCase("firefox")) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + "\\Driver\\geckodriver.exe");
+				driver = new FirefoxDriver();
+				driver.manage().window().maximize();
+			}else {
+				throw new Exception("Not a valid Browser");
+			}
+			return driver;
+			
+		} catch (Exception e) {
+		e.printStackTrace();
+		throw new RuntimeException();
+		}
+	} 	
+	
+	public static WebDriver getUrl(String url) throws Exception {
+		try {
+			driver.get(url);
+		
+//			driver.manage().window().maximize();
+//			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+			return driver ;
+		} catch (Exception e) {
+		e.printStackTrace();
+		throw new RuntimeException();
+		}
+	}
+	
+	
 	
 
 }

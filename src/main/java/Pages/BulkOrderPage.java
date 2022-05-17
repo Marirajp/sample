@@ -199,7 +199,7 @@ public class BulkOrderPage extends BasePage {
 
 		
 		
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		
 		UploadNow.click();
 		Thread.sleep(5000);

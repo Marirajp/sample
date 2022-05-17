@@ -8,6 +8,7 @@ import java.util.List;
 import javax.print.attribute.standard.Copies;
 
 import org.junit.AfterClass;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -30,9 +31,9 @@ public class CheckoutPlaceorder extends BasePage {
 	CartPage Cp;
 	
 	String  noofItems1;
+	String Pricetotal ;
 	
-	
-	@Test(priority=1, description= "Adding Item to Cart with correct qty",enabled =false)
+	@Test(priority=1, description= "Adding Item to Cart with correct qty")
 	public void AddingItemToCart() throws Exception 
 	{
 		BasePage.initializtion();
@@ -72,7 +73,7 @@ public class CheckoutPlaceorder extends BasePage {
 		
 	}
 
-	@Test(priority=2, description= "Check the Item are added Cart to Checkout verify ",enabled =false)
+	@Test(priority=2, description= "Check the Item are added Cart to Checkout verify ")
 	public void CheckoutValidation() throws Exception 
 	{
 	Thread.sleep(1000);
@@ -84,7 +85,9 @@ public class CheckoutPlaceorder extends BasePage {
 	String title= driver.getTitle();
 	Assert.assertEquals(title, Constants.CheckoutPageTitle);
 	Reporter.log(title, true);
+	
 	CheckoutPageTest Ch = new CheckoutPageTest();
+	
 	Ch.Date_Validation();
 	CheckoutPage COp= new CheckoutPage(driver) ;
 	COp.NextStep1().click();
@@ -115,12 +118,26 @@ public class CheckoutPlaceorder extends BasePage {
 	
 	}
 		COp.scroll();
+		Thread.sleep(16000);
+		COp.Terms_Check();
 		Thread.sleep(2000);
-		COp.Terms_Check().click();
-		COp.Holdorder();
-		Thread.sleep(5000);
+//		COp.Holdorder();
+//	
+//		Thread.sleep(5000);
+//		System.out.println(driver.getTitle());
+//		String PricefromOpenorderpage = driver.findElement(By.xpath("//td[contains(@class,'column column--orderTotal')]")).getText();
+//		PricefromOpenorderpage.equalsIgnoreCase(Pricetotal);
+//		
+	COp.PlaceOrder();
+	Thread.sleep(3000);
+	String Sucessmsge = driver.findElement(By.xpath("//p[text()='Your order has been submitted to your selected branch. ']")).getText();
+		System.out.println(Sucessmsge);
+		Assert.assertEquals(prop.getProperty(Sucessmsge), Sucessmsge);
+		Thread.sleep(10000);
 		System.out.println(driver.getTitle());
-	//COp.PlaceOrder().click();;
+		String SucesspagePrice = driver.findElement(By.xpath("(//span[@class='price'])[3]")).getText();
+		SucesspagePrice.equalsIgnoreCase(Pricetotal);
+		
 		
 		
 		
@@ -136,7 +153,7 @@ public class CheckoutPlaceorder extends BasePage {
 		
 	}
 	
-@org.testng.annotations.AfterClass(enabled =false)
+@org.testng.annotations.AfterClass(enabled = false)
 public void close() {
 	driver.quit();
 }

@@ -6,17 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="SRSproject.SRSproject.ReorderPage_Test">
-        <methods>
-          <include name="View_Validation"/>
-          <include name="setUp"/>
-          <include name="UploadFile_Redirection"/>
-          <include name="SaveAnReorderList_Validation"/>
-          <include name="CreateNewReorder_Redirection"/>
-          <include name="CreateNew_ReorderPad_Validation"/>
-          <include name="InvalidFile_Validation"/>
-        </methods>
-      </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
       <class name="SRSproject.SRSproject.BulkOrderPadTest">
         <methods>
           <include name="InValid_FileUpload_Validation"/>
@@ -24,6 +13,12 @@
           <include name="ListofItem_Validation"/>
         </methods>
       </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
+      <class name="SRSproject.SRSproject.ProductDetailPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="PDP_RegisterRedirection_GuestValidation"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.ProductDetailPageTest -->
       <class name="SRSproject.SRSproject.QuickOrderPadTest">
         <methods>
           <include name="setUp"/>
