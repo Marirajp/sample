@@ -129,7 +129,7 @@ public class BasePage
 		
 		((JavascriptExecutor)driver).executeScript("window.resizeTo(screen.width, screen.height)");
 		driver.manage().window().setPosition(new Point(0, 0));
-		driver.manage().window().setSize(new Dimension(1500,1800)); 
+		driver.manage().window().setSize(new Dimension(2558,1378)); 
 		driver.findElement(By.tagName("body")).sendKeys(Keys.F11);
 		driver.get(prop.getProperty("url"));
 		tdriver.set(driver);
