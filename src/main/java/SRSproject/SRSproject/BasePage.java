@@ -17,6 +17,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -102,6 +103,8 @@ public class BasePage
 						System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 				driver = new ChromeDriver();
 				
+				DesiredCapabilities caps = new DesiredCapabilities();
+				caps.setCapability("resolution", "1024x768");
 
 //			WebDriverManager.chromedriver().setup();
 //			driver = new ChromeDriver();
