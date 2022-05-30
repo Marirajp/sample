@@ -59,7 +59,7 @@ public class BulkOrderPadTest extends BaseTest {
 	
 		
 		
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			
 		Bp.AddNewLineItem();
 		
@@ -106,7 +106,7 @@ public class BulkOrderPadTest extends BaseTest {
 				
 				
 						Bp.Fileupload();
-						Thread.sleep(8000);
+						Thread.sleep(15000);
 					ArrayList<String> List= Bp.ListOfItem();
 					BulkOrderPage_List = List;
 					

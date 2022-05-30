@@ -37,7 +37,7 @@ public class Reorder_Page extends BasePage {
 	
 	@FindBy(xpath="(//input[@id='id-items0sku'])[1]") WebElement Product_input;
 	
-	@FindBy(xpath="(//a[text()[normalize-space()='View']])[1]") WebElement First_List_View;
+	@FindBy(xpath="(//a[text()[normalize-space()='View']])[2]") WebElement First_List_View;
 	
 	@FindBy(xpath="(//button[@title='Add All Items To Cart'])[1]") WebElement Add_All_Items_btn;
 	
@@ -45,8 +45,8 @@ public class Reorder_Page extends BasePage {
 //	@FindBy(xpath = "//div[@id='modal-content-44']//div[1]") WebElement Success_msg;
 	@FindBy(css = "body > div.swal2-container.swal2-center.swal2-fade.swal2-shown > div > div.swal2-header > button") WebElement Pop_close;
 	@FindBy(css ="body > div.modals-wrapper > aside.modal-popup.message-modal-container._show > div.modal-inner-wrap > header > button") WebElement close;
-	@FindBy(xpath="(//button[@class='action-primary'])[3]") WebElement Proceed_Btn ;
-	
+//	@FindBy(css="html>body>div:nth-of-type(2)>aside:nth-of-type(22)>div:nth-of-type(2)>footer>button:nth-of-type(2)>span") WebElement Proceed_Btn ;
+	@FindBy(xpath = "(//button[@class='action-primary'])[2]") WebElement Proceed_Btn ;
 	public Reorder_Page(WebDriver driver)
 	{
 	this.driver=driver;
@@ -124,7 +124,8 @@ public  WebElement ReorderNameField()
 		return Save_btn;
 	}
 	
-	public WebElement Proceed_Btn() {
+	public WebElement Proceed_Btn() throws Exception {
+		jsClick(Proceed_Btn);
 		return Proceed_Btn ;
 	}
 	

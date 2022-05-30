@@ -49,7 +49,7 @@ public class QuickOrderPadTest extends BaseTest {
 		 
 	
 		HomePage hp= new HomePage(driver);
-		hp.clickOnHomeLink();
+	//	hp.clickOnHomeLink();
 	//	Thread.sleep(8000);
 		//driver.navigate().refresh();
 		Thread.sleep(10000);
@@ -161,7 +161,7 @@ System.out.println("final"+arr);
 	{
 	
 	
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	
 		qp = new QuickOrderPadPage(driver);
 		Thread.sleep(11000);

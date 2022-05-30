@@ -19,9 +19,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import SRSproject.SRSproject.BasePage;
+import SRSproject.SRSproject.BaseTest;
 import Utils.Constants;
 
-public class ProductListPage {
+public class ProductListPage extends BaseTest {
 
 	WebDriverWait wait;
 	WebDriver driver;
@@ -38,6 +39,10 @@ public class ProductListPage {
 	@FindBy(xpath="(//input[@name='qty'])[1]") WebElement FirstItem_Qty;
     @FindBy(xpath="(//button[@title='Add to Cart'])[1]") WebElement AddToCart;
     @FindBy(xpath="//p[text()='has been added to your cart']") WebElement text;
+    
+    @FindBy(xpath="//strong[text()='Recently Viewed']") WebElement Recently_viwed_Title;
+    
+    @FindBy(css = "#maincontent > div > div.sidebar.sidebar-main > div > div > div.block-content.content > div:nth-child(1) > div > strong > a") WebElement First_Recent_Item;
 
 	
 	public ProductListPage(WebDriver driver)
@@ -98,7 +103,20 @@ return text.getText();
 	
 	}
 	
+	public WebElement Recently_Viewed() throws InterruptedException
+	
+	{
+		Thread.sleep(3000);
+          return Recently_viwed_Title;
+	}
+	
+	public WebElement First_Recently_Viewed() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		return First_Recent_Item;
+	}
 	
 	
-
+	
+	
 }

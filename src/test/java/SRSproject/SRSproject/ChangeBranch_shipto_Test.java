@@ -25,7 +25,7 @@ public class ChangeBranch_shipto_Test  extends BaseTest
 		Lp.ValidLogin();
 		
 		String shipto =Hp.ChangeShipTo();
-//		Assert.assertEquals(shipto,prop.getProperty("Shipto"));
+		Assert.assertEquals(shipto,prop.getProperty("Shipto"));
 
 }
 	

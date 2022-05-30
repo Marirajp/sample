@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 
 import Pages.HomePage;
 import Pages.LoginPage;
+import Pages.ProductDetailPage;
 import Pages.ProductListPage;
 import Pages.RegistrationForm;
 import Utils.Constants;
@@ -86,4 +87,36 @@ public class ProductListPageTest extends BaseTest {
 
 		
 	}
+	
+
+@Test(priority=3, description= "Validating Recently viewed is  List in PLP",enabled = false )
+	public void Recently_viewedItems_validation() throws InterruptedException, IOException 
+	{
+		Thread.sleep(7000);
+		HomePage hp= new HomePage(driver);
+		
+		
+		hp.SearchByKeyword();
+		Thread.sleep(10000);
+		
+	
+	
+	plp.GuestUser_ClickItem();
+	Thread.sleep(3000);
+	driver.navigate().back();
+	Thread.sleep(5000);
+	HomePage	Hp = new HomePage(driver);
+	ProductDetailPage	pdp = new ProductDetailPage(driver);
+	Thread.sleep(5000);
+	Hp.BrandSelection();
+	System.out.print(plp.Recently_Viewed().getText());
+	plp.First_Recently_Viewed().click();
+	String pdp_page_spec= pdp.Spec_PDP_Title().getText();
+	Assert.assertEquals(pdp_page_spec, "Specs");
+	
+		
+				
+	}
+
+
 }

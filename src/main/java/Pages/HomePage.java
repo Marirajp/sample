@@ -529,6 +529,22 @@ public void ValidLogin() throws InterruptedException
 	Singin.click();
 
 }
+
+public void InValidLogin() throws InterruptedException
+
+{
+
+	Thread.sleep(8000);
+	act = new Actions(driver);
+
+	// wait = new WebDriverWait(driver,30);
+	// wait.until(ExpectedConditions.visibilityOf(Account));
+	act.moveToElement(Account).build().perform();
+	LoginEmail.sendKeys(prop.getProperty("inValidLogin_email"));
+	Password.sendKeys(prop.getProperty("inValidLogin_Pswd"));
+	Singin.click();
+
+}
 public LoginPage UnApprovedLogin() throws InterruptedException
 
 {

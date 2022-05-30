@@ -5,9 +5,10 @@
     <classes>
       <class name="SRSproject.SRSproject.CartPageTest">
         <methods>
-          <include name="Reorder_Validation"/>
           <include name="setUp"/>
+          <include name="CartSubtotalValidationfn"/>
           <include name="AddItemToCart_Validation"/>
+          <include name="AddItemToCart_ValidationTo_Reorder"/>
         </methods>
       </class> <!-- SRSproject.SRSproject.CartPageTest -->
     </classes>

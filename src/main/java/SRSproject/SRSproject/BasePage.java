@@ -4,8 +4,11 @@ package SRSproject.SRSproject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
+import org.apache.commons.collections.LRUMap;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -17,9 +20,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -54,14 +59,14 @@ public class BasePage
 	//glb
 	//	public static String configpath ="src/main/java/config_prod/config_prod_glb.properties";
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_glb.properties";
-	//  public static String configpath= "src/main/java/config_staging2/configuration_staging2_glb.properties";
+	 // public static String configpath= "src/main/java/config_staging2/configuration_staging2_glb.properties";
 	
 	//Aqua-gon
 	//public static String configpath="src/main/java/config_staging2/configuration_staging2_Aquagon.properties";
 	//public static String configpath="src/main/java/config_prod/config_prod_Aquagon.properties";
 		
 	//PEP	
-	//public static String configpath="src/main/java/config_staging2/configuration_staging2_PEP.properties";
+     //public static String configpath="src/main/java/config_staging2/configuration_staging2_PEP.properties";
 	//public static String configpath="src/main/java/config_prod/config_prod_PEP.properties";
 		
 	//FWP	
@@ -69,13 +74,18 @@ public class BasePage
 
 		
 	//APS 
-     //public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+    
+	//public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+	// public static String configpath="src/main/java/config_staging2/configuration_staging2_Aps.properties";
+	  
     
 	//TPS 
 	//public static String configpath ="src/main/java/config_prod/config_prod_Tps.properties";
+	 // public static String configpath="src/main/java/config_staging2/configuration_staging2_Tps.properties";
 	
 	//Conely
 	//public static String configpath = "src/main/java/config_prod/configuration_pro_conley.properties";
+	 //  public static String configpath="src/main/java/config_staging2/configuration_staging2_Tps.properties";
 
 	//Emsco
 	//public static String configpath ="src/main/java/config_prod/configuration_pro_emscp.properties";
@@ -107,7 +117,15 @@ public class BasePage
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "\\Driver\\chromedriver.exe");
 				
-				driver = new ChromeDriver();
+				//driver = new ChromeDriver();
+				ChromeOptions options = new ChromeOptions();
+
+				Map<String, Object> prefs = new HashMap<String, Object>();
+//				String path = System.getProperty("user.dir")+ "\\DownloadCSV" ;
+				prefs.put("download.default_directory", System.getProperty("user.dir") + "\\DownloadCSV");
+
+				options.setExperimentalOption("prefs", prefs);
+				driver = new ChromeDriver(options);
 				
 				
 
@@ -183,7 +201,7 @@ public class BasePage
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 		
-	        js.executeScript("arguments[0].focus();", element);
+	      //  js.executeScript("arguments[0].focus();", element);
 
 	        js.executeScript("arguments[0].scrollIntoView(true);", element);
 	       js.executeScript("arguments[0].click()", element);
@@ -230,6 +248,29 @@ public class BasePage
 		} catch (Exception e) {
 		e.printStackTrace();
 		throw new RuntimeException();
+		}
+	}
+	
+	public static void moveToElement(WebElement element) {
+		try {
+			waitUntilElementVisibility(element);
+			Actions ac = new Actions(driver);
+			ac.moveToElement(element).build().perform();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException();
+		}
+		
+	}
+	
+	public static void scrollUpandDownUsingElement(WebElement element) {
+		try {
+			waitUntilElementVisibility(element);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView();", element);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException();
 		}
 	}
 	

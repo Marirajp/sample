@@ -51,7 +51,22 @@ public class CheckoutPageTest extends BaseTest {
 		 MyList=a1;
 		// System.out.println(MyList);
 		 Thread.sleep(1000);
-		
+		 WebElement stock_count = driver.findElement(By.xpath("//td[@class ='col stock']/span[1]"));
+	     if (stock_count.isDisplayed() && ! (stock_count.getText().equals("Call for availability"))) {
+	         String s = stock_count.getText();
+	         int i = Integer.parseInt(s);
+	         int quantity = i+1;
+	         driver.findElement(By.xpath("//*[@class='input-text qty'][1]")).sendKeys("" + quantity +"\n");
+	Thread.sleep(9000);
+	         WebElement backorder_msg = driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
+	         Reporter.log("Backorder Warning is Present", true);
+	     }
+	     else {
+	         Thread.sleep(3000);
+	         driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
+	         Reporter.log("Call for Availability is there and Backorder Warning is Present", true);
+	     }
+	     
 		Cp.clickOnProceedToCheckout();
 		String title= driver.getTitle();
 		Assert.assertEquals(title, Constants.CheckoutPageTitle);
@@ -142,6 +157,12 @@ public class CheckoutPageTest extends BaseTest {
 			System.out.println("Item in Checkout Page"+ a2);
 			Reporter.log("Not all item from cart are added to checkout page ",true);
 		}}
+	@Test(priority = 4, description = "BackOrder Warning")
+	public void Backorder_Warning_Checkout() throws Exception {
+	    Thread.sleep(8000);
+	    driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
+	    Reporter.log("Backorder Warning is Present", true);
+	}
 	
 	/*@Test(priority=4,  description= "Placing Order validation")
 	public void OrderPlacement_Validation() throws InterruptedException 

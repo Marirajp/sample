@@ -34,6 +34,7 @@ public class CartPageTest  extends BaseTest
 {
 
 	CartPage Cp;
+	String Total_items_in_cart ;
 	
 
 	@Test(priority=1, description= "Minicart to cartpage redirection")
@@ -170,9 +171,9 @@ float MultipliedPrice= ActualPrice * quantity;
 	public void AddItemToCart_Validation() throws Exception
 
 	{
-		Thread.sleep(10000);
+		Thread.sleep(16000);
 		WebElement SearchField = Cp.Searcfield();
-		 Thread.sleep(5000);
+		 Thread.sleep(20000);
 		SearchField.click();
 		SearchField.sendKeys(prop.getProperty("KeywordSearch"));
 		 Thread.sleep(8000);
@@ -210,16 +211,17 @@ float MultipliedPrice= ActualPrice * quantity;
 	Thread.sleep(8000);
 	String msg= Cp.Message();
 	System.out.println(msg);
+	Total_items_in_cart = msg.substring(14, 16);
+	System.out.println("Total_Itemsin Cart" +Total_items_in_cart);
+
 	String ReorderItemCount=msg.replaceAll("[^\\d]", "");
-//	 String items =  driver.findElement(By.xpath("//span[text()='27 Items']")).getText();
-//	 System.out.println(items);
-	//System.out.println(ReorderItemCount);
+
 	
 	 Cp.ClickAddToReorder();
 	 String msg1= Cp.Message();
 	 System.out.println(msg);
 		String ReorderItemAdded=msg.replaceAll("[^\\d]", "");
-	//	System.out.println(ReorderItemAdded);
+		
 	
 		 if(ReorderItemCount.equals(ReorderItemAdded))
 		    {
@@ -228,7 +230,7 @@ float MultipliedPrice= ActualPrice * quantity;
 		    	Thread.sleep(3000);
 		    	Cp.KeepShopping().click();
 		    	
-//		    	Cp.viewcart().click();
+
 		    	
 		    	
 		    }
@@ -236,10 +238,93 @@ float MultipliedPrice= ActualPrice * quantity;
 		    {
 		    	Reporter.log(" Not All Items are added from cart to Reorder List selected" , true);
 				   
-		    }
+		    }	
+	}
+	
+	@Test(priority=9, description= "Adding item  cart to reorder validate the item will be added or nt  " )
+	public void AddItemToCart_ValidationTo_Reorder() throws Exception
+
+	{
+		MiniCartPage Mp= new MiniCartPage(driver);
+		Mp.MiniCart().click();
+		Thread.sleep(8000);
+		Mp.ClickViewCart();
+	Thread.sleep(3000);
+		Cp.CreatenewReOrder();
+		Thread.sleep(3000);
+	 Cp.createreordername().sendKeys(prop.getProperty("New_Reorder_Pad"));
+	 
+		
+		Cp.Clickbtn_createReorder();
+		Thread.sleep(5000);
+		
+		Cp.ReOrderSelectionaftercreate_NewReorderpad();
+		Thread.sleep(3000);
+		String msg= Cp.Message();
+		System.out.println(msg);
+		String ReorderItemCount=msg.replaceAll("[^\\d]", "");
+
+		 Cp.ClkAddToReorder(); 
+		 String msg1= Cp.Message();
+			String ReorderItemAdded=msg.replaceAll("[^\\d]", "");
+	
+			 if(ReorderItemCount.equals(ReorderItemAdded))
+			    {
+			    	Assert.assertTrue(true);
+			    	Reporter.log("Items are added from cart to Reorder List selected" , true);
+			    	Thread.sleep(3000);
+			    	
+			    	Cp.ViewReorderPad();
+			    	String Totalitems = Cp.Totalitems_in_Reorderpad().getText();
+			    	
+			    	
+		
+			    	System.out.println("Total items in Reorderpad : " + Totalitems);
+			    	System.out.println("Total items in CartPage :"+Total_items_in_cart);
+			    	
+			    	if (Totalitems.equalsIgnoreCase(Total_items_in_cart)) {
+			    		System.out.println("Products in cart to Reorderpad QTY is same");
+						
+					}
+			    	
+			    	
+			    	Thread.sleep(3000);
+			    	
+
+			    	
+			    	
+			    	
+			    }
+			    else
+			    {
+			    	Reporter.log(" Not All Items are added from cart to Reorder List selected" , true);
+					   
+			    }
+			
+	    
+		
+		
+		
 		
 			
 	}
-	
+	@Test(priority = 3, description = "BackOrder Warning")
+	 public void Backorder_Warning() throws Exception {
+	     WebElement stock_count = driver.findElement(By.xpath("//td[@class ='col stock']/span[1]"));
+	     if (stock_count.isDisplayed() && ! (stock_count.getText().equals("Call for availability"))) {
+	         String s = stock_count.getText();
+	         int i = Integer.parseInt(s);
+	         int quantity = i+1000;
+	         driver.findElement(By.xpath("//*[@class='input-text qty'][1]")).sendKeys("" + quantity +"\n");
+	Thread.sleep(9000);
+	         WebElement backorder_msg = driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
+	         Reporter.log("Backorder Warning is Present", true);
+	     }
+	     else {
+	         Thread.sleep(3000);
+	         driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
+	         Reporter.log("Call for Availability is there and Backorder Warning is Present", true);
+	     }
+	 }
 	
 }

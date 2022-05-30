@@ -62,7 +62,7 @@ public class ReorderPage_Test  extends BaseTest
 }
 	
 	@Test(priority=3)
-	public void SaveAnReorderList_Validation() throws InterruptedException, CsvValidationException, IOException 
+	public void SaveAnReorderList_Validation() throws Exception 
 	{
 		Rp= new Reorder_Page(driver);
 		Thread.sleep(8000);
@@ -71,7 +71,7 @@ public class ReorderPage_Test  extends BaseTest
 		Thread.sleep(400);
 		Rp.Save_button().click();
 		Thread.sleep(3000);
-		Rp.Proceed_Btn().click();
+		Rp.Proceed_Btn();
 		
 }
 	
@@ -89,9 +89,9 @@ public class ReorderPage_Test  extends BaseTest
 		Hp.Reorder_Hover();
 		Thread.sleep(8000);
 		Rp.Invalid_Fileupload();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	String notification =Rp.ItemsNotAdded_Notification();
-	Thread.sleep(300);
+	Thread.sleep(900);
 	//Rp.close_button_click();
 	Assert.assertEquals(notification.contains(Constants.Notification), true);
 		
@@ -109,9 +109,9 @@ public class ReorderPage_Test  extends BaseTest
 	}
 
 	@Test(priority=5)
-	public void CreateNew_ReorderPad_Validation() throws InterruptedException, CsvValidationException, IOException 
+	public void CreateNew_ReorderPad_Validation() throws Exception 
 	{
-		Thread.sleep(7000);
+		Thread.sleep(3000);
 	
 		
 		
@@ -122,7 +122,8 @@ public class ReorderPage_Test  extends BaseTest
 			Thread.sleep(400);
 			
 			Rp.Save_button().click();
-			Rp.Proceed_Btn().click();
+//			Thread.sleep(2000);
+			Rp.Proceed_Btn();
 				
 			
 			
@@ -133,20 +134,13 @@ public class ReorderPage_Test  extends BaseTest
 	@Test(priority=6)
 	public void View_Validation() throws Exception 
 	{
-		/*driver.navigate().refresh();
-		driver.navigate().refresh();
-		Thread.sleep(8000);
-		Rp= new Reorder_Page(driver);
-		HomePage Hp = new HomePage(driver);
-		Hp.MyAccount_Hover();
-		Hp.Reorder_Hover();*/
-		Thread.sleep(5000);
 		
-		waitUntilElementVisibility(Rp.View_Click());
-//		Rp.View_Click();
+		Thread.sleep(5000);
+		Rp.View_Click();
+		Thread.sleep(5000);
 		Rp.Add_All_Items().click();
 		
-		Thread.sleep(8000);
+		Thread.sleep(18000);
 	
 		String Success_msg= Rp.Items_addtocart_msg();
 		Assert.assertEquals(Success_msg.contains("successfully added to your Cart"), true);

@@ -16,6 +16,7 @@ public class BaseTest extends BasePage {
 	public void setUp() throws IOException {
 		initializtion();
 	}
+	
 //	@BeforeMethod
 //	public void setUp() throws IOException {
 //		initializtion();
