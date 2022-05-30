@@ -11,13 +11,7 @@
     
  <class name="SRSproject.SRSproject.LoginTest"/>
  <class name="SRSproject.SRSproject.ProductListPageTest"/>
- <class name="SRSproject.SRSproject.ProductDetailPageTest"/>
- <class name="SRSproject.SRSproject.CartPageTest"/>
-<class name="SRSproject.SRSproject.CheckoutPageTest"/>
-  <class name="SRSproject.SRSproject.QuickOrderPadTest"/>
-      <class name="SRSproject.SRSproject.BulkOrderPadTest"/>
- <class name="SRSproject.SRSproject.ReorderPage_Test"/>
-  <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test"/>
+ 
 
 
 
