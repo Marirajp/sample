@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.poi.hssf.record.PageBreakRecord.Break;
-import org.apache.poi.ss.formula.atp.Switch;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,7 +34,6 @@ public class HomePage_Global extends BasePage {
 	WebDriverWait wait;
 	WebDriver driver;
 	Actions act;
-	
 	@FindBy(xpath="//a[@class='logo']") WebElement HomeLink;
 	
 	@FindBy(xpath = "//div[@class='quick-order-label']")
