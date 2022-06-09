@@ -4,9 +4,12 @@ package SRSproject.SRSproject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.io.FileUtils;
@@ -34,6 +37,9 @@ import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender.Size;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class BasePage
 { 
@@ -46,41 +52,45 @@ public class BasePage
 
 	//PCS
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_pcs.properties";
-		public static String configpath="src/main/java/config_staging2/configuration_staging2_pcs.properties";
-	//	public static String configpath ="src/main/java/config_prod/config_prod_pcs.properties";
+	//public static String configpath="src/main/java/config_staging2/configuration_staging2_pcs.properties";
+     	public static String configpath ="src/main/java/config_prod/config_prod_pcs.properties";
 	//	public static String configpath ="src/main/java/config/configuration_pcs.properties"; //QA
 	
 	
 	//QPS
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_qps.properties";
-	//	public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
+	//public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
 	//  public static String configpath ="src/main/java/config_prod/config_prod_qps.properties";
     
+		
 	//glb
 	//	public static String configpath ="src/main/java/config_prod/config_prod_glb.properties";
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_glb.properties";
 	 // public static String configpath= "src/main/java/config_staging2/configuration_staging2_glb.properties";
 	
 	//Aqua-gon
+		// public static String configpath="src/main/java/config_staging/configuration_staging_Aquagon.properties";
 	//public static String configpath="src/main/java/config_staging2/configuration_staging2_Aquagon.properties";
-	//public static String configpath="src/main/java/config_prod/config_prod_Aquagon.properties";
+	  // public static String configpath="src/main/java/config_prod/config_prod_Aquagon.properties";
 		
 	//PEP	
-     //public static String configpath="src/main/java/config_staging2/configuration_staging2_PEP.properties";
+		 //public static String configpath="src/main/java/config_staging/configuration_staging_PEP.properties";
+    //public static String configpath="src/main/java/config_staging2/configuration_staging2_PEP.properties";
 	//public static String configpath="src/main/java/config_prod/config_prod_PEP.properties";
 		
 	//FWP	
-	//public static String configpath ="src/main/java/config_staging2/configuration_staging2_FWP.properties";
+//	//public static String configpath ="src/main/java/config_staging2/configuration_staging2_FWP.properties";
+//	 public static String configpath ="src/main/java/config_staging/configuration_staging_FWP.properties";
 
 		
 	//APS 
     
-	//public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
-	// public static String configpath="src/main/java/config_staging2/configuration_staging2_Aps.properties";
+	// public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+	//public static String configpath="src/main/java/config_staging2/configuration_staging2_Aps.properties";
 	  
-    
+     
 	//TPS 
-	//public static String configpath ="src/main/java/config_prod/config_prod_Tps.properties";
+	  //public static String configpath ="src/main/java/config_prod/config_prod_Tps.properties";
 	 // public static String configpath="src/main/java/config_staging2/configuration_staging2_Tps.properties";
 	
 	//Conely
@@ -172,7 +182,6 @@ public class BasePage
 	public String getScreenshot() throws IOException, InterruptedException
 	{
 		
-		
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir") + "/build/screenshots/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);
@@ -181,14 +190,52 @@ public class BasePage
 		
 
 		try {
+//			String property = System.getProperty("user.dir" )+ "/build/Screenshots" ;
+//			System.out.println(property);
+//			File destinations = new File(property);
+//			FileUtils.cleanDirectory(destinations);
+			
+//			 System.out.println("deleted...");
 			FileUtils.copyFile(src, destination);
 		} catch (IOException e) {
 			System.out.println("screenshot captured failed...");
 		}
-
+		
+		
 		return absolutePath;
+		
 	}
 	
+	public static String takeFullPageScreenShot() throws IOException {
+
+	    JavascriptExecutor jsExec = (JavascriptExecutor)driver;
+
+	    jsExec.executeScript("window.scrollTo(0, 0);"); //Scroll To Top
+
+	    Long innerHeight = (Long) jsExec.executeScript("return window.innerHeight;");
+	    Long scroll = innerHeight;
+
+	    Long scrollHeight = (Long) jsExec.executeScript("return document.body.scrollHeight;"); 
+
+	    scrollHeight = scrollHeight + scroll;
+
+	    do{
+
+	        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	        String path = System.getProperty("user.dir") + "/build/screenshots/" + System.currentTimeMillis() + ".png";
+	        //Unique File Name For Each Screenshot
+	        File destination = new File(path);
+
+	        FileUtils.copyFile(screenshot, destination);
+
+	        jsExec.executeScript("window.scrollTo(0, "+innerHeight+");");
+
+	        innerHeight = innerHeight + scroll;
+
+	    }while(scrollHeight >= innerHeight);
+		return null;
+	}
+
 	public static String   Reportname() {
 		prop = new Properties();
 		return prop.getProperty("site");
@@ -273,7 +320,15 @@ public class BasePage
 			throw new RuntimeException();
 		}
 	}
-	
+	 public static void scrolltoTopPage() {
+			try {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("window.scrollTo(0,-document.body.scrollHeaith)");
+			} catch (Exception e) {
+				e.printStackTrace();
+				throw new RuntimeException();
+			}
+		}
 	
 	
 

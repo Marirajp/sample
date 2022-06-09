@@ -165,6 +165,7 @@ public class QuickOrderPadPage extends BasePage{
 			 Thread.sleep(5000);
 			QuickOrderPad.click();
 			Thread.sleep(3000);
+			scrolltoTopPage();
 			uploadfile.click();
 			 Thread.sleep(1000);
 			//file.sendKeys("C:\\Users\\DCKAP\\Downloads\\Invalidfile1.csv");

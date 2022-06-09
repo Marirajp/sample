@@ -67,7 +67,7 @@ public class QuickOrderPadTest extends BaseTest {
 //
 //	Reporter.log("Item did not get added to cart ",true);
 //}
-	
+	driver.close();
 
   }
 	
@@ -171,7 +171,8 @@ System.out.println("final"+arr);
 		if (ProductNotExistMessage.endsWith("Successfully Passed Validation"));
 		{
 			System.out.println(ProductNotExistMessage);
-			
+			Thread.sleep(3000);
+			driver.close();
 		}
 		
 	}

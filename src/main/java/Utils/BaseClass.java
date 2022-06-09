@@ -344,6 +344,16 @@ public class BaseClass {
 			}
 		}
 		 
+		 public static void scrolltoTopPage() {
+				try {
+					JavascriptExecutor js = (JavascriptExecutor) driver;
+					js.executeScript("window.scrollTo(0,-document.body.scrollHeaith)");
+				} catch (Exception e) {
+					e.printStackTrace();
+					throw new RuntimeException();
+				}
+			}
+		 
 		 public static void waitForAlertIsPresent() {
 			 try {
 				WebDriverWait wb = new WebDriverWait(driver, 50);

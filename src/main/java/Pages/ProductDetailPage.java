@@ -13,12 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import SRSproject.SRSproject.BasePage;
 
-public class ProductDetailPage  extends BasePage{
+public class ProductDetailPage extends BasePage  {
 	WebDriverWait wait;
 	WebDriver driver;
 	Actions act;
-	
-
 	
 	@FindBy(xpath="//strong[text()='Register']") WebElement RegisterLink;
 	@FindBy(xpath="(//div[@class='product attribute part'])[2]") WebElement PartLabel;
@@ -34,16 +32,16 @@ public class ProductDetailPage  extends BasePage{
 	@FindBy(xpath="//div[@id='tab-label-additional']") WebElement Specs;
 	
 	@FindBy(xpath="//span[text()='Brand:']") WebElement brand_label;
-	@FindBy(xpath = "//div[@class='block recentlyviewed']//li[1]//div[1]//div[1]//div[4]//div[1]//form[1]//button[3]//span[1]") WebElement recentlyviwed_add;	
 	
-//	@FindBy(xpath = "/html/body/div[2]/main/div[3]/div/div[6]/div[2]/div/ol/div/div/div[5]/div/li/div/div/div[4]/div[1]/form/button[3]") WebElement recentlyviwed_add;	
+	
+	@FindBy(xpath = "/html/body/div[2]/main/div[3]/div/div[6]/div[2]/div/ol/div/div/div[5]/div/li/div/div/div[4]/div[1]/form/button[3]") WebElement recentlyviwed_add;	
 	
 	@FindBy(xpath="//a[@id='mode-list']") WebElement List;
 	@FindBy(css= "#amasty-shopby-product-list > div.products.wrapper.grid.products-grid > ol > li > div > div.product.details.product-item-details > strong > a") WebElement Product;
 	  @FindBy(id = "search") WebElement SearchField; 
 	  
 	  @FindBy(xpath="//strong[@id='block-related-heading']") WebElement RelatedProduct_Title;
-	  
+	  @FindBy(xpath="(//button[@class='action tocart primary'])[1]") WebElement Related_AddToCart;
 	public ProductDetailPage(WebDriver driver)
 	{
 		this.driver=driver;
@@ -74,7 +72,7 @@ public class ProductDetailPage  extends BasePage{
 		
 	}
 	
-	public String AddingItem() throws InterruptedException 
+	public String AddingItem() throws Exception 
 	{
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -86,7 +84,8 @@ public class ProductDetailPage  extends BasePage{
 			wait.until(ExpectedConditions.visibilityOf(PartLabel));
 			 wait.until(ExpectedConditions.visibilityOf(AddToCart));
 	      Thread.sleep(5000);
-			AddToCart.click();
+	      jsClick(AddToCart);
+//			AddToCart.click();
 			
 				wait.until(ExpectedConditions.visibilityOf(text));
 			System.out.println(	text.getText());
@@ -178,5 +177,10 @@ public String RelatedProductsTitle() throws InterruptedException
 	
 	 js.executeScript("arguments[0].scrollIntoView();", Specs);
 	return RelatedProduct_Title.getText();
+}
+
+public WebElement Related_add_tocart()
+{
+	return Related_AddToCart;
 }
 }

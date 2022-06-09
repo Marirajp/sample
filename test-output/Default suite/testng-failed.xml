@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SRSproject.SRSproject.CartPageTest">
+      <class name="SRSproject.SRSproject.BulkOrderPadTest">
         <methods>
+          <include name="InValid_FileUpload_Validation"/>
           <include name="setUp"/>
-          <include name="CartSubtotalValidationfn"/>
-          <include name="AddItemToCart_Validation"/>
-          <include name="AddItemToCart_ValidationTo_Reorder"/>
         </methods>
-      </class> <!-- SRSproject.SRSproject.CartPageTest -->
+      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

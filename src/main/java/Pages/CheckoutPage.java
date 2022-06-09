@@ -226,14 +226,12 @@ public void ShipVia()
 	
 }
 
-public WebElement PlaceOrder() throws Exception
+public WebElement PlaceOrder()
 
 {
 	
-WebElement findElement = driver.findElement(By.cssSelector("div#checkout-payment-method-load>div>div>div:nth-of-type(2)>div>div:nth-of-type(2)>div:nth-of-type(3)>div>button:nth-of-type(2)"));
-	
-	jsClick(findElement);
-	 
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	 js.executeScript("arguments[0].scrollIntoView();", PlaceOrder);
 	return  PlaceOrder;
 	
 }
@@ -247,8 +245,8 @@ public void scroll() throws InterruptedException
 	//((JavascriptExecutor) driver)
 //    .executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-//	 js.executeScript("arguments[0].scrollIntoView();", reviewlab);
-//	 reviewlab.click();
+	 js.executeScript("arguments[0].scrollIntoView();", reviewlab);
+	 reviewlab.click();
 	 ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,7000)");
 //	 js.executeScript("arguments[0].scrollIntoView();", Terms_checkBx);
 //	 Terms_checkBx.click();

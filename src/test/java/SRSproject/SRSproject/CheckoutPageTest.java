@@ -28,6 +28,7 @@ public class CheckoutPageTest extends BaseTest {
 	
 	CheckoutPage COp;
 	ArrayList<String> MyList = null;
+	int total_No_items;
 	
 	
 	@Test(priority=1, description= "Cart to Checkout Redirection ")
@@ -49,24 +50,12 @@ public class CheckoutPageTest extends BaseTest {
 		ArrayList<String> a1= Cp.getItemName1();
 		// System.out.println(a1);
 		 MyList=a1;
+		 String total_items=Cp.TotalNo_Items();
+		 int number = Integer.parseInt(total_items);
+		 total_No_items=number;
 		// System.out.println(MyList);
 		 Thread.sleep(1000);
-		 WebElement stock_count = driver.findElement(By.xpath("//td[@class ='col stock']/span[1]"));
-	     if (stock_count.isDisplayed() && ! (stock_count.getText().equals("Call for availability"))) {
-	         String s = stock_count.getText();
-	         int i = Integer.parseInt(s);
-	         int quantity = i+1;
-	         driver.findElement(By.xpath("//*[@class='input-text qty'][1]")).sendKeys("" + quantity +"\n");
-	Thread.sleep(9000);
-	         WebElement backorder_msg = driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
-	         Reporter.log("Backorder Warning is Present", true);
-	     }
-	     else {
-	         Thread.sleep(3000);
-	         driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
-	         Reporter.log("Call for Availability is there and Backorder Warning is Present", true);
-	     }
-	     
+		
 		Cp.clickOnProceedToCheckout();
 		String title= driver.getTitle();
 		Assert.assertEquals(title, Constants.CheckoutPageTitle);
@@ -144,8 +133,11 @@ public class CheckoutPageTest extends BaseTest {
 			
 			a2.add(text);
 		}
-		
-		if(MyList.equals(a2))
+		int items= a2.size();
+		System.out.print( total_No_items);
+		 Assert.assertEquals(items,  total_No_items);
+		driver.close();
+		/*if(MyList.equals(a2))
 		{
 			System.out.println("Item in Cart Page"+ MyList);
 			System.out.println("Item in Checkout Page"+ a2);
@@ -156,13 +148,9 @@ public class CheckoutPageTest extends BaseTest {
 			System.out.println("Item in Cart Page"+ MyList);
 			System.out.println("Item in Checkout Page"+ a2);
 			Reporter.log("Not all item from cart are added to checkout page ",true);
-		}}
-	@Test(priority = 4, description = "BackOrder Warning")
-	public void Backorder_Warning_Checkout() throws Exception {
-	    Thread.sleep(8000);
-	    driver.findElement(By.xpath("//div[@class='cart item message error']/span[1]"));
-	    Reporter.log("Backorder Warning is Present", true);
-	}
+		}
+		*/
+		 }
 	
 	/*@Test(priority=4,  description= "Placing Order validation")
 	public void OrderPlacement_Validation() throws InterruptedException 

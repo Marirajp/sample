@@ -1,6 +1,9 @@
 package SRSproject.SRSproject;
 
 import java.util.List;
+
+import static org.junit.Assert.assertArrayEquals;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -52,18 +55,17 @@ public class ProductListPageTest extends BaseTest {
 		String title=plp.GuestUser_ClickRegister();
 		Assert.assertEquals(title, prop.getProperty("Homepage_url"));
 		
-		
+		driver.close();
 		
 	}
 	
 	@Test(priority=2, description= "Adding Item to Cart")
-	public void AddToCart_Validation() throws InterruptedException, IOException 
+	public void AddToCart_Validation() throws Exception 
 	{
 		BasePage.initializtion();
 		Thread.sleep(8000);
 		
 		
-		Thread.sleep(1000);
 			LoginPage Lp = new LoginPage(driver);
 		Lp.ValidLogin();
 		Thread.sleep(8000);
@@ -89,8 +91,8 @@ public class ProductListPageTest extends BaseTest {
 	}
 	
 
-@Test(priority=3, description= "Validating Recently viewed is  List in PLP",enabled = false )
-	public void Recently_viewedItems_validation() throws InterruptedException, IOException 
+@Test(priority=3, description= "Validating Recently viewed is  List in PLP")
+	public void Recently_viewedItems_validation() throws Exception 
 	{
 		Thread.sleep(7000);
 		HomePage hp= new HomePage(driver);
@@ -107,7 +109,6 @@ public class ProductListPageTest extends BaseTest {
 	Thread.sleep(5000);
 	HomePage	Hp = new HomePage(driver);
 	ProductDetailPage	pdp = new ProductDetailPage(driver);
-	Thread.sleep(5000);
 	Hp.BrandSelection();
 	System.out.print(plp.Recently_Viewed().getText());
 	plp.First_Recently_Viewed().click();
@@ -118,5 +119,32 @@ public class ProductListPageTest extends BaseTest {
 				
 	}
 
+@Test(priority=4, description= "Adding Recently viewed Item to cart in PLP")
+public void Recently_viewedItems_Add_validation() throws InterruptedException, IOException 
+{
+	driver.navigate().back();
+	Thread.sleep(8000);
+	plp.Add_Recently_viwed().click();
+	
+	String successmsg= plp.AddItem_recently_viewed();
+	Assert.assertEquals(successmsg.contains(Constants.Success_Msg_Reorder), true);
 
+
+
+}
+
+@Test(priority=5, description= "Validating Recently viewed is  List in PLP")
+public void Recently() throws InterruptedException, IOException 
+{
+	Thread.sleep(7000);
+	HomePage hp= new HomePage(driver);
+	
+	
+	hp.SearchByKeyword();
+	Thread.sleep(10000);
+	driver.close();
+
+}
+
+	
 }

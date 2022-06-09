@@ -42,7 +42,7 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath="/html/body/div[1]/main/div[3]/div/section/div/div[1]/div[1]/a/div[2]/span") WebElement ThirdCategory;
 	
-	@FindBy(id = "ui-id-4") WebElement BrandsHeader;
+	@FindBy(xpath="//span[text()='Brands']") WebElement BrandsHeader;
     
 	@FindBy(className = "ambrands-letter letter-B" ) WebElement B_Aplhabet;
     
@@ -132,16 +132,20 @@ public class HomePage extends BasePage {
 	
 	@FindBy(xpath = "//div[@id='change-branch-modal-alert']/h3")
 	WebElement ConfirmChangeBranch;
-
+	 @FindBy(xpath=" //span[text()='View Open Orders']") WebElement Open_Orders;
+	 @FindBy(xpath="//span[text()='View Invoice History']") WebElement Invoicehistory;
+	
 	
 	@FindBy(xpath = "//div[@class='quick-order-label']")
 	WebElement QuickOrderPad;
 	@FindBy(xpath = "//div[@class='quick-order-modal']")
 	WebElement QuickOrderPopup;
-	
+	@FindBy(xpath = "//span[@class='price-uom'][1]") WebElement Uom;
+	@FindBy(xpath="//p[text()='Our Texas based Florida Water Products & Pool & Electrical Products branches have rebranded to Texas Pool Supply!!!']") WebElement ErrorPopup ; 
+	@FindBy(xpath="//a[@href='https://tps-stg.heritagepoolplus.com/']") WebElement TPS_link ;
 	public HomePage(WebDriver driver)
 	{
-		this.driver=driver;
+		this.driver=driver; 
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -258,7 +262,7 @@ public class HomePage extends BasePage {
 
 	 }
 	
-	public String BrandSelection() throws InterruptedException
+public String BrandSelection() throws InterruptedException
 	
 	{
 		
@@ -529,6 +533,36 @@ public void ValidLogin() throws InterruptedException
 	Singin.click();
 
 }
+public void UnAuthorisedLogin() throws InterruptedException
+
+{
+
+	Thread.sleep(8000);
+	act = new Actions(driver);
+
+	// wait = new WebDriverWait(driver,30);
+	// wait.until(ExpectedConditions.visibilityOf(Account));
+	act.moveToElement(Account).build().perform();
+	LoginEmail.sendKeys(prop.getProperty("unAuthorisedLogin_email"));
+	Password.sendKeys(prop.getProperty("unAuthorisedLogin_Pswd"));
+	Singin.click();
+
+}
+public void TPS_Login() throws InterruptedException
+
+{
+
+	Thread.sleep(8000);
+	act = new Actions(driver);
+
+	// wait = new WebDriverWait(driver,30);
+	// wait.until(ExpectedConditions.visibilityOf(Account));
+	act.moveToElement(Account).build().perform();
+	LoginEmail.sendKeys(prop.getProperty("TPSLogin_email"));
+	Password.sendKeys(prop.getProperty("TPSLogin_Pswd"));
+	Singin.click();
+
+}
 
 public void InValidLogin() throws InterruptedException
 
@@ -621,7 +655,7 @@ public String SignOut() throws Exception {
 //
 //js.executeScript("arguments[0].scrollIntoView();", ReorderPad);
 	waitUntilElementVisibility(SignOut);
-	SignOut.click();
+//	SignOut.click();
 	return driver.getTitle();
 
 }
@@ -631,5 +665,41 @@ public CompanyUsersPage ClickUserManagement() {
 	UserMgmnt.click();
 	return new CompanyUsersPage(driver);
 
+}
+public OpenOrdersPage OpenOrder_Hover() throws InterruptedException
+
+{
+	 
+	Thread.sleep(2000);
+  act= new Actions(driver);
+
+		act.moveToElement(Open_Orders).perform();
+		Open_Orders.click();
+		return new OpenOrdersPage(driver);
+	
+}
+public InvoicePage   Invoice_History() throws Exception
+
+{
+	 
+	Thread.sleep(5000);
+  act= new Actions(driver);
+
+		act.moveToElement(Invoicehistory).perform();
+		Invoicehistory.click();
+		return new InvoicePage(driver);
+		
+	
+}
+public WebElement uom() {
+	return Uom ;
+}
+public WebElement Errorpopupmsg() {
+	return ErrorPopup;
+}
+
+public WebElement TPS_redirected_link() {
+	return TPS_link;
+	
 }
 }

@@ -37,8 +37,8 @@ public class Reorder_Page extends BasePage {
 	
 	@FindBy(xpath="(//input[@id='id-items0sku'])[1]") WebElement Product_input;
 	
-	@FindBy(xpath="(//a[text()[normalize-space()='View']])[2]") WebElement First_List_View;
-	
+	@FindBy(xpath="(//a[text()[normalize-space()='Automation_Valid5']])[1]") WebElement First_List_View;
+	@FindBy(xpath="//a[@href='https://qps-stg2.heritagepoolplus.com/reorder-pads/index/detail/?id=3636']") WebElement Click_view ; 
 	@FindBy(xpath="(//button[@title='Add All Items To Cart'])[1]") WebElement Add_All_Items_btn;
 	
 	@FindBy(xpath = "//p[text()=' Items have been successfully added to your Cart']") WebElement Success_msg;

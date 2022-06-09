@@ -72,7 +72,7 @@ public class ExtentReport extends BasePage implements ITestListener
 		htmlReporter.config().setDocumentTitle("TestExecutionReport");
 		
 	
-		htmlReporter.config().setReportName("Automation Test Results Of: Aqua-gon " );//
+		htmlReporter.config().setReportName("Automation Test Results Of: PCS  " );//
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		htmlReporter.config().setTheme(Theme.STANDARD);
 

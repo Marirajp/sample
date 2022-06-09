@@ -84,7 +84,7 @@ public class BulkOrderPage extends BasePage {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
-		 js.executeScript("arguments[0].scrollIntoView();", ProductLabel);
+		// js.executeScript("arguments[0].scrollIntoView();", ProductLabel);
 		//Product1.sendKeys(prop.getProperty("BulkOrder_Product1"));
 		List <WebElement>  listele= Product;
 	
@@ -94,10 +94,10 @@ public class BulkOrderPage extends BasePage {
 		listele.size();
 		 Thread.sleep(900);
 		
-
-	listele.get(0).click();
+		 listele.get(0).click();
 	listele.get(0).sendKeys(prop.getProperty("BulkOrder_Product1"));
 	
+
 	
 	
 	Thread.sleep(8000);
@@ -128,7 +128,7 @@ public class BulkOrderPage extends BasePage {
 	
 	public void  AddNewLineItem() throws InterruptedException
 	{
-		 Thread.sleep(5000);
+		 Thread.sleep(6000);
 		AddANewLineItem.click();
 		
 		 Thread.sleep(4000);

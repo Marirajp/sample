@@ -76,26 +76,7 @@ public class ReorderPage_Test  extends BaseTest
 }
 	
 	
- @Test(priority=8)
-	public void InvalidFile_Validation() throws InterruptedException, CsvValidationException, IOException 
-	{
-
-		driver.navigate().refresh();
-		Thread.sleep(2000);
-		Rp= new Reorder_Page(driver);
-		HomePage Hp = new HomePage(driver);
-		Hp.clickOnHomeLink();
-		Hp.MyAccount_Hover();
-		Hp.Reorder_Hover();
-		Thread.sleep(8000);
-		Rp.Invalid_Fileupload();
-		Thread.sleep(5000);
-	String notification =Rp.ItemsNotAdded_Notification();
-	Thread.sleep(900);
-	//Rp.close_button_click();
-	Assert.assertEquals(notification.contains(Constants.Notification), true);
-		
-}
+ 
 	
 	@Test(priority=4)
 	public void CreateNewReorder_Redirection()throws InterruptedException, CsvValidationException, IOException 
@@ -143,6 +124,7 @@ public class ReorderPage_Test  extends BaseTest
 		Thread.sleep(18000);
 	
 		String Success_msg= Rp.Items_addtocart_msg();
+		Thread.sleep(5000);
 		Assert.assertEquals(Success_msg.contains("successfully added to your Cart"), true);
         System.out.println(Success_msg);
 
@@ -150,4 +132,25 @@ public class ReorderPage_Test  extends BaseTest
 		
 		
 	}
+	@Test(priority=8)
+	public void InvalidFile_Validation() throws InterruptedException, CsvValidationException, IOException 
+	{
+
+		driver.navigate().refresh();
+		Thread.sleep(2000);
+		Rp= new Reorder_Page(driver);
+		HomePage Hp = new HomePage(driver);
+		Hp.clickOnHomeLink();
+		Hp.MyAccount_Hover();
+		Hp.Reorder_Hover();
+		Thread.sleep(8000);
+		Rp.Invalid_Fileupload();
+		Thread.sleep(5000);
+	String notification =Rp.ItemsNotAdded_Notification();
+	Thread.sleep(900);
+	//Rp.close_button_click();
+	Assert.assertEquals(notification.contains(Constants.Notification), true);
+		Thread.sleep(5000);
+		driver.close();
+}
 }

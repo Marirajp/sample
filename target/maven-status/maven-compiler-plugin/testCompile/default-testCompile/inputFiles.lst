@@ -5,7 +5,6 @@ C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSprojec
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\ApprovedLoginTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\UnAuthorizedAccessToTPS.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\ProductDetailPageTest.java
-C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\Invoice.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\UnAuthorizedAccessToConely.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\ReorderPage_Test.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\StoreLocatorsPageTest.java
@@ -22,10 +21,12 @@ C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSprojec
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\LoginTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\ChangeBranch_shipto_Test.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\BrandLoginMultiBrandTest.java
+C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\InvoiceTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\QuickOrderPadTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\UnAuthorizedAccessToPEP.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\UnApprovedLoginMultiBrandTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\ExtentReporterNG.java
+C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\OpenOrderTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\SRSproject\CheckoutPlaceorder.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\ApprovedLoginMultiBrandTest.java
 C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\src\test\java\SRSproject\LoginTests\UnAuthorizedAccessToEmsco.java
