@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="SRSproject.SRSproject.ReorderpadEditaccesrightsTest">
+        <methods>
+          <include name="Add_Product_to_ReorderPad_from_Open_order"/>
+          <include name="Add_to_Reorder_Pad_in_cartPage"/>
+          <include name="Add_Product_to_ReorderPad_from_PDP"/>
+          <include name="beforeClass"/>
+          <include name="Add_Product_to_ReorderPad_from_Invoice"/>
+          <include name="Add_Product_to_ReorderPad_from_PLP"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.ReorderpadEditaccesrightsTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

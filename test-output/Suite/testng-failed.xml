@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Listeners.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="SRSproject.SRSproject.QuickOrderPadTest">
+        <methods>
+          <include name="Quick_OrderPad_Validation"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.QuickOrderPadTest -->
+      <class name="SRSproject.SRSproject.ReorderPage_Test">
+        <methods>
+          <include name="CreateNew_ReorderPad_AndLegacySearch_Validation"/>
+          <include name="View_Validation"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
+      <class name="SRSproject.SRSproject.BulkOrderPadTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="ListofItem_Validation"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
+      <class name="SRSproject.SRSproject.ProductListPageTest">
+        <methods>
+          <include name="AddToCart_Validation"/>
+          <include name="Recently_viewedItems_validation"/>
+          <include name="Recently_viewedItems_Add_validation"/>
+          <include name="beforeClass"/>
+          <include name="AddToCart_Validation_using_mousehover"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.ProductListPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
