@@ -273,7 +273,7 @@ public class ReorderPage_Test  extends BaseTest
 		Thread.sleep(8000);
 	
 		String Success_msg= Rp.Items_addtocart_msg();
-		Thread.sleep(12000);
+		Thread.sleep(20000);
 		Assert.assertEquals(Success_msg.contains("successfully added to your Cart"), true);
         System.out.println(Success_msg);
  
