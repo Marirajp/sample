@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">33 methods, 5 failed,   28 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="InValid_FileUpload_Validation">InValid_FileUpload_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="ListofItem_Validation">ListofItem_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ProductDetailPageTest" class="method navigator-link" hash-for-method="PDP_RegisterRedirection_GuestValidation">PDP_RegisterRedirection_GuestValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.QuickOrderPadTest" class="method navigator-link" hash-for-method="Quick_OrderPad_FileUpload_Validation">Quick_OrderPad_FileUpload_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.QuickOrderPadTest" class="method navigator-link" hash-for-method="Quick_OrderPad_InvalidFileUpload_Validation">Quick_OrderPad_InvalidFileUpload_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="AddAll_ItemToCart_Validation">AddAll_ItemToCart_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CartPageTest" class="method navigator-link" hash-for-method="AddItemToCart_Validation">AddItemToCart_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="AddItemtoBulkOrder_Validation">AddItemtoBulkOrder_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="AddNewLineItem_Validation">AddNewLineItem_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ProductListPageTest" class="method navigator-link" hash-for-method="AddToCart_Validation">AddToCart_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ProductDetailPageTest" class="method navigator-link" hash-for-method="AddingItemToCart">AddingItemToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="BulOrder_Redirection">BulOrder_Redirection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CartPageTest" class="method navigator-link" hash-for-method="CartSubtotalValidationfn">CartSubtotalValidationfn</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CheckoutPageTest" class="method navigator-link" hash-for-method="CartToCheckout_Validation">CartToCheckout_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CartPageTest" class="method navigator-link" hash-for-method="CartUpdateValidation">CartUpdateValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ChangeBranch_shipto_Test" class="method navigator-link" hash-for-method="ChangeBranch_Validation">ChangeBranch_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ChangeBranch_shipto_Test" class="method navigator-link" hash-for-method="Change_Shito_Validation">Change_Shito_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="CreateNewReorder_Redirection">CreateNewReorder_Redirection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="CreateNew_ReorderPad_Validation">CreateNew_ReorderPad_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CheckoutPageTest" class="method navigator-link" hash-for-method="Date_Validation">Date_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="InvalidFile_Validation">InvalidFile_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CartPageTest" class="method navigator-link" hash-for-method="MiniCartToCartPage_Redirection">MiniCartToCartPage_Redirection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ProductListPageTest" class="method navigator-link" hash-for-method="PLP_RegisterRedirection_GuestValidation">PLP_RegisterRedirection_GuestValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CartPageTest" class="method navigator-link" hash-for-method="ProductInformationValidation">ProductInformationValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CheckoutPageTest" class="method navigator-link" hash-for-method="ProductList_Validation">ProductList_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.QuickOrderPadTest" class="method navigator-link" hash-for-method="Quick_OrderPad_UploadedtoBulkOrder_Validation">Quick_OrderPad_UploadedtoBulkOrder_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.QuickOrderPadTest" class="method navigator-link" hash-for-method="Quick_OrderPad_Validation">Quick_OrderPad_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="ReorderPage_Redirection">ReorderPage_Redirection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.CartPageTest" class="method navigator-link" hash-for-method="Reorder_Validation">Reorder_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="SaveAnReorderList_Validation">SaveAnReorderList_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.BulkOrderPadTest" class="method navigator-link" hash-for-method="UpdateQunatity_Validation">UpdateQunatity_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="UploadFile_Redirection">UploadFile_Redirection</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SRSproject.SRSproject.ReorderPage_Test" class="method navigator-link" hash-for-method="View_Validation">View_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SRSproject.SRSproject.BulkOrderPadTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InValid_FileUpload_Validation">
+                  </a> <!-- InValid_FileUpload_Validation -->
+                  <span class="method-name">InValid_FileUpload_Validation</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;amasty-action-file&quot; data-bind=&quot;i18n: &apos;...&apos;&quot; data-trigger=&quot;trigger-amasty-upload-modal&quot;&gt;Upload CSV&lt;/button&gt; is not clickable at point (111, 415). Other element would receive the click: &lt;div class=&quot;loading-mask&quot; data-role=&quot;loader&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=101.0.4951.54)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;L295-W-MARIRAJP&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63279}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c982b093ebc6138ececc8a85431940cd
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy8.click(Unknown Source)
+	at Pages.BulkOrderPage.InvalidFileupload(BulkOrderPage.java:236)
+	at SRSproject.SRSproject.BulkOrderPadTest.InValid_FileUpload_Validation(BulkOrderPadTest.java:132)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ListofItem_Validation">
+                  </a> <!-- ListofItem_Validation -->
+                  <span class="method-name">ListofItem_Validation</span>
+                  <div class="stack-trace">java.lang.AssertionError: lists don&apos;t have the same size expected [9] but found [0]
+	at SRSproject.SRSproject.BulkOrderPadTest.ListofItem_Validation(BulkOrderPadTest.java:119)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SRSproject.SRSproject.ProductDetailPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PDP_RegisterRedirection_GuestValidation">
+                  </a> <!-- PDP_RegisterRedirection_GuestValidation -->
+                  <span class="method-name">PDP_RegisterRedirection_GuestValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://qps-stg2.heritagepoolplus.com/pentair-stud-1-2-13x11-2-lg-303ss-30747-0152-30747-0152&quot; class=&quot;product photo product-item-photo&quot; tabindex=&quot;-1&quot;&gt;...&lt;/a&gt; is not clickable at point (495, 398). Other element would receive the click: &lt;ul class=&quot;level1 submenu ui-menu ui-widget ui-widget-content ui-corner-all expanded&quot; role=&quot;menu&quot; aria-expanded=&quot;true&quot; style=&quot;display: block; height: 1700px; top: 441px; left: 0px;&quot;&gt;...&lt;/ul&gt;
+  (Session info: chrome=101.0.4951.54)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;L295-W-MARIRAJP&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59323}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 914262fdd91d34c8cc77f10f8e76a2a8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy8.click(Unknown Source)
+	at Pages.ProductListPage.GuestUser_ClickItem(ProductListPage.java:74)
+	at SRSproject.SRSproject.ProductDetailPageTest.PDP_RegisterRedirection_GuestValidation(ProductDetailPageTest.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Register now link redirection)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SRSproject.SRSproject.QuickOrderPadTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Quick_OrderPad_FileUpload_Validation">
+                  </a> <!-- Quick_OrderPad_FileUpload_Validation -->
+                  <span class="method-name">Quick_OrderPad_FileUpload_Validation</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.54)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;L295-W-MARIRAJP&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 65f3703bfd2584ce0df2c88c9e74f9d8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy8.click(Unknown Source)
+	at Pages.QuickOrderPadPage.Fileupload(QuickOrderPadPage.java:139)
+	at SRSproject.SRSproject.QuickOrderPadTest.Quick_OrderPad_FileUpload_Validation(QuickOrderPadTest.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Uploading a CSV file and validating)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Quick_OrderPad_InvalidFileUpload_Validation">
+                  </a> <!-- Quick_OrderPad_InvalidFileUpload_Validation -->
+                  <span class="method-name">Quick_OrderPad_InvalidFileUpload_Validation</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.54)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;L295-W-MARIRAJP&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\DELL\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 65f3703bfd2584ce0df2c88c9e74f9d8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy8.click(Unknown Source)
+	at Pages.QuickOrderPadPage.InvalidFileupload(QuickOrderPadPage.java:168)
+	at SRSproject.SRSproject.QuickOrderPadTest.Quick_OrderPad_InvalidFileUpload_Validation(QuickOrderPadTest.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Uploading CSV file that has Invalid items)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.CartPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddItemToCart_Validation">
+                  </a> <!-- AddItemToCart_Validation -->
+                  <span class="method-name">AddItemToCart_Validation</span>
+                  <em>
+(Adding item to cart using search option in cart page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CartSubtotalValidationfn">
+                  </a> <!-- CartSubtotalValidationfn -->
+                  <span class="method-name">CartSubtotalValidationfn</span>
+                  <em>
+(Subtotal validation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CartUpdateValidation">
+                  </a> <!-- CartUpdateValidation -->
+                  <span class="method-name">CartUpdateValidation</span>
+                  <em>
+(Updating cart Validation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="MiniCartToCartPage_Redirection">
+                  </a> <!-- MiniCartToCartPage_Redirection -->
+                  <span class="method-name">MiniCartToCartPage_Redirection</span>
+                  <em>
+(Minicart to cartpage redirection)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ProductInformationValidation">
+                  </a> <!-- ProductInformationValidation -->
+                  <span class="method-name">ProductInformationValidation</span>
+                  <em>
+(Pricing validaiton)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Reorder_Validation">
+                  </a> <!-- Reorder_Validation -->
+                  <span class="method-name">Reorder_Validation</span>
+                  <em>
+(Adding items to an reorder list)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.ReorderPage_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNewReorder_Redirection">
+                  </a> <!-- CreateNewReorder_Redirection -->
+                  <span class="method-name">CreateNewReorder_Redirection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateNew_ReorderPad_Validation">
+                  </a> <!-- CreateNew_ReorderPad_Validation -->
+                  <span class="method-name">CreateNew_ReorderPad_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidFile_Validation">
+                  </a> <!-- InvalidFile_Validation -->
+                  <span class="method-name">InvalidFile_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ReorderPage_Redirection">
+                  </a> <!-- ReorderPage_Redirection -->
+                  <span class="method-name">ReorderPage_Redirection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveAnReorderList_Validation">
+                  </a> <!-- SaveAnReorderList_Validation -->
+                  <span class="method-name">SaveAnReorderList_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UploadFile_Redirection">
+                  </a> <!-- UploadFile_Redirection -->
+                  <span class="method-name">UploadFile_Redirection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="View_Validation">
+                  </a> <!-- View_Validation -->
+                  <span class="method-name">View_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.BulkOrderPadTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddAll_ItemToCart_Validation">
+                  </a> <!-- AddAll_ItemToCart_Validation -->
+                  <span class="method-name">AddAll_ItemToCart_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddItemtoBulkOrder_Validation">
+                  </a> <!-- AddItemtoBulkOrder_Validation -->
+                  <span class="method-name">AddItemtoBulkOrder_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddNewLineItem_Validation">
+                  </a> <!-- AddNewLineItem_Validation -->
+                  <span class="method-name">AddNewLineItem_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BulOrder_Redirection">
+                  </a> <!-- BulOrder_Redirection -->
+                  <span class="method-name">BulOrder_Redirection</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UpdateQunatity_Validation">
+                  </a> <!-- UpdateQunatity_Validation -->
+                  <span class="method-name">UpdateQunatity_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.ProductDetailPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingItemToCart">
+                  </a> <!-- AddingItemToCart -->
+                  <span class="method-name">AddingItemToCart</span>
+                  <em>
+(Adding Item to Cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.ProductListPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddToCart_Validation">
+                  </a> <!-- AddToCart_Validation -->
+                  <span class="method-name">AddToCart_Validation</span>
+                  <em>
+(Adding Item to Cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PLP_RegisterRedirection_GuestValidation">
+                  </a> <!-- PLP_RegisterRedirection_GuestValidation -->
+                  <span class="method-name">PLP_RegisterRedirection_GuestValidation</span>
+                  <em>
+(Register now link redirection)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.ChangeBranch_shipto_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ChangeBranch_Validation">
+                  </a> <!-- ChangeBranch_Validation -->
+                  <span class="method-name">ChangeBranch_Validation</span>
+                  <em>
+(Changing Branch)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Change_Shito_Validation">
+                  </a> <!-- Change_Shito_Validation -->
+                  <span class="method-name">Change_Shito_Validation</span>
+                  <em>
+(Changing Shipto)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.CheckoutPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CartToCheckout_Validation">
+                  </a> <!-- CartToCheckout_Validation -->
+                  <span class="method-name">CartToCheckout_Validation</span>
+                  <em>
+(Cart to Checkout Redirection )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Date_Validation">
+                  </a> <!-- Date_Validation -->
+                  <span class="method-name">Date_Validation</span>
+                  <em>
+(Date Picker validation and other basic info updation )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ProductList_Validation">
+                  </a> <!-- ProductList_Validation -->
+                  <span class="method-name">ProductList_Validation</span>
+                  <em>
+(Product Listing in checkout as per the list in cart)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SRSproject.SRSproject.QuickOrderPadTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Quick_OrderPad_UploadedtoBulkOrder_Validation">
+                  </a> <!-- Quick_OrderPad_UploadedtoBulkOrder_Validation -->
+                  <span class="method-name">Quick_OrderPad_UploadedtoBulkOrder_Validation</span>
+                  <em>
+(Validating item added from csv to the bulkorder page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Quick_OrderPad_Validation">
+                  </a> <!-- Quick_OrderPad_Validation -->
+                  <span class="method-name">Quick_OrderPad_Validation</span>
+                  <em>
+(Add item from Quick order to by searching item)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\DELL\eclipse-workspace_realtime\srsheritagepool\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;Listeners.ExtentReport&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.ProductListPageTest&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.ProductDetailPageTest&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.CartPageTest&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.CheckoutPageTest&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.QuickOrderPadTest&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.BulkOrderPadTest&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.ReorderPage_Test&quot;/&gt;
+      &lt;class name=&quot;SRSproject.SRSproject.ChangeBranch_shipto_Test&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (8 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(33);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'MiniCartToCartPage_Redirection')
+data.setCell(0, 2, 'SRSproject.SRSproject.CartPageTest')
+data.setCell(0, 3, 79384);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'View_Validation')
+data.setCell(1, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(1, 3, 64391);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'AddingItemToCart')
+data.setCell(2, 2, 'SRSproject.SRSproject.ProductDetailPageTest')
+data.setCell(2, 3, 64320);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Quick_OrderPad_Validation')
+data.setCell(3, 2, 'SRSproject.SRSproject.QuickOrderPadTest')
+data.setCell(3, 3, 61627);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'AddToCart_Validation')
+data.setCell(4, 2, 'SRSproject.SRSproject.ProductListPageTest')
+data.setCell(4, 3, 58123);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Quick_OrderPad_FileUpload_Validation')
+data.setCell(5, 2, 'SRSproject.SRSproject.QuickOrderPadTest')
+data.setCell(5, 3, 55769);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'InvalidFile_Validation')
+data.setCell(6, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(6, 3, 55634);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'CartToCheckout_Validation')
+data.setCell(7, 2, 'SRSproject.SRSproject.CheckoutPageTest')
+data.setCell(7, 3, 48504);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Change_Shito_Validation')
+data.setCell(8, 2, 'SRSproject.SRSproject.ChangeBranch_shipto_Test')
+data.setCell(8, 3, 35380);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'BulOrder_Redirection')
+data.setCell(9, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(9, 3, 35073);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'ReorderPage_Redirection')
+data.setCell(10, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(10, 3, 33742);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'ListofItem_Validation')
+data.setCell(11, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(11, 3, 31252);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'PLP_RegisterRedirection_GuestValidation')
+data.setCell(12, 2, 'SRSproject.SRSproject.ProductListPageTest')
+data.setCell(12, 3, 31195);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'AddItemToCart_Validation')
+data.setCell(13, 2, 'SRSproject.SRSproject.CartPageTest')
+data.setCell(13, 3, 28411);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'PDP_RegisterRedirection_GuestValidation')
+data.setCell(14, 2, 'SRSproject.SRSproject.ProductDetailPageTest')
+data.setCell(14, 3, 27786);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'AddItemtoBulkOrder_Validation')
+data.setCell(15, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(15, 3, 26450);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'Quick_OrderPad_InvalidFileUpload_Validation')
+data.setCell(16, 2, 'SRSproject.SRSproject.QuickOrderPadTest')
+data.setCell(16, 3, 24120);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'Reorder_Validation')
+data.setCell(17, 2, 'SRSproject.SRSproject.CartPageTest')
+data.setCell(17, 3, 23450);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'ProductInformationValidation')
+data.setCell(18, 2, 'SRSproject.SRSproject.CartPageTest')
+data.setCell(18, 3, 23251);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'UploadFile_Redirection')
+data.setCell(19, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(19, 3, 22022);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'AddNewLineItem_Validation')
+data.setCell(20, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(20, 3, 18326);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'ChangeBranch_Validation')
+data.setCell(21, 2, 'SRSproject.SRSproject.ChangeBranch_shipto_Test')
+data.setCell(21, 3, 16785);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'CreateNewReorder_Redirection')
+data.setCell(22, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(22, 3, 16773);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'Quick_OrderPad_UploadedtoBulkOrder_Validation')
+data.setCell(23, 2, 'SRSproject.SRSproject.QuickOrderPadTest')
+data.setCell(23, 3, 16053);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'CreateNew_ReorderPad_Validation')
+data.setCell(24, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(24, 3, 14238);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'SaveAnReorderList_Validation')
+data.setCell(25, 2, 'SRSproject.SRSproject.ReorderPage_Test')
+data.setCell(25, 3, 8853);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'CartUpdateValidation')
+data.setCell(26, 2, 'SRSproject.SRSproject.CartPageTest')
+data.setCell(26, 3, 8346);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'InValid_FileUpload_Validation')
+data.setCell(27, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(27, 3, 6111);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'Date_Validation')
+data.setCell(28, 2, 'SRSproject.SRSproject.CheckoutPageTest')
+data.setCell(28, 3, 4290);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'ProductList_Validation')
+data.setCell(29, 2, 'SRSproject.SRSproject.CheckoutPageTest')
+data.setCell(29, 3, 1600);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'UpdateQunatity_Validation')
+data.setCell(30, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(30, 3, 1188);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'AddAll_ItemToCart_Validation')
+data.setCell(31, 2, 'SRSproject.SRSproject.BulkOrderPadTest')
+data.setCell(31, 3, 1083);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'CartSubtotalValidationfn')
+data.setCell(32, 2, 'SRSproject.SRSproject.CartPageTest')
+data.setCell(32, 3, 468);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 15 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Reorder_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Items are added from cart to Reorder List selected</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CartToCheckout_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Checkout</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">ProductInformationValidation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Items price is same in PDP and Cart Page i.e Cart Price : 10.2 = PDP Price : 10.2</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddNewLineItem_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Items added to bulk order as expected</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddItemtoBulkOrder_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Items added to bulk order as expected</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">ProductList_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Not all item from cart are added to checkout page </span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">AddAll_ItemToCart_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Items added to cart</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">UpdateQunatity_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Items added to bulk order as expected</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">CreateNew_ReorderPad_Validation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Able to create new reorder pad</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">7 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.CartPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.ReorderPage_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.BulkOrderPadTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.ProductDetailPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.ChangeBranch_shipto_Test</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.CheckoutPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">SRSproject.SRSproject.QuickOrderPadTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.ProductListPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">PLP_RegisterRedirection_GuestValidation</span>
+                <span class="method-start">3759 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddToCart_Validation</span>
+                <span class="method-start">34978 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.ProductDetailPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">PDP_RegisterRedirection_GuestValidation</span>
+                <span class="method-start">93104 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddingItemToCart</span>
+                <span class="method-start">121155 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.CartPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">MiniCartToCartPage_Redirection</span>
+                <span class="method-start">185483 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ProductInformationValidation</span>
+                <span class="method-start">264883 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CartSubtotalValidationfn</span>
+                <span class="method-start">288135 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CartUpdateValidation</span>
+                <span class="method-start">288604 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddItemToCart_Validation</span>
+                <span class="method-start">296951 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Reorder_Validation</span>
+                <span class="method-start">325363 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.CheckoutPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">CartToCheckout_Validation</span>
+                <span class="method-start">348813 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Date_Validation</span>
+                <span class="method-start">397318 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ProductList_Validation</span>
+                <span class="method-start">401609 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.QuickOrderPadTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Quick_OrderPad_Validation</span>
+                <span class="method-start">403210 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Quick_OrderPad_FileUpload_Validation</span>
+                <span class="method-start">464839 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Quick_OrderPad_UploadedtoBulkOrder_Validation</span>
+                <span class="method-start">520741 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Quick_OrderPad_InvalidFileUpload_Validation</span>
+                <span class="method-start">536795 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.BulkOrderPadTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">BulOrder_Redirection</span>
+                <span class="method-start">561035 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddItemtoBulkOrder_Validation</span>
+                <span class="method-start">596110 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddNewLineItem_Validation</span>
+                <span class="method-start">622562 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UpdateQunatity_Validation</span>
+                <span class="method-start">640890 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddAll_ItemToCart_Validation</span>
+                <span class="method-start">642079 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ListofItem_Validation</span>
+                <span class="method-start">643164 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">InValid_FileUpload_Validation</span>
+                <span class="method-start">674615 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.ReorderPage_Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">ReorderPage_Redirection</span>
+                <span class="method-start">680936 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UploadFile_Redirection</span>
+                <span class="method-start">714680 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveAnReorderList_Validation</span>
+                <span class="method-start">736703 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CreateNewReorder_Redirection</span>
+                <span class="method-start">745557 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CreateNew_ReorderPad_Validation</span>
+                <span class="method-start">762332 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">View_Validation</span>
+                <span class="method-start">776571 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">InvalidFile_Validation</span>
+                <span class="method-start">840963 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SRSproject.SRSproject.ChangeBranch_shipto_Test</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Change_Shito_Validation</span>
+                <span class="method-start">896599 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ChangeBranch_Validation</span>
+                <span class="method-start">931979 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
