@@ -35,18 +35,20 @@ public class ProductListPageTest extends BaseTest {
 	public void PLP_RegisterRedirection_GuestValidation() throws InterruptedException, IOException 
 	{
 		//BasePage.initializtion();
-		Thread.sleep(1500);
+		Thread.sleep(5000);
 		HomePage hp= new HomePage(driver);
-
+		 Thread.sleep(2000);
+	//	hp.mouseHoverSelectCategory();
 		 
 
 		
 			
 			
 			hp.SearchByKeyword();
+			Thread.sleep(10000);
 
 
-	  Thread.sleep(1500);
+	  Thread.sleep(500);
 		
 		plp = new ProductListPage(driver);
 		
@@ -62,25 +64,25 @@ public class ProductListPageTest extends BaseTest {
 	{
 		//BasePage.initializtion();
 		driver.navigate().back();
-		Thread.sleep(3000);
+		Thread.sleep(9000);
 		
 		 
-
+		Thread.sleep(1000);
 			LoginPage Lp = new LoginPage(driver);
 		Lp.ValidLogin();
-		Thread.sleep(3000);
+		Thread.sleep(8000);
 		
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.SearchByKeyword();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 
 
 	
 		
 		plp = new ProductListPage(driver);
-		  Thread.sleep(4000);
+		  Thread.sleep(3000);
 		
 	String successmsg= plp.AddItem();
 	Assert.assertEquals(successmsg.contains(Constants.Success_Msg_Reorder), true);
@@ -94,18 +96,20 @@ public class ProductListPageTest extends BaseTest {
 	public void AddToCart_Validation_using_mousehover() throws Exception 
 	{
 		
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		
 		HomePage hp= new HomePage(driver);
 		
-		Thread.sleep(1500);
-		hp.mouseHoverSelectCategory();
 		
+		hp.mouseHoverSelectCategory();
+		Thread.sleep(10000);
+
 
 	
 		
 		plp = new ProductListPage(driver);
-		Thread.sleep(1000);
+		  Thread.sleep(3000);
+		
 	String successmsg= plp.AddItem();
 	Assert.assertEquals(successmsg.contains(Constants.Success_Msg_Reorder), true);
 
@@ -118,19 +122,19 @@ public class ProductListPageTest extends BaseTest {
 	@Test(priority=4, description= "Validating Recently viewed is  List in PLP")
 	public void Recently_viewedItems_validation() throws Exception 
 	{
-		Thread.sleep(4000);
+		Thread.sleep(7000);
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.SearchByKeyword();
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		
 	
 	
 	plp.GuestUser_ClickItem();
 	Thread.sleep(3000);
 	driver.navigate().back();
-	Thread.sleep(3000);
+	Thread.sleep(5000);
 	HomePage	Hp = new HomePage(driver);
 	ProductDetailPage	pdp = new ProductDetailPage(driver);
 	Hp.BrandSelection();
@@ -147,7 +151,7 @@ public class ProductListPageTest extends BaseTest {
 public void Recently_viewedItems_Add_validation() throws InterruptedException, IOException 
 {
 	driver.navigate().back();
-	Thread.sleep(5000);
+	Thread.sleep(8000);
 	plp.Add_Recently_viwed().click();
 	
 	String successmsg= plp.AddItem_recently_viewed();
@@ -163,12 +167,12 @@ public void Recently_viewedItems_Add_validation() throws InterruptedException, I
 @Test(priority=6, description= "Validating UOM in PLP")
 public void UOM_Validation() throws InterruptedException, IOException 
 {
-	Thread.sleep(4000);
+	Thread.sleep(7000);
 	HomePage hp= new HomePage(driver);
 	
-	
+	Thread.sleep(3000);
 	hp.SearchByKeyword();
-	Thread.sleep(2000);
+	Thread.sleep(18000);
 	String uom = plp.Uom();
 	String uom1=uom.replaceAll("[^a-zA-Z0-9]", "");
 	String price = plp.Price();
