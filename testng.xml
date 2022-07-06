@@ -10,10 +10,9 @@
     
    
 <class name="SRSproject.SRSproject.ProductListPageTest"/>
-<class name="SRSproject.SRSproject.BulkOrderPadTest"/>
-<class name="SRSproject.SRSproject.CartPageTest"/>
+
 <class name="SRSproject.SRSproject.ReorderPage_Test"/>
-<class name="SRSproject.SRSproject.StoreLocatorsPageTest"/>
+
 
 
   
