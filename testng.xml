@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+		<listener class-name="Listeners.ExtentReport"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+    
+<class name="SRSproject.SRSproject.ReorderPage_Test"/>
+<class name="SRSproject.SRSproject.ProductListPageTest"/>
+<class name="SRSproject.SRSproject.ProductDetailPageTest"/>
+<class name="SRSproject.SRSproject.CartPageTest"/>
+<class name="SRSproject.SRSproject.CheckoutPageTest"/>
+<class name="SRSproject.SRSproject.QuickOrderPadTest"/>
+<class name="SRSproject.SRSproject.BulkOrderPadTest"/>
+<class name="SRSproject.SRSproject.ChangeBranch_shipto_Test"/>
+<class name="SRSproject.SRSproject.OpenOrderTest"/>
+<class name="SRSproject.SRSproject.InvoiceTest"/>
+<class name="SRSproject.SRSproject.HomePage_Brands_Test"/>
+<class name="SRSproject.SRSproject.RegistrationFormTest"/>
+<class name="SRSproject.SRSproject.CompanyUserTest"/>
+<class name="SRSproject.SRSproject.AccountDashboardPageTest"/>
+<class name="SRSproject.SRSproject.BrandPageTest"/>
+<class name="SRSproject.SRSproject.MyAccountPageTest"/>
+<class name="SRSproject.SRSproject.AccountStatementTest"/>
+<class name="SRSproject.SRSproject.LoginTest"/>
+<class name="SRSproject.SRSproject.StoreLocatorsPageTest"/>
+<class name="SRSproject.SRSproject.Cart_With30_ProductsTest"/>
+
+
+  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

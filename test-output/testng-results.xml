@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-07T16:21:57 IST" name="Default suite" finished-at="2022-07-07T16:25:50 IST" duration-ms="233304">
+    <groups>
+    </groups>
+    <test started-at="2022-07-07T16:21:57 IST" name="Default test" finished-at="2022-07-07T16:25:50 IST" duration-ms="233304">
+      <class name="SRSproject.SRSproject.ReorderPadViewAccessrights">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:21:57 IST" name="beforeClass" finished-at="2022-07-07T16:22:01 IST" duration-ms="3489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="ReorderPage_Redirection()[pri:1, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:22:01 IST" name="ReorderPage_Redirection" description="verify the dashborad the view and edit acces has present " finished-at="2022-07-07T16:22:33 IST" duration-ms="32083" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReorderPage_Redirection -->
+        <test-method signature="UploadCSV_and_share_acess_is_enabled_or_not()[pri:2, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:22:33 IST" name="UploadCSV_and_share_acess_is_enabled_or_not" description="Verify UploadCSV and Share acess toggle is enabled or not" finished-at="2022-07-07T16:22:33 IST" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UploadCSV_and_share_acess_is_enabled_or_not -->
+        <test-method signature="View_Validation_add_ReorderpadProducts_to_cart()[pri:3, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:22:33 IST" name="View_Validation_add_ReorderpadProducts_to_cart" description="Verify Delete btn and search product is enabled in reorderpad and adding all items to cart from Reorderpad" finished-at="2022-07-07T16:23:26 IST" duration-ms="52787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- View_Validation_add_ReorderpadProducts_to_cart -->
+        <test-method signature="Add_to_Reorder_Pad_from_cartPage()[pri:4, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:23:26 IST" name="Add_to_Reorder_Pad_from_cartPage" description="verify  to Reorder Pad option is enabled in  Cart" finished-at="2022-07-07T16:24:29 IST" duration-ms="63914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_to_Reorder_Pad_from_cartPage -->
+        <test-method signature="Add_Product_to_ReorderPad_from_PLP()[pri:5, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:24:29 IST" name="Add_Product_to_ReorderPad_from_PLP" description="Verify Add to Reorder Pad option is enabled on PLP" finished-at="2022-07-07T16:24:49 IST" duration-ms="20043" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Product_to_ReorderPad_from_PLP -->
+        <test-method signature="Add_Product_to_ReorderPad_from_PDP()[pri:6, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:24:49 IST" name="Add_Product_to_ReorderPad_from_PDP" description="Add to Reorder Pad option on PDP" finished-at="2022-07-07T16:25:09 IST" duration-ms="19991" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Product_to_ReorderPad_from_PDP -->
+        <test-method signature="Add_Product_to_ReorderPad_from_Invoice()[pri:7, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:25:09 IST" name="Add_Product_to_ReorderPad_from_Invoice" description="Add to Reorder Pad option on Invoice " finished-at="2022-07-07T16:25:36 IST" duration-ms="26907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Product_to_ReorderPad_from_Invoice -->
+        <test-method signature="Add_Product_to_ReorderPad_from_Open_order()[pri:8, instance:SRSproject.SRSproject.ReorderPadViewAccessrights@242b836]" started-at="2022-07-07T16:25:36 IST" name="Add_Product_to_ReorderPad_from_Open_order" description="Add to Reorder Pad option on Openorder" finished-at="2022-07-07T16:25:50 IST" duration-ms="14007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Product_to_ReorderPad_from_Open_order -->
+      </class> <!-- SRSproject.SRSproject.ReorderPadViewAccessrights -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
