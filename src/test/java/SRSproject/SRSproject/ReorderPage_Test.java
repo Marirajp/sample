@@ -266,20 +266,19 @@ public class ReorderPage_Test  extends BaseTest
 		Hp.Reorder_Hover();
 		Thread.sleep(12000);
 	
-		waitUntilElementVisibility(Rp.View_Click());
-		//Rp.View_Click();
+//		waitUntilElementVisibility(Rp.View_Click());
+		Rp.View_Click();
+		Thread.sleep(2000);
 		Rp.Add_All_Items().click();
 		
 		Thread.sleep(5000);
 	
 		String Success_msg= Rp.Items_addtocart_msg();
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 		 System.out.println(Success_msg);
+		 Thread.sleep(2000);
 		Assert.assertEquals(Success_msg.contains(" Items have been successfully added to your Cart"), true);
 //        System.out.println(Success_msg);
  
-
-		
-		
-	}
+}
 }
