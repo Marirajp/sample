@@ -16,14 +16,14 @@
 <class name="SRSproject.SRSproject.QuickOrderPadTest"/>
 <class name="SRSproject.SRSproject.BulkOrderPadTest"/>
 <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test"/>
-<class name="SRSproject.SRSproject.OpenOrderTest"/>
+
 <class name="SRSproject.SRSproject.InvoiceTest"/>
 <class name="SRSproject.SRSproject.HomePage_Brands_Test"/>
 <class name="SRSproject.SRSproject.RegistrationFormTest"/>
 <class name="SRSproject.SRSproject.CompanyUserTest"/>
 <class name="SRSproject.SRSproject.AccountDashboardPageTest"/>
 <class name="SRSproject.SRSproject.BrandPageTest"/>
-<class name="SRSproject.SRSproject.MyAccountPageTest"/>
+
 <class name="SRSproject.SRSproject.AccountStatementTest"/>
 <class name="SRSproject.SRSproject.LoginTest"/>
 <class name="SRSproject.SRSproject.StoreLocatorsPageTest"/>
