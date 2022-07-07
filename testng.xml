@@ -8,9 +8,9 @@
   <test thread-count="5" name="Test">
     <classes>
     
-   
+   <class name="SRSproject.SRSproject.ReorderPage_Test"/>
 <class name="SRSproject.SRSproject.ProductListPageTest"/>
-<class name="SRSproject.SRSproject.ReorderPage_Test"/>
+
 
 
   
