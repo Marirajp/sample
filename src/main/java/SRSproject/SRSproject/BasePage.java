@@ -75,7 +75,7 @@ public class BasePage
 	//PEP	
 		 //public static String configpath="src/main/java/config_staging/configuration_staging_PEP.properties";
    // public static String configpath="src/main/java/config_staging2/configuration_staging2_PEP.properties";
-    public static String configpath="src/main/java/config_prod/config_prod_PEP.properties";
+   // public static String configpath="src/main/java/config_prod/config_prod_PEP.properties";
 		
 	//FWP	
 	//public static String configpath ="src/main/java/config_staging2/configuration_staging2_FWP.properties";
@@ -84,7 +84,7 @@ public class BasePage
 		
 	//APS 
     
-	//public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+	public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
     //public static String configpath="src/main/java/config_staging2/configuration_staging2_Aps.properties";
 	  
      
