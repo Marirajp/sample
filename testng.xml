@@ -11,7 +11,7 @@
 
 
 <class name="SRSproject.SRSproject.AccountStatementTest"/>
-
+<class name="SRSproject.SRSproject.InvoiceTest"/>
 
 
     </classes>
