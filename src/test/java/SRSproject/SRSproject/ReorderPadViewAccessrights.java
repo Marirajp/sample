@@ -72,7 +72,7 @@ public class ReorderPadViewAccessrights extends BaseTest{
 	@Test(priority=3,description = "Verify Delete btn and search product is enabled in reorderpad and adding all items to cart from Reorderpad")
 public void View_Validation_add_ReorderpadProducts_to_cart() throws Exception 
 {
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 		Rp.View_Click();
 		try {
 			
@@ -91,7 +91,7 @@ public void View_Validation_add_ReorderpadProducts_to_cart() throws Exception
 			Thread.sleep(18000);
 
 			String Success_msg= Rp.Items_addtocart_msg();
-			Thread.sleep(15000);
+			Thread.sleep(5000);
 			Assert.assertEquals(Success_msg.contains("successfully added to your Cart"), true);
 		    System.out.println(Success_msg);
 
@@ -105,7 +105,7 @@ public void View_Validation_add_ReorderpadProducts_to_cart() throws Exception
 	 @Test(priority = 4,description =  "verify  to Reorder Pad option is enabled in  Cart")
 	 public void Add_to_Reorder_Pad_from_cartPage() throws InterruptedException {
 		 Rp = new Reorder_Page(driver);
-		 Thread.sleep(18000);
+		 Thread.sleep(2000);
 		 Rp.ViewCart().click();
 		 
 		CartPage Cp = new CartPage(driver);
@@ -154,9 +154,9 @@ public void View_Validation_add_ReorderpadProducts_to_cart() throws Exception
 			pdp=plp.GuestUser_ClickItem();
 			Thread.sleep(3000);
 			
-    if (Rp.addreorderpadPdpenble().isEnabled()) {
+    if (Rp.addreorderpadPdpenble().isDisplayed()) {
     	 Rp.AddReorderpadpdp();
-    	  Thread.sleep(3000);
+    	  Thread.sleep(5000);
 			String	text = driver.findElement(By.xpath("//div[@id='swal2-content']")).getText();
 			
 			Assert.assertEquals("Access Denied. You don't have access.",text);

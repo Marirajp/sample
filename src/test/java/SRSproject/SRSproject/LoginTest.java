@@ -4,6 +4,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,9 +23,9 @@ public class LoginTest extends BaseTest {
 	ProductDetailPage pdp;
 	HomePage Hp;
 
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void LoginValidation() throws Exception {
-		
+	
 		Thread.sleep(3000);
 		Hp = new HomePage(driver);
 		Hp.ValidLogin();
@@ -46,7 +47,7 @@ public class LoginTest extends BaseTest {
 		Hp.confirmLogin(); 
 		Hp.SignOut();
 	}
-	@Test(priority = 0)
+	@Test(priority = 2)
 	public void invalidLoginValidation() throws Exception {
 		Thread.sleep(5000);
 		Hp = new HomePage(driver);
@@ -72,13 +73,16 @@ public class LoginTest extends BaseTest {
 
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 3)
 	public void UnApprovedLoginValidation() throws Exception {
 
 		Thread.sleep(5000);
-		
+		driver.findElement(By.xpath("//button[@class='swal2-close']")).click();
 		HomePage Hp = new HomePage(driver);
+		Hp.clickOnHomeLink();
+		Thread.sleep(3000);
 		Hp.UnApprovedLogin();
+		
 		LoginPage Lp = new LoginPage(driver);
 		Thread.sleep(3000);
 		String errorMsg = Lp.handlePopup();
@@ -92,7 +96,7 @@ public class LoginTest extends BaseTest {
 
 		
 	}
-	@Test(priority = 2)
+	@Test(priority = 4)
 	public void LoginFromPLP() throws Exception {
 //		
 		HomePage hp= new HomePage(driver);
@@ -116,7 +120,7 @@ public class LoginTest extends BaseTest {
 		hp.SignOut();
 	
 		}
-	@Test(priority = 3)
+	@Test(priority = 5)
 	public void LoginFromPDP() throws Exception {
 //		
 	
@@ -141,7 +145,7 @@ public class LoginTest extends BaseTest {
 		
 		}
 	}
-	@Test(priority = 5, description = "validLogin with differsites")
+	@Test(priority = 6, description = "validLogin with differsites")
 	public void UnAuthorisedLogin() throws Exception {
 		Thread.sleep(5000);
 		Hp = new HomePage(driver);

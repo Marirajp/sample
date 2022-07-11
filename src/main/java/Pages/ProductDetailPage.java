@@ -90,7 +90,7 @@ public class ProductDetailPage extends BasePage  {
 		
 			wait.until(ExpectedConditions.visibilityOf(PartLabel));
 			 wait.until(ExpectedConditions.visibilityOf(AddToCart));
-	      Thread.sleep(500);
+	      Thread.sleep(5000);
 	      jsClick(AddToCart);
 //			AddToCart.click();
 			

@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class Constants { 
-
-	public static final String REGISTRATIONFORM_URL="https://www.heritagepoolplus.com/company/account/create";
-//	public static final String REGISTRATIONFORM_URL="https://mcstaging.heritagepoolplus.com/company/account/create";
-//	public static final String REGISTRATIONFORM_URL="https://mcstaging2.heritagepoolplus.com/company/account/create";
+//	
+//	public static final String REGISTRATIONFORM_URL="https://www.heritageplus.com/company/account/create";
+//	public static final String REGISTRATIONFORM_URL="https://mcstaging.heritageplus.com/company/account/create";
+	public static final String REGISTRATIONFORM_URL="https://mcstaging2.heritageplus.com/company/account/create";
 	public static final String First_ERROR_MSG="First name is required";
 	public static final String Last_ERROR_MSG="Last name is required";
 	public static final String ERROR_MSG="This is a required field.";
@@ -25,6 +25,7 @@ public class Constants {
 	public static final String BecomeACustomerTitle="Become A Customer";
 	public static final String SitemapTitle="Sitemap";
 	public static final String TermsPageTitle="Heritage Pool+ Terms & Conditions";
+	public static final String TermsPageTitle1 = "Terms & Conditions";
 	public static final String BulkOrderTitle="Bulk Order";
 	public static final String CartPageTitle="Shopping Cart";
 	public static final String CheckoutPageTitle="Checkout";
@@ -38,9 +39,5 @@ public class Constants {
 	public static final String InvalidErrormsge = "Invalid login or password." ;
 	public static final String OpenOrder_Title = "Open Orders";
 	public static final String Invoice_Title = "Invoice History";
-	
 	public static final String Error_Popup =  "Our Texas based Florida Water Products & Pool & Electrical Products branches have rebranded to Texas Pool Supply!!!" ;
-	public static final String TPS_link_Stg ="https://tps-stg.heritagepoolplus.com/";
-	public static final String TPS_link_Prod ="https://tps.heritagepoolplus.com/" ;
-	
 }

@@ -14,7 +14,8 @@ import SRSproject.SRSproject.BasePage;
 import SRSproject.SRSproject.BaseTest;
 
 public class LoginMultiple extends BaseTest{
-	
+	ProductListPage plp;
+	ProductDetailPage pdp;
 //	HomePage_Global Hpg;
 	HomePage Hp;
 
@@ -22,19 +23,18 @@ public class LoginMultiple extends BaseTest{
 	public void LoginMultipleTimes() throws Exception {
 		Thread.sleep(3000);
 		Hp = new HomePage(driver);
-	
-		for (int i = 0; i < 10; i++) {	
-			  Date d = new Date();
-		System.out.println("Execution Started:"+i +" :"+ d);
+		for (int i = 0; i < 10; i++) {
+			Date d = new Date();
+			System.out.println("Execution start :"+ i+":"+d);
 		Hp.ValidLogin();
-		Thread.sleep(3000);
+		
 		Hp.ChangeBranch();
 		Thread.sleep(5000);
 		Hp.SignOut();
 		Date d1 = new Date();
 		 System.out.println("Execution Ended:"+i +" :" + d1);
-       Thread.sleep(600000);
-      
+		Thread.sleep(1500000);
+
 		}
 }
 	

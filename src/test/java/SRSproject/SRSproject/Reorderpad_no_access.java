@@ -74,7 +74,7 @@ public class Reorderpad_no_access extends BaseTest {
 			hp.mouseHoverSelectCategory();
 			Thread.sleep(10000);
 			try {
-				Rp.AddReorderpad().isEnabled();
+				Rp.AddReorderpad().isDisplayed();
 				Thread.sleep(2000);
 				String	text = driver.findElement(By.xpath("//div[@id='swal2-content']")).getText();
 				
@@ -100,7 +100,7 @@ public class Reorderpad_no_access extends BaseTest {
 			pdp=plp.GuestUser_ClickItem();
 			Thread.sleep(3000);
 			
-			if (Rp.addreorderpadPdpenble().isEnabled()) {
+			if (Rp.addreorderpadPdpenble().isDisplayed()) {
 		    	 Rp.AddReorderpadpdp();
 		    	  Thread.sleep(5000);
 					String	text = driver.findElement(By.xpath("//div[@id='swal2-content']")).getText();

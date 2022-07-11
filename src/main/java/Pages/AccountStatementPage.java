@@ -1,3 +1,4 @@
+
 package Pages;
 
 import java.io.BufferedReader;
@@ -10,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -90,18 +92,18 @@ public class AccountStatementPage extends BasePage {
 		Thread.sleep(3000);
 		
 	}
-	
-	public void AccountStatement() throws InterruptedException {
-		act=new Actions(driver);
-		act.moveToElement(AccountStatement1).perform();
-		AccountStatement1.click();
-		Thread.sleep(3000);
-	}
 	public void AccountStatement2() throws InterruptedException {
 		act=new Actions(driver);
 		act.moveToElement(Account).moveToElement(AccountStatement).perform();
 	//	act.moveToElement(AccountStatement).perform();
 		AccountStatement.click();
+		Thread.sleep(3000);
+	}
+	public void AccountStatement() throws InterruptedException {
+		act=new Actions(driver);
+		Thread.sleep(3000);
+		act.moveToElement(AccountStatement1).perform();
+		AccountStatement1.click();
 		Thread.sleep(3000);
 	}
 	
@@ -155,9 +157,7 @@ public class AccountStatementPage extends BasePage {
 		String TotalBal = TotalBalance.getText();
 		System.out.println(TotalBal);
 		Thread.sleep(3000);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1000)");
-		Thread.sleep(3000);	
+
 		onemonth.isDisplayed();
 		String one = onemonth.getText();
 		System.out.println(one);
@@ -177,6 +177,9 @@ public class AccountStatementPage extends BasePage {
 		InvoiceHastag.isDisplayed();
 		InvoiceHastag.getText();
 		BottomTotalBalance.isDisplayed();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		Thread.sleep(3000);	
 		String BottomTotalBal = BottomTotalBalance.getText();
 		System.out.println(BottomTotalBal);
 		Thread.sleep(3000);
@@ -193,8 +196,9 @@ public class AccountStatementPage extends BasePage {
 	}
 	
 	public void InvoiceId() throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,200)");
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("window.scrollBy(0,300)");
+	//	scrollUpandDownUsingElement(InvoiceID);
 		Thread.sleep(3000);
 		act.moveToElement(InvoiceID).perform();
 		String in = InvoiceID.getText();
@@ -215,14 +219,14 @@ public class AccountStatementPage extends BasePage {
 	
 	public void AccountBill() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1200)");
+		js.executeScript("window.scrollBy(0,1000)");
 		Thread.sleep(3000);
 		AccountBillTrust.isEnabled();
 		AccountBillTrust.getText();
-		
+		AccountBillTrust.click();
 		String newtab = driver.getWindowHandle();
 		System.out.println(newtab);
-		AccountBillTrust.click();
+		
 		Thread.sleep(3000);
 		for(String childTab:driver.getWindowHandles()) {
 			driver.switchTo().window(childTab);
@@ -243,19 +247,41 @@ public class AccountStatementPage extends BasePage {
 		return s2;
 	}
 	
-	public void Downloadfiles() throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,200)");
-		Thread.sleep(3000);
-		act.moveToElement(DownloadCSV).perform();
-		DownloadCSV.getText();
-		DownloadCSV.click();
-		Thread.sleep(3000);
-		act.moveToElement(DownloadXLSX).perform();
-		DownloadXLSX.getText();
-		DownloadXLSX.click();
-		Thread.sleep(3000);
+	public void Downloadfiles() throws InterruptedException, IOException {
+		
+		 String filePath = System.getProperty("user.dir") + "\\DownloadCSV";
+	      //Creating the File object
+	      File file = new File(filePath);
+	      FileUtils.cleanDirectory(file);
+	    
+	      System.out.println("Files deleted........");
+	      Thread.sleep(20000);
+	      act.moveToElement(DownloadCSV).perform();
+	      DownloadCSV.getText();
+			DownloadCSV.click();
+			Thread.sleep(3000);
+			act.moveToElement(DownloadXLSX).perform();
+			DownloadXLSX.getText();
+			DownloadXLSX.click();
+	      System.out.println("File Downloded");
+	    
+		
+		
+		
+	
 	}
+	public boolean IsDispayed()
+	{
+	    try {
+	    	PrintPage.isDisplayed();
+	    	System.out.println("s");
+	    } catch (Exception e) {
+	    	System.out.println("n");
+	        return false;
+	    }
+	    return true;
+	}
+	
 //	public void DownloadFileAvailable() {
 //		File folder = new File(System.getProperty("user.dir") +"\\DownloadCSV");
 //		File[] listOfFiles = folder.listFiles();
@@ -286,7 +312,7 @@ public  int ReadfileData() throws InterruptedException, CsvValidationException, 
 	
 	{
 //		 file .sendKeys(System.getProperty("user.dir") + prop.getProperty("Invalid_csvfile"));
-	 String file = System.getProperty("user.dir") + "\\DownloadCSV\\statement.csv";
+	 String file = System.getProperty("user.dir") + "\\DownloadCSV\\";
 		 
 	 String delimiter = ",";
      

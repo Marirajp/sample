@@ -96,13 +96,13 @@ public class ProductListPageTest extends BaseTest {
 	public void AddToCart_Validation_using_mousehover() throws Exception 
 	{
 		
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.mouseHoverSelectCategory();
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 
 
 	

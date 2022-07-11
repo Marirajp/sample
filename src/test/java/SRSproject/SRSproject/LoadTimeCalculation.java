@@ -12,27 +12,32 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Pages.LoginPage;
-import Utils.BaseClass;
+
 
 public class LoadTimeCalculation extends BasePage  {
 	
 	@BeforeTest
 	public void login() throws Exception {
+//		getbrowser("chrome");
 		
+		
+		initializtion();
+//		getbrowser("chrome");
 		LoginPage Lp = new LoginPage(driver);
 		Lp.ValidLogin();
-		getbrowser("chrome");
+		
 		
 	}
 	@Test
 	public void LoadTime() throws Exception {
 		
+		
 		for (int i = 0; i < 3; i++) {
 		
-//		getbrowser("chrome");
+//		
 		
 		//long startTime = System.currentTimeMillis();
-			WebDriver url = getUrl("https://fis-stg2.heritageplus.com/checkout/cart/");
+			WebDriver url = getUrl("https://cps-stg2.heritageplus.com/rain-bird-1800-series-spray-head-a44120");
 			
 			System.out.println(url);
 			

@@ -191,23 +191,23 @@ public class BulkOrderPage extends BasePage {
 	
 {
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 //		((JavascriptExecutor) driver)
 //	    .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 //		waitUntilElementVisibility(UploadCsv);
 		UploadCsv.click();
-		 Thread.sleep(3000);
+		 Thread.sleep(2000);
 		 file .sendKeys(System.getProperty("user.dir") + prop.getProperty("valid_csvfile"));
 
 //		file.sendKeys(prop.getProperty("valid_csvfile"));
 
 		
 		
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		UploadNow.click();
-		Thread.sleep(8000);
+		Thread.sleep(3000);
 		return new BulkOrderPage(driver);
 	
 }
@@ -239,7 +239,7 @@ public class BulkOrderPage extends BasePage {
 	    .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 		
 		UploadCsv.click();
-		 Thread.sleep(10000);
+		 Thread.sleep(8000);
 		 file .sendKeys(System.getProperty("user.dir") + prop.getProperty("Invalid_csvfile"));
 //		file.sendKeys(prop.getProperty("Invalid_csvfile"));
 
@@ -248,9 +248,9 @@ public class BulkOrderPage extends BasePage {
 		Thread.sleep(3000);
 		
 		UploadNow.click();
-		Thread.sleep(9000);
+		Thread.sleep(5000);
  String No_of_itemsimported= ItemsImported.getText();
-	Thread.sleep(10000);
+	Thread.sleep(8000);
 			Accept.click();
 			
 			return No_of_itemsimported;

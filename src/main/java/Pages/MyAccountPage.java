@@ -215,17 +215,17 @@ SaveButton.click();
 	}
 	
 	public void ChangeBranchPage() throws InterruptedException {
-	
 		act.moveToElement(ReturnToCart).perform();
 		ReturnToCart.click();
-		
-		Thread.sleep(8000);
 		driver.getTitle();
+		Thread.sleep(3000);
 		ChangeBranch.click();
 		Thread.sleep(3000);
 		
-		act.moveToElement(ChangeBranchID).click();
-		ChangeBranchID.sendKeys(Keys.ARROW_DOWN);
+		Select Brand= new Select(ChangeBranchSelection);
+
+		Brand.selectByValue(prop.getProperty("Change_Branch_val"));
+		
 		Thread.sleep(3000);
 
 		ConFirmButton.click();

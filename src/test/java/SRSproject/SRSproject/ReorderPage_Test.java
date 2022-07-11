@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -48,10 +49,9 @@ public class ReorderPage_Test  extends BaseTest
  @Test(priority=2)
 	public void UploadFile_Redirection() throws InterruptedException, CsvValidationException, IOException 
 	{
-	 Thread.sleep(2000);
 		Rp= new Reorder_Page(driver);
 		Rp.Fileupload();
-		Thread.sleep(8000);
+		Thread.sleep(7000);
 	ArrayList<String>List = Rp.GetLineItme();
 	Reorder_list=List;
 	
@@ -144,7 +144,6 @@ public class ReorderPage_Test  extends BaseTest
 		}
 		else
 		{
-			Thread.sleep(1000);
 			String uom1=Rp.First_Product_UOM().getText();
 			String str1 = uom1.replaceAll("[^a-zA-Z0-9]"," "); 
 			String UOM1= 	str1.replaceAll("\\d","");
@@ -209,9 +208,9 @@ public class ReorderPage_Test  extends BaseTest
 		Hp.Reorder_Hover();
 		Thread.sleep(8000);
 		Rp.Invalid_Fileupload();
-		Thread.sleep(5000);
+		Thread.sleep(20000);
 	String notification =Rp.ItemsNotAdded_Notification();
-	Thread.sleep(3000);
+	Thread.sleep(300);
 	//Rp.close_button_click();
 	Assert.assertEquals(notification.contains(Constants.Notification), true);
 		
@@ -232,17 +231,18 @@ public class ReorderPage_Test  extends BaseTest
 	@Test(priority=6)
 	public void CreateNew_ReorderPad_AndLegacySearch_Validation() throws Exception 
 	{
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 	
 		
 		
 
 			
 			Rp.EnterProduct();
+			Thread.sleep(9000);
 			Rp.Enter_LegacyPartNo();
-			Thread.sleep(900);
+			Thread.sleep(9000);
 			Rp.ReorderNameField().sendKeys(prop.getProperty("Reorder_Name2"));
-			Thread.sleep(900);
+			Thread.sleep(9000);
 			
 			Rp.Save_button().click();
 //			Thread.sleep(2000);
@@ -257,31 +257,34 @@ public class ReorderPage_Test  extends BaseTest
 	@Test(priority=7)
 	public void View_Validation() throws Exception 
 	{
-		driver.navigate().refresh();
+		/*driver.navigate().refresh();
 		driver.navigate().refresh();
 		Thread.sleep(8000);
 		Rp= new Reorder_Page(driver);
 		HomePage Hp = new HomePage(driver);
 		Hp.MyAccount_Hover();
-		Hp.Reorder_Hover();
-		Thread.sleep(12000);
-	
-//		waitUntilElementVisibility(Rp.View_Click());
+		Hp.Reorder_Hover();*/
+		Thread.sleep(20000);
+		WebElement findElement = driver.findElement(By.xpath("//a[text()='Help Page']"));
+		scrollUpandDownUsingElement(findElement);
+		//waitUntilElementVisibility(Rp.View_Click());
 		Rp.View_Click();
+		Thread.sleep(1000);
+		((JavascriptExecutor) driver)
+	    .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 		Thread.sleep(2000);
 		Rp.Add_All_Items().click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 	
 		String Success_msg= Rp.Items_addtocart_msg();
-		Thread.sleep(15000);
-		 System.out.println(Success_msg);
-		 Thread.sleep(4000);
-		Assert.assertEquals(Success_msg.contains(" Items have been successfully added to your Cart"), true);
-//        System.out.println(Success_msg);
+		Thread.sleep(20000);
+		Assert.assertEquals(Success_msg.contains("successfully added to your Cart"), true);
+        System.out.println(Success_msg);
  
 
 		
 		
 	}
+	
 }

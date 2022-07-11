@@ -18,7 +18,6 @@ import Pages.CartPage;
 import Pages.HomePage;
 import Pages.InvoicePage;
 import Pages.LoginPage;
-import Pages.OpenOrdersPage;
 import Pages.ProductDetailPage;
 import Pages.ProductListPage;
 import Pages.QuickOrderPadPage;
@@ -66,7 +65,7 @@ public class ReorderpadEditaccesrightsTest extends BaseTest {
 		{
 			Rp= new Reorder_Page(driver);
 			Rp.Fileupload();
-			Thread.sleep(10000);
+			Thread.sleep(8000);
 		ArrayList<String>List = Rp.GetLineItme();
 		Reorder_list=List;
 		
@@ -103,10 +102,10 @@ public class ReorderpadEditaccesrightsTest extends BaseTest {
 			Assert.assertTrue(Rp.Acesstoggle().isEnabled());
 			Thread.sleep(2000);
 			Rp.View_Click();
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 			Rp.Add_All_Items().click();
 			
-			Thread.sleep(20000);
+			Thread.sleep(18000);
 		
 			String Success_msg= Rp.Items_addtocart_msg();
 			Thread.sleep(5000);
@@ -127,7 +126,7 @@ public class ReorderpadEditaccesrightsTest extends BaseTest {
 		CartPage Cp = new CartPage(driver);
 			Thread.sleep(9000);
 			Cp.ReOrderSelection1();
-			Thread.sleep(18000);
+			Thread.sleep(8000);
 			String msg= Cp.Message();
 			System.out.println(msg);
 		String 	Total_items_in_cart = msg.substring(14, 16);
@@ -235,18 +234,8 @@ public class ReorderpadEditaccesrightsTest extends BaseTest {
 			 Assert.assertEquals(Title,Constants.OpenOrder_Title);
 			
 		try {
-			Thread.sleep(2000);
 			driver.findElement(By.xpath("(//td[@class='column column--orderNumber'])[1]")).click();
-			OpenOrdersPage op = new OpenOrdersPage(driver);
-			op.Reorderpadclk();
-			Thread.sleep(3000);
 			
-			InvoicePage Ip = new InvoicePage(driver);
-			
-			Ip.AddTOReorderPad();
-				
-				Thread.sleep(2000);
-				Ip.keepshoping();
 		} catch (Exception e) {
 			System.out.println( "open orderpad is empty");
 			

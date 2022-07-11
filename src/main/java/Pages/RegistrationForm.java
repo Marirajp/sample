@@ -135,7 +135,7 @@ public class RegistrationForm extends BasePage {
 	
 	public String ClickOnRegisternowOnGlobalSite() throws InterruptedException
 	{
-       Thread.sleep(8000);
+     Thread.sleep(3000);
 	    act= new Actions(driver);
 		act.moveToElement(Account).build().perform();
 	
@@ -448,31 +448,24 @@ Select Brand= new Select(Heritage_Brand_Selection);
 
 }
 
-public void Hertiage_Brand_PCS_Selection()
 
-{
-
-Select Brand= new Select(Heritage_Brand_Selection);
-Brand.selectByVisibleText("Pool Contractor Supply");
-
-}
-public void Hertiage_Brand_Aqua_gon_Selection() throws InterruptedException
+public void Hertiage_Brand_CPS_Selection() throws InterruptedException
 
 {
 
 Select Brand= new Select(Heritage_Brand_Selection);
 Thread.sleep(3000);
-Brand.selectByVisibleText("Aqua-Gon");
+Brand.selectByVisibleText("CPS");
 
 }
 
 
-public void Hertiage_Brand_QPS_Selection()
+public void Hertiage_Brand_WCC_Selection()
 
 {
 
 Select Brand= new Select(Heritage_Brand_Selection);
-Brand.selectByVisibleText("Quality Pool Supply");
+Brand.selectByVisibleText("Wolf Creek Company");
 
 }
 

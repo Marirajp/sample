@@ -85,10 +85,10 @@ public class InvoiceTest extends BaseTest {
 	Hp.Account_Hover();
 	Thread.sleep(2000);
 	Hp.Invoice_History();
-	Thread.sleep(10000);
+	Thread.sleep(8000);
 	String poSearch = Ip.POSearch();
 	 invoiceSearch.sendKeys(poSearch);	
-	 Thread.sleep(4000);
+	 Thread.sleep(2000);
 	 Ip.ClickFindIvoiceSearch().click();
 	 
 	 String poName = Ip.PoName().getText();
@@ -200,7 +200,7 @@ public void Downloaded_File_validation() throws Exception
 	Assert.assertEquals(Invoice_count1, orders);
 	Assert.assertEquals(Invoice_count2, orders);
 	Thread.sleep(3000);
-	
+	driver.close();
 }
 }
 	

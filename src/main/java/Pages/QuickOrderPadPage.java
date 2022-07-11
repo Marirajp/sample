@@ -181,11 +181,11 @@ public class QuickOrderPadPage extends BasePage{
 			WebDriverWait wait= new WebDriverWait(driver, 60);
 			wait.until(ExpectedConditions.visibilityOf(ProductNotExistCount));
 			
-			Thread.sleep(16000);
+			Thread.sleep(4000);
 		
 	    String	ProductNotExistMsg=ProductNotExistCount.getText();
 
-			Thread.sleep(10000);
+			Thread.sleep(3000);
 			
 			//WebDriverWait wait= new WebDriverWait(driver, 60);
 //			wait.until(ExpectedConditions.visibilityOf(Accept));

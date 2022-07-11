@@ -19,7 +19,7 @@ public class MiniCartPage extends BasePage {
 	Actions act;
 
 	
-	@FindBy(xpath="//a[@class='action showcart']//i[1]") WebElement MiniCarticon;
+	@FindBy(xpath="//a[@class='action showcart']") WebElement MiniCarticon;
 	@FindBy(xpath="//span[text()='View Cart']") WebElement ViewCartbutton;
 	@FindBy(xpath="//button[@title='Checkout']") WebElement CheckOut_btn;
 	
@@ -41,15 +41,6 @@ public class MiniCartPage extends BasePage {
 		 js.executeScript("arguments[0].scrollIntoView();", ViewCartbutton);
 		ViewCartbutton.click();
 		return new CartPage(driver);
-	}
-
-	public void ViewCart() throws Exception
-	{
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
-		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		ViewCartbutton.click();
-		
-		
 	}
 	
 	public CheckoutPage ClickCheckout()

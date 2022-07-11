@@ -103,9 +103,8 @@ public class CartPage extends BasePage {
 		 
 		 Thread.sleep(5000);
 		 WebDriverWait wait= new WebDriverWait(driver, 80);
-//		 wait.until(ExpectedConditions.visibilityOf(PDP_PriceofProduct));
-		Thread.sleep(3000);
-		scrollUpandDownUsingElement(PDP_PriceofProduct);
+		 wait.until(ExpectedConditions.visibilityOf(PDP_PriceofProduct));
+		
 		String PDP_price= PDP_PriceofProduct.getText();
 		
 		return PDP_price.replaceAll("[$,]", "");	
@@ -119,7 +118,7 @@ public class CartPage extends BasePage {
 		// js.executeScript("arguments[0].scrollIntoView();", NeedHelpmsg);
 		//wait = new WebDriverWait(driver,30);
 		//wait.until(ExpectedConditions.visibilityOf(cartSubtotal));
-		Thread.sleep(2000);
+		Thread.sleep(9000);
 		String subtotal=cartSubtotal.getText();
 		return subtotal.replaceAll("[$,]", "");
 	}

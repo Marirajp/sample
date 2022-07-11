@@ -1,18 +1,29 @@
 package SRSproject.SRSproject;
 
+import java.util.List;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
+import org.apache.tools.ant.taskdefs.condition.Contains;
+import org.jsoup.select.Evaluator.ContainsData;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
+import Pages.BulkOrderPage;
 import Pages.CartPage;
 import Pages.CheckoutPage;
+import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.MiniCartPage;
+import Pages.ProductListPage;
+import Pages.QuickOrderPadPage;
+import Pages.ProductDetailPage;
+import Pages.RegistrationForm;
 import Utils.Constants;
 
 public class CheckoutPageTest extends BaseTest {
@@ -20,6 +31,7 @@ public class CheckoutPageTest extends BaseTest {
 	CheckoutPage COp;
 	ArrayList<String> MyList = null;
 	int total_No_items;
+	
 	
 	@Test(priority=1, description= "Cart to Checkout Redirection ")
 	public void CartToCheckout_Validation() throws InterruptedException, IOException 
@@ -55,7 +67,6 @@ public class CheckoutPageTest extends BaseTest {
 			Assert.assertEquals(title, Constants.CheckoutPageTitle);
 		
 	}
-	
 	@Test(priority=2, description=  "Date Picker validation and other basic info updation ")
 	public void Date_Validation() throws InterruptedException 
 	{

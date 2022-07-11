@@ -19,7 +19,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.opencsv.exceptions.CsvValidationException;
@@ -52,8 +51,8 @@ public class OpenOrdersPage extends BasePage {
 	@FindBy(xpath="//div[text()='Order Qty']") WebElement orderqty;
 	@FindBy(xpath="//div[text()='Invoiced Qty']") WebElement InvoiceQty;
 	@FindBy(xpath="//div[text()='Remaining Qty']") WebElement RemainingQty;
-	@FindBy(xpath="(//input[@class='itemcheckbox'])[1]") WebElement Check ;
-	@FindBy(xpath="//select[@id='select-reorder-pad']") WebElement Reorderpad;
+	
+	
 	
 	
 	
@@ -250,7 +249,7 @@ public int Next_button() throws InterruptedException
 			catch (NoSuchElementException e) {
 			//throw new RuntimeException("This is where you put the message"+e);
 				 Thread.sleep(5000);
-				 List<WebElement> orderlist=  Openorders;
+					List<WebElement> orderlist=  Orders;
 					ArrayList<String> a1= new ArrayList<String>();
 					for (WebElement option:orderlist)
 					{
@@ -318,12 +317,6 @@ public WebElement invoiceQty() {
 public WebElement remainingQty() {
 	
 	return RemainingQty ;
-}
-public WebElement Reorderpadclk () {
-	Check.click();
-		Select reorderlist = new Select(Reorderpad);
-		reorderlist.selectByValue(prop.getProperty("Reorder_List_Value1"));
-		return Reorderpad;
 }
 
 }

@@ -31,24 +31,24 @@ ProductDetailPage pdp;
 	public void PDP_RegisterRedirection_GuestValidation() throws Exception 
 	{
 	//BasePage.initializtion();
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 	
 	
 	HomePage hp= new HomePage(driver);
-
+	 Thread.sleep(2000);
 	 
 	 hp.SearchByKeyword();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		
 		
 	ProductListPage	plp = new ProductListPage(driver);
 	pdp=plp.GuestUser_ClickItem();
-//	Thread.sleep(2000);
+	Thread.sleep(4000);
 
 //pdp = new ProductDetailPage(driver);
 String title=pdp. Guest_clickProductRegister();
 Assert.assertEquals(title, prop.getProperty("Homepage_url"));
-Thread.sleep(500);
+Thread.sleep(600);
 				
 	}
 	
@@ -57,24 +57,24 @@ Thread.sleep(500);
 	{
 		//BasePage.initializtion();
 		driver.navigate().back();
-		Thread.sleep(3000);
+		Thread.sleep(9000);
 		
 		 
-
+		Thread.sleep(1000);
 			LoginPage Lp = new LoginPage(driver);
 		Lp.ValidLogin();
-		Thread.sleep(3000);
+		Thread.sleep(9000);
 		
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.SearchByKeyword();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		
 		
 	ProductListPage	plp = new ProductListPage(driver);
 	pdp=plp.GuestUser_ClickItem();
-	Thread.sleep(1000);
+	Thread.sleep(6000);
 	
 
 String successmsg= pdp.AddingItem();
@@ -90,12 +90,12 @@ Assert.assertEquals(successmsg, Constants.Success_Msg_Reorder);
 	@Test(priority=3, description= "validating Recently viewed Items is in PDP")
 	public void Recently_viewedItems_validation() throws Exception 
 	{
-		Thread.sleep(4000);
+		Thread.sleep(7000);
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.SearchByKeyword();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		
 		
 	ProductListPage	plp = new ProductListPage(driver);
@@ -130,9 +130,9 @@ Assert.assertEquals(tile,"Recently Viewed");
 	{
 		try
 		{
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	pdp.SearchByKeyword();
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		
 		pdp.RelatedProducts();
 	String	tile = pdp.RelatedProductsTitle();
@@ -168,16 +168,16 @@ Assert.assertEquals(tile,"Recently Viewed");
 	@Test(priority=7, description= "Validating UOM in PDP")
 	public void UOM_Validation() throws Exception 
 	{
-		Thread.sleep(4000);
+		Thread.sleep(7000);
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.SearchByKeyword();
 		
-		Thread.sleep(3000);
+		Thread.sleep(18000);
 		ProductListPage	plp = new ProductListPage(driver);
 		pdp=plp.GuestUser_ClickItem();
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 		String uom = pdp.Uom();
 		String uom1=uom.replaceAll("[^a-zA-Z0-9]", "");
 		String price = pdp.Price();

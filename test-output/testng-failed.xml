@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SRSproject.SRSproject.ReorderPage_Test">
+      <class name="SRSproject.SRSproject.StoreLocatorsPageTest">
         <methods>
-          <include name="View_Validation"/>
+          <include name="ChangingBranch_Validation"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- SRSproject.SRSproject.ReorderPage_Test -->
+      </class> <!-- SRSproject.SRSproject.StoreLocatorsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

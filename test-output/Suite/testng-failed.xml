@@ -8,8 +8,9 @@
     <classes>
       <class name="SRSproject.SRSproject.ChangeBranch_shipto_Test">
         <methods>
+          <include name="ChangeBranch_Validation"/>
           <include name="beforeClass"/>
-          <include name="Change_Shito_Validation"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- SRSproject.SRSproject.ChangeBranch_shipto_Test -->
     </classes>
