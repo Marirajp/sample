@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-12T16:55:40 IST" name="Default suite" finished-at="2022-07-12T16:57:38 IST" duration-ms="117348">
+    <groups>
+    </groups>
+    <test started-at="2022-07-12T16:55:40 IST" name="Default test" finished-at="2022-07-12T16:57:38 IST" duration-ms="117348">
+      <class name="SRSproject.SRSproject.CompanyUserTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:SRSproject.SRSproject.CompanyUserTest@223aa2f7]" started-at="2022-07-12T16:55:40 IST" name="beforeClass" finished-at="2022-07-12T16:55:43 IST" duration-ms="3093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="CreateCompanyUser()[pri:0, instance:SRSproject.SRSproject.CompanyUserTest@223aa2f7]" started-at="2022-07-12T16:55:43 IST" name="CreateCompanyUser" finished-at="2022-07-12T16:56:22 IST" duration-ms="38561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateCompanyUser -->
+        <test-method signature="AddNewUserRole()[pri:1, instance:SRSproject.SRSproject.CompanyUserTest@223aa2f7]" started-at="2022-07-12T16:56:22 IST" name="AddNewUserRole" finished-at="2022-07-12T16:57:37 IST" duration-ms="75604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewUserRole -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SRSproject.SRSproject.CompanyUserTest@223aa2f7]" started-at="2022-07-12T16:57:37 IST" name="tearDown" finished-at="2022-07-12T16:57:38 IST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SRSproject.SRSproject.CompanyUserTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
