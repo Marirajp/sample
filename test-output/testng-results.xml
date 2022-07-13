@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-13T13:51:14 IST" name="Default suite" finished-at="2022-07-13T13:54:30 IST" duration-ms="196403">
+    <groups>
+    </groups>
+    <test started-at="2022-07-13T13:51:14 IST" name="Default test" finished-at="2022-07-13T13:54:30 IST" duration-ms="196403">
+      <class name="SRSproject.SRSproject.StoreLocatorsPageTest_QPS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:51:14 IST" name="beforeClass" finished-at="2022-07-13T13:51:18 IST" duration-ms="4660" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="AllBranchValidation()[pri:1, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:51:18 IST" name="AllBranchValidation" finished-at="2022-07-13T13:52:07 IST" duration-ms="48165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AllBranchValidation -->
+        <test-method signature="SelectBranch_RedirectionValidation()[pri:2, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:52:07 IST" name="SelectBranch_RedirectionValidation" finished-at="2022-07-13T13:52:22 IST" duration-ms="15439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectBranch_RedirectionValidation -->
+        <test-method signature="LocationBasedBranchValidation()[pri:4, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:52:22 IST" name="LocationBasedBranchValidation" finished-at="2022-07-13T13:52:43 IST" duration-ms="20770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LocationBasedBranchValidation -->
+        <test-method signature="ZipcodeBasedBranchValidation()[pri:5, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:52:43 IST" name="ZipcodeBasedBranchValidation" finished-at="2022-07-13T13:53:05 IST" duration-ms="22041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ZipcodeBasedBranchValidation -->
+        <test-method signature="GetDirection_RedirectionValidation()[pri:6, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:53:05 IST" name="GetDirection_RedirectionValidation" finished-at="2022-07-13T13:53:23 IST" duration-ms="17757" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetDirection_RedirectionValidation -->
+        <test-method signature="InValidLocationSearch_Validation()[pri:7, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:53:23 IST" name="InValidLocationSearch_Validation" finished-at="2022-07-13T13:53:38 IST" duration-ms="15238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InValidLocationSearch_Validation -->
+        <test-method signature="ChangeBranchDisplayed_LoggedInUser_Validation()[pri:8, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:53:38 IST" name="ChangeBranchDisplayed_LoggedInUser_Validation" finished-at="2022-07-13T13:54:00 IST" duration-ms="22334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeBranchDisplayed_LoggedInUser_Validation -->
+        <test-method signature="ChangingBranch_Validation()[pri:9, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:54:00 IST" name="ChangingBranch_Validation" finished-at="2022-07-13T13:54:30 IST" duration-ms="29828" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangingBranch_Validation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SRSproject.SRSproject.StoreLocatorsPageTest_QPS@5a45133e]" started-at="2022-07-13T13:54:30 IST" name="tearDown" finished-at="2022-07-13T13:54:30 IST" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SRSproject.SRSproject.StoreLocatorsPageTest_QPS -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
