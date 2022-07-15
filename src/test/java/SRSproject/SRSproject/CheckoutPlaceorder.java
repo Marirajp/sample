@@ -1,13 +1,7 @@
 package SRSproject.SRSproject;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-import javax.print.attribute.standard.Copies;
-
-import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -20,8 +14,6 @@ import Pages.CheckoutPage;
 import Pages.HomePage;
 import Pages.LoginPage;
 import Pages.MiniCartPage;
-import Pages.ProductDetailPage;
-import Pages.ProductListPage;
 import Utils.Constants;
 
 public class CheckoutPlaceorder extends BasePage {
@@ -33,7 +25,7 @@ public class CheckoutPlaceorder extends BasePage {
 	String  noofItems1;
 	String Pricetotal ;
 	
-	@Test(priority=1, description= "Adding Item to Cart with correct qty",enabled = false)
+	@Test(priority=1, description= "Adding Item to Cart with correct qty")
 	public void AddingItemToCart() throws Exception 
 	{
 		BasePage.initializtion();
@@ -73,7 +65,7 @@ public class CheckoutPlaceorder extends BasePage {
 		
 	}
 
-	@Test(priority=2, description= "Check the Item are added Cart to Checkout verify ",enabled = false)
+	@Test(priority=2, description= "Check the Item are added Cart to Checkout verify ")
 	public void CheckoutValidation() throws Exception 
 	{
 	Thread.sleep(1000);
@@ -153,10 +145,7 @@ public class CheckoutPlaceorder extends BasePage {
 		
 	}
 	
-@org.testng.annotations.AfterClass(enabled = false)
-public void close() {
-	driver.quit();
-}
+
 
 }
 

@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Pages.HomePage;
-import Utils.Constants;
 
 public class BrandPageTest extends BaseTest {
 	
@@ -15,9 +14,9 @@ public class BrandPageTest extends BaseTest {
 	public void BandsHeaderValid() throws InterruptedException, IOException {
 		Thread.sleep(2000);
 		HP = new HomePage(driver);
-		Thread.sleep(8000); 
+		Thread.sleep(5000);
 		HP. mouseHoverToBrandsA();
-		Thread.sleep(6000);
+		Thread.sleep(5000);
 		HP. mouseHoverToBrandsB();
 		Thread.sleep(5000);
 		String URL = driver.getCurrentUrl();
@@ -55,7 +54,7 @@ public class BrandPageTest extends BaseTest {
 
 		
 		
-		Assert.assertEquals(URL, prop.get("BrandBASF_url"));
+		Assert.assertEquals(URL, prop.get("BrandBalboa_url"));
 		
 	}
 	@Test(priority=3,enabled=true)

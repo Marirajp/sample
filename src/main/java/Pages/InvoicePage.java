@@ -49,11 +49,13 @@ public class InvoicePage extends BasePage{
     @FindBy(xpath="//td[@class='column column--PONumber']") WebElement POName ;
     @FindBy(xpath="(//a[@href='javascript:void(0);'])[3]") WebElement InvoiceNoforSearch;
     @FindBy(xpath="(//td[@class='column column--PONumber'])[3]")WebElement PoNames ;
-                   
-    @FindBy(xpath="(//a[@class='footable-page-link'])[7]") WebElement Nextbtn ;
+
+    @FindBy(xpath="//li[@data-page='next']") WebElement Nextbtn ;
     @FindBy(xpath="//td[@class='column column--InvoiceNumber']") List<WebElement> Invoice ;
     @FindBy(xpath="//td[@class='column column--InvoiceNumber']") List<WebElement> Invoicehistory ;
     @FindBy(xpath="//button[@id='view-orders']") WebElement view_orders;
+    
+    @FindBy(xpath="//span[text()='Invoice History']") WebElement Invoicetitle ;
    @FindBy(xpath = "//span[text()='Download XLSX']")WebElement DownloadXLSX ; 
  
 
@@ -211,8 +213,7 @@ public int Invoicecount() throws Exception {
 	
 	}
 	
-	public WebElement DownloadExcel() throws InterruptedException {
-		Thread.sleep(1000);
+	public WebElement DownloadExcel() {
 		return DownloadXLSX ;
 	}
 
@@ -239,7 +240,9 @@ public int Invoicecount() throws Exception {
 		
 if (size>=10)
 {
+	scrollUpandDownUsingElement(Nextbtn);
 	Nextbtn.click();
+
 	 Thread.sleep(5000);
 	 scrollUpandDownUsingElement(InvoiceBtn);
 	 Checkbox1.click();
@@ -257,6 +260,19 @@ else
 	}
 
 	}
+	public void Second_Page_Listing1() throws Exception{
+
+	try {
+		Thread.sleep(1500);
+		Nextbtn.isDisplayed();
+		jsClick(Nextbtn);
+		Checkbox1.click();
+	}
+	catch (NoSuchElementException e) {
+System.out.print("Consist of Less than 10 open orders");
+}
+	}
+
 	
 public WebElement PoName() {
 		

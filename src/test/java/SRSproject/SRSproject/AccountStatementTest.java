@@ -2,7 +2,6 @@ package SRSproject.SRSproject;
 
 import java.io.IOException;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +12,6 @@ import Pages.LoginPage;
 
 public class AccountStatementTest extends BaseTest {
 	
-
 	AccountStatementPage HP;
 	@Test(priority=1,enabled=true)
 	public void Account() throws Exception {

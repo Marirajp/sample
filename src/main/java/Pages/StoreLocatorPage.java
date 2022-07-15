@@ -324,8 +324,8 @@ Thread.sleep(1000);
 		 WebDriverWait wait = new WebDriverWait(driver,50 );
 			wait.until(ExpectedConditions.visibilityOf(Confirm));
 	 Confirm.click();
-		
-//		 js.executeScript("arguments[0].scrollIntoView();",YourBranch);
+		Thread.sleep(2000);
+		 js.executeScript("arguments[0].scrollIntoView();",YourBranch);
 		 Thread.sleep(10000);
 		 return YourBranch.getText();
 		 

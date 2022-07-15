@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SRSproject.SRSproject.OpenOrderTest">
+      <class name="SRSproject.SRSproject.HomePage_Brands_Test">
         <methods>
-          <include name="OpenOrder_SecondPage_Listing"/>
-          <include name="beforeClass"/>
           <include name="tearDown"/>
+          <include name="CategorySelection_Validation"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- SRSproject.SRSproject.OpenOrderTest -->
+      </class> <!-- SRSproject.SRSproject.HomePage_Brands_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -169,14 +169,14 @@ driver.navigate().back();
 @Test(priority=9)
 	public void ChangingBranch_Validation() throws InterruptedException 
 	{
-	
+	Thread.sleep(1500);
 		HomePage hp= new HomePage(driver);
 		hp.Locations_click();
 		slp = new StoreLocatorPage(driver);
-		Thread.sleep(5000);
+		Thread.sleep(500);
 		slp.YourLocation_EnterLocation();
 		
-		
+		Thread.sleep(3000);
 		//slp.YourLocation_EnterZipcode();
 	String a=	slp.ChangeBranchDropDown();
 		Assert.assertEquals(a,prop.getProperty("Branch2"));

@@ -31,7 +31,7 @@ public class HomePage_Brands_Test extends BaseTest
 	public void homepageglobal() throws InterruptedException, IOException 
 	{
 	//	BasePage.initializtion();
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 		
 		Hp = new HomePage(driver);
 	String	BrandPage= Hp.BrandSelection();
@@ -45,7 +45,7 @@ public class HomePage_Brands_Test extends BaseTest
 	@Test(priority=2, description="Category Selection From layout")
 	public void CategorySelection_Validation() throws InterruptedException 
 	{
-		Thread.sleep(8000);
+		Thread.sleep(1500);
 	
 	
  String CategoryPageTitle= Hp.mouseHoverSelectCategory();
@@ -59,7 +59,7 @@ public class HomePage_Brands_Test extends BaseTest
     @Test(priority=4, description="Logo redirection")
 	public void Logo_Validation() throws InterruptedException 
 	{
-		Thread.sleep(8000);
+		Thread.sleep(2000);
 		
 		Hp.clickOnHomeLink();
 		
@@ -75,12 +75,12 @@ public class HomePage_Brands_Test extends BaseTest
 	@Test(priority=5, description="Site Map link Redirection ")
 	public void siteMap_Redirection_Validation() throws InterruptedException 
 	{
-		Thread.sleep(8000);
+		Thread.sleep(1500);
 	
 		
 
 		 String SiteMapTitle= Hp.Sitemap_Footer_click();
-		 Thread.sleep(1000);
+		 Thread.sleep(500);
 		 driver.navigate().back();
 		 Assert.assertEquals(SiteMapTitle, Constants.SitemapTitle);
 		 
@@ -90,13 +90,13 @@ public class HomePage_Brands_Test extends BaseTest
     @Test(priority=7,  description="Terms link Redirection ")
 	public void Terms_Redirection_Validation() throws InterruptedException 
 	{
-		Thread.sleep(8000);
+		Thread.sleep(1500);
 		
 		
 
 		 String Term_title=	Hp.Terms_Footer_click();
-		 Assert.assertEquals(Term_title, Constants.TermsPageTitle1);
-		 Thread.sleep(1000);
+		 Assert.assertEquals(Term_title, Constants.TermsPageTitle);
+		 Thread.sleep(500);
 		 driver.navigate().back();
 		 Thread.sleep(500);
 	
@@ -129,16 +129,18 @@ public class HomePage_Brands_Test extends BaseTest
 	
      }
 */
-     
-@Test(priority=11,  description="Search by keyword")
+
+
+
+ @Test(priority=11,  description="Search by keyword")
     
     public void Search_KeywordValidation() throws InterruptedException, TimeoutException 
     {
 	
 	Hp.SearchByKeyword();
-	Thread.sleep(10000);
+	Thread.sleep(2500);
 	List<WebElement> list1=Hp.LineItemsList();
-	Thread.sleep(5000);
+	Thread.sleep(2500);
 	ArrayList<String> a1= new ArrayList<String>();
 	for (WebElement option:list1)
 	{
@@ -160,151 +162,154 @@ public class HomePage_Brands_Test extends BaseTest
 	
 	
 	}
-@Test(priority=9, description="Search by keyword and its autosuggestion")
-public void Search_Keyword_Autosuggestion() throws InterruptedException, TimeoutException 
-{
-	
-Hp.SearchByKeyword_Autosuggestion();
-Thread.sleep(10000);
-List<WebElement> list1=Hp.LineItemsListAuto();
-ArrayList<String> a1= new ArrayList<String>();
-
-for (WebElement option:list1)
-{
-String text= option.getText();
-
-a1.add(text);
-}
-System.out.println(a1);
 
 
-if (a1.isEmpty()) 
-{
-	Reporter.log("Items are Not listed in autosuggestion on Search by Keyword",true);
-	assertFalse(a1.isEmpty());
-} else
-{
-	Reporter.log("Items are listed in autosuggestion on Search by Keyword",true);
-	assertFalse(a1.isEmpty());
-}
-System.out.println("*****************");
-
-
-}
-
-@Test(priority=10,  description="Search by Partno and its autosuggestion")
-public void Search_PartNo_Autosuggestion() throws InterruptedException, TimeoutException 
-{
-
-Hp.SearchByPartNo_Autosuggestion();
-Thread.sleep(7000);
-List<WebElement> list1=Hp.LineItemsListAuto();
-ArrayList<String> a1= new ArrayList<String>();
-
-for (WebElement option:list1)
-{
+    @Test(priority=9, description="Search by keyword and its autosuggestion")
+    public void Search_Keyword_Autosuggestion() throws InterruptedException, TimeoutException 
+   {
+    	Thread.sleep(1500);
+    Hp.SearchByKeyword_Autosuggestion();
+    Thread.sleep(3500);
+    List<WebElement> list1=Hp.LineItemsListAuto();
+    ArrayList<String> a1= new ArrayList<String>();
+    
+    for (WebElement option:list1)
+    {
 	String text= option.getText();
 	
 	a1.add(text);
-}
-System.out.println(a1);
-
-
-if (a1.isEmpty()) 
-{
-		Reporter.log("Items are Not listed in autosuggestion on Search by Part No",true);
+    }
+    System.out.println(a1);
+    
+    
+    if (a1.isEmpty()) 
+    {
+		Reporter.log("Items are Not listed in autosuggestion on Search by Keyword",true);
 		assertFalse(a1.isEmpty());
- } 
-else 
-{
-    	Reporter.log("Items are listed in autosuggestion on Search by Part No",true);
+    } else
+    {
+    	Reporter.log("Items are listed in autosuggestion on Search by Keyword",true);
     	assertFalse(a1.isEmpty());
-  }
+    }
+    System.out.println("*****************");
 
-System.out.println("*****************");
 
+   }
 
-}
-
-@Test(priority=12, description="Search by Legacy Part no and its autosuggestion")
-public void Legacy_No_Autosuggestion() throws InterruptedException, TimeoutException 
-{
+    @Test(priority=10,  description="Search by Partno and its autosuggestion")
+    public void Search_PartNo_Autosuggestion() throws InterruptedException, TimeoutException 
+    {
+	Thread.sleep(1500);
+	Hp.SearchByPartNo_Autosuggestion();
+	Thread.sleep(2500);
+	List<WebElement> list1=Hp.LineItemsListAuto();
+	ArrayList<String> a1= new ArrayList<String>();
 	
-Hp.LegacyPartNo_Autosuggestion();
-Thread.sleep(20000);
-List<WebElement> list1=Hp.LineItemsListAuto();
-Thread.sleep(15000);
-ArrayList<String> a1= new ArrayList<String>();
+	for (WebElement option:list1)
+	{
+		String text= option.getText();
+		
+		a1.add(text);
+	}
+	System.out.println(a1);
+	
+	
+	if (a1.isEmpty()) 
+	{
+			Reporter.log("Items are Not listed in autosuggestion on Search by Part No",true);
+			assertFalse(a1.isEmpty());
+     } 
+	else 
+	{
+        	Reporter.log("Items are listed in autosuggestion on Search by Part No",true);
+        	assertFalse(a1.isEmpty());
+      }
+	
+	System.out.println("*****************");
+	
+	
+	}
+    
+    @Test(priority=12, description="Search by Legacy Part no and its autosuggestion")
+    public void Legacy_No_Autosuggestion() throws InterruptedException, TimeoutException 
+   {
+    	
+    Hp.LegacyPartNo_Autosuggestion();
+    Thread.sleep(2000);
+    List<WebElement> list1=Hp.LineItemsListAuto();
+    Thread.sleep(1500);
+    ArrayList<String> a1= new ArrayList<String>();
+    
+    for (WebElement option:list1)
+    {
+	String text= option.getText();
+	
+	a1.add(text);
+    }
+    System.out.println(a1);
+    
+    
+    if (a1.isEmpty()) 
+    {
+		Reporter.log("Items are Not listed in autosuggestion on Search by legacy no",true);
+		assertFalse(a1.isEmpty());
+    } else
+    {
+    	Reporter.log("Items are listed in autosuggestion on Search by legacy no",true);
+    	assertFalse(a1.isEmpty());
+    }
+    
+    a1.size();
+    assertTrue(a1.size()==1);
+    
+    System.out.println("*****************");
 
-for (WebElement option:list1)
-{
-String text= option.getText();
 
-a1.add(text);
-}
-System.out.println(a1);
-
-
-if (a1.isEmpty()) 
-{
-	Reporter.log("Items are Not listed in autosuggestion on Search by legacy no",true);
-	assertFalse(a1.isEmpty());
-} else
-{
-	Reporter.log("Items are listed in autosuggestion on Search by legacy no",true);
-	assertFalse(a1.isEmpty());
-}
-
-a1.size();
-assertTrue(a1.size()==1);
-
-System.out.println("*****************");
-
-
-}
+   }
 
 
 
 @Test(priority=13,  description="Search by keyword")
-
-public void Legacy_SearchResult_Validation() throws InterruptedException, TimeoutException 
-{
-
+    
+    public void Legacy_SearchResult_Validation() throws InterruptedException, TimeoutException 
+    {
 	
-Hp.LegacyPartNo_Autosuggestion();
-Thread.sleep(10000);
-List<WebElement> list1=Hp.LineItemsList();
-Thread.sleep(10000);
-ArrayList<String> a1= new ArrayList<String>();
-for (WebElement option:list1)
-{
-	String text= option.getText();
-	a1.add(text);
-}
-System.out.println(a1);
-if (a1.isEmpty())
-{
-	Reporter.log("Items are Not listed in search result page",true);
-	assertFalse(a1.isEmpty());
+ 	
+    Hp.LegacyPartNo_Autosuggestion();
+	Thread.sleep(2000);
+	List<WebElement> list1=Hp.LineItemsList();
+	Thread.sleep(2000);
+	ArrayList<String> a1= new ArrayList<String>();
+	for (WebElement option:list1)
+	{
+		String text= option.getText();
+		a1.add(text);
+	}
+	System.out.println(a1);
+	if (a1.isEmpty())
+	{
+		Reporter.log("Items are Not listed in search result page",true);
+		assertFalse(a1.isEmpty());
 
-} else
-{
-	Reporter.log("Items are listed in search result page ",true);
-	assertFalse(a1.isEmpty());
-}
-System.out.println("*****************");
-
-
-}
-
-
+    } else
+    {
+    	Reporter.log("Items are listed in search result page ",true);
+    	assertFalse(a1.isEmpty());
+    }
+	System.out.println("*****************");
 	
 	
-
+	}
 
 
 	
 	
+
+
+
+	
+	
+		
 	
 }
 		

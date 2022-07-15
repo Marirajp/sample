@@ -67,7 +67,7 @@ public class ProductListPageTest extends BaseTest {
 		Thread.sleep(9000);
 		
 		 
-		Thread.sleep(1000);
+		
 			LoginPage Lp = new LoginPage(driver);
 		Lp.ValidLogin();
 		Thread.sleep(8000);
@@ -96,13 +96,13 @@ public class ProductListPageTest extends BaseTest {
 	public void AddToCart_Validation_using_mousehover() throws Exception 
 	{
 		
-		Thread.sleep(10000);
+		Thread.sleep(4000);
 		
 		HomePage hp= new HomePage(driver);
 		
 		
 		hp.mouseHoverSelectCategory();
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 
 
 	
@@ -170,9 +170,9 @@ public void UOM_Validation() throws InterruptedException, IOException
 	Thread.sleep(7000);
 	HomePage hp= new HomePage(driver);
 	
-	Thread.sleep(3000);
+	Thread.sleep(5000);
 	hp.SearchByKeyword();
-	Thread.sleep(18000);
+	Thread.sleep(8000);
 	String uom = plp.Uom();
 	String uom1=uom.replaceAll("[^a-zA-Z0-9]", "");
 	String price = plp.Price();

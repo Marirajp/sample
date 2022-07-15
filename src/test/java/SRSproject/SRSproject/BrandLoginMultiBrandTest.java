@@ -21,14 +21,13 @@ public class BrandLoginMultiBrandTest extends BaseTest {
 	//Run  configuration_staging_pcs.properties file & configuration_staging_qps.properties file
 	HomePage Hp;
 	
-	@Test(priority = 1)
-	public void MultiBrandLoginValidation() throws Exception {
+	@Test(priority = 0)
+	public void MultiBrandLoginValidation() throws InterruptedException, IOException {
 		
 		Hp.initializtion();
 		Hp = new HomePage(driver);
 		Hp.ValidLoginMultiBrand();
 		Thread.sleep(5000);
-//		Hp.jstclk();
 		Hp.printBranchList();
 		Thread.sleep(5000);
 
@@ -41,7 +40,6 @@ public class BrandLoginMultiBrandTest extends BaseTest {
 		
 		Hp = new HomePage(driver);
 		Hp.ValidLoginMultiBrand();
-		
 		Thread.sleep(5000);
 		Hp.confirmChangeBranch();
 		

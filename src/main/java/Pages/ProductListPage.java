@@ -36,9 +36,7 @@ public class ProductListPage extends BasePage{
 	
 	@FindBy(css="ol.products>li:nth-of-type(1)>div>a") WebElement firstProduct;
 	@FindBy(xpath="(//input[@name='qty'])[1]") WebElement FirstItem_Qty;
-	@FindBy(xpath="(//input[@name='qty'])[2]") WebElement Seconditem_Qty;
     @FindBy(xpath="(//button[@title='Add to Cart'])[1]") WebElement AddToCart;
-    @FindBy(xpath="(//button[@title='Add to Cart'])[2]") WebElement AddToCarttwo;
     @FindBy(xpath="//p[text()='has been added to your cart']") WebElement text;
     
     @FindBy(xpath="//strong[text()='Recently Viewed']") WebElement Recently_viwed_Title;
@@ -67,7 +65,7 @@ public class ProductListPage extends BasePage{
 		
 		 js.executeScript("arguments[0].scrollIntoView();", List);
 		 
-		 WebDriverWait wait= new WebDriverWait(driver, 30);
+		 WebDriverWait wait= new WebDriverWait(driver, 20);
 			wait.until(ExpectedConditions.visibilityOf(RegisterLink));
 		RegisterLink.click();
 		return driver.getCurrentUrl();
@@ -90,28 +88,17 @@ public class ProductListPage extends BasePage{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		 js.executeScript("arguments[0].scrollIntoView();", List);
-		 try {
-         FirstItem_Qty.sendKeys("2");
-			 
-			 WebDriverWait wait= new WebDriverWait(driver, 50);
-			 wait.until(ExpectedConditions.visibilityOf(AddToCart));
-		AddToCart.click();
 		 
-		wait.until(ExpectedConditions.visibilityOf(text));
-	System.out.println(	text.getText());
-		} catch (Exception e) {
-			Seconditem_Qty.sendKeys("2");
-			 
-			 WebDriverWait wait= new WebDriverWait(driver, 50);
-			 wait.until(ExpectedConditions.visibilityOf(AddToCart));
-		AddToCarttwo.click();
+		 Thread.sleep(500);
+		// jsClick(FirstItem_Qty);
+		FirstItem_Qty.sendKeys("2");
 		 
-		wait.until(ExpectedConditions.visibilityOf(text));
-	System.out.println(	text.getText());
-		}
-		 Thread.sleep(1000);
-	
-		
+		 WebDriverWait wait= new WebDriverWait(driver, 50);
+		 wait.until(ExpectedConditions.visibilityOf(AddToCart));
+	AddToCart.click();
+	 Thread.sleep(8000);
+//	wait.until(ExpectedConditions.visibilityOf(text));
+System.out.println(	text.getText());
 return text.getText();
 
 	

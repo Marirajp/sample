@@ -47,40 +47,62 @@ public class HomePage extends BasePage {
 	@FindBy(className = "ambrands-letter letter-B" ) WebElement B_Aplhabet;
     
 	@FindBy(xpath="(//a[@class='ambrands-inner'])[1]") WebElement Brand;
-	
-	@FindBy(xpath="//a[@id='ui-id-6']") WebElement FirstLayerCategory;
-	
-	@FindBy(xpath="//li[@class='level2 nav-1-2-1 category-item first ui-menu-item']") WebElement SecondLayerCategory;
-	
-	@FindBy(xpath="//button [text()='Change Branch']") WebElement ChangeBranch;
+	//PCS and QPS
+//	@FindBy(xpath="//a[@id='ui-id-6']") WebElement FirstLayerCategory;
+	//Aqua,PEP
+	@FindBy(xpath="(//a[@role='menuitem'])[2]") WebElement FirstLayerCategory;
+//	QPS
+//	@FindBy(xpath="//span[text()='Water Tubes & Air Pillows']") WebElement SecondLayerCategory;
+//	PCS
+//	@FindBy(xpath="//span[text()='Above Ground Pumps']") WebElement SecondLayerCategory;
+	//aqua,PEP
+	@FindBy(xpath="//span[text()='Bulk Chemicals']") WebElement SecondLayerCategory;
+	@FindBy(xpath="//button[text()='Change Branch']") WebElement ChangeBranch;
 	
 	@FindBy(xpath="//button [text()='Change Ship To']") WebElement ChangeShipTo;
 	
 	@FindBy(xpath="//select[@id='branches']") WebElement ChangeBranchSelection;
 	
-//	@FindBy(xpath="/html/body/div[9]/aside[7]/div[2]/footer/button[1]/span") WebElement Confirm;
 	@FindBy(xpath="(//button[@class='action primary'])[6]") WebElement Confirm;
+	///html/body/div[9]/aside[7]/div[2]/footer/button[1]/span
+//	@FindBy(xpath="//*[@id='branches']/option[2]") WebElement YourBranch;
 	
-	//CPS
-//	@FindBy(xpath="//span[text()='CPS ARVADA']")WebElement YourBranch;
+	//PCS
+//	@FindBy(xpath="//span[text()='POOL CONTRACTORS SUPPLY  BATON ROUGE']") WebElement YourBranch;
 	
-	//FIS
+	//QPS
+//	@FindBy(xpath="//span[text()='QUALITY POOL SUPPLY AKRON']") WebElement YourBranch;
+	//Aqua_gon
 	@FindBy(xpath="//span[@class='customer-header-panel-item-value']") WebElement YourBranch;
-//	@FindBy(xpath="/html/body/div[2]/div[1]/div/div/div[1]/div[1]/ul/li[1]/span") WebElement YourBranch;
 	
+	//PEP
+//		@FindBy(xpath="//span[text()='POOL & ELECTRICAL PRODUCTS PHOENIX']") WebElement YourBranch;
+	
+	
+//	"/html/body/div[2]/div[1]/div/div/div[1]/div[1]/ul/li[1]/span"
+//	@FindBy(xpath="//select[@name='shipto']") WebElement Shipto_opt;
+	
+	//PCS
 	@FindBy(xpath="//select[@name='shipto']") WebElement Shipto_opt;
 	
 //	@FindBy(xpath="/html/body/div[9]/aside[5]/div[2]/footer/button[1]/span") WebElement  shiptoConfirm;
 	
+//	@FindBy(xpath="//button[text()='Change Branch']") WebElement  shiptoConfirm;
 	@FindBy(xpath="(//button[@class='action primary'])[5]") WebElement  shiptoConfirm;
 	
-	@FindBy(xpath="//div[@class='customer-header-panel-item']//span[1]") WebElement YourShipto;
-
-	
+//	@FindBy(xpath="(//span[@class='customer-header-panel-item-value'])[4]") WebElement YourShipto;
+	//pcs
+//		@FindBy(xpath="(//span[text()='MALONE CONSTRUCTION ENTERPRISE,9113 BELLE FLEURS COVE,CORDOVA,TN,38018']") WebElement YourShipto;
+	//Aqua
+	@FindBy(xpath="(//span[@class='customer-header-panel-item-value'])[4]") WebElement YourShipto;
+	//PEP //div[@class='customer-header-panel-item']//span[1]
+//	@FindBy(xpath="(//span[text()='TRIBAL WATERS,2630 W. DEER VALLEY RD,PHOENIX,AZ,85027']") WebElement YourShipto;
+	//div[text()='']
     @FindBy(id = "search") WebElement SearchField; 
-    @FindBy(xpath="(//button[@class='action primary'])[4]")WebElement jstclk;
-
-     @FindBy(xpath ="//strong[@class='product name product-item-name ']") List<WebElement> lineItemList;
+    
+ @FindBy(xpath ="//strong[@class='product name product-item-name ']") List<WebElement> lineItemList;
+    
+    
     @FindBy(xpath ="//div[@class='klevu-name']") List<WebElement> lineItemListauto;
    
     
@@ -96,35 +118,42 @@ public class HomePage extends BasePage {
     
     @FindBy(xpath="(//input[@placeholder='Qty'])[1]") WebElement FirstItem_Qty;
     @FindBy(xpath="(//button[@title='Add to Cart'])[1]") WebElement AddToCart;
-    
-
-	@FindBy(xpath = "//div[@id='change-branch-modal-alert']/h3")
-	WebElement ConfirmChangeBranch;
-
-	@FindBy(xpath = "//div[@class='quick-order-label']")
-	WebElement QuickOrderPad;
-	@FindBy(xpath = "//div[@class='quick-order-modal']")
-	WebElement QuickOrderPopup;
+   
 	@FindBy(xpath = "//input[@id='header-email']")
 	WebElement LoginEmail;
 	@FindBy(xpath = "//input[@title='Password']")
 	WebElement Password;
 	@FindBy(xpath = "//button[@class='action login primary']")
-	WebElement Signin;
+	WebElement Singin;
 	@FindBy(xpath = "//span[text()='User Management']")
 	WebElement UserMgmnt;
-
 	@FindBy(xpath = "//a[@class='logout-link']")
 	WebElement SignOut;
-	@FindBy(xpath = "//button[@class='action login primary']")
-	WebElement Singin;
+	@FindBy(xpath = "//div[@id='change-branch-modal-alert']//h3")
+	WebElement confirmpopup;
+	
+	@FindBy(xpath = "//div[@id='change-branch-modal-alert']/h3")
+	WebElement ConfirmChangeBranch;
 	 @FindBy(xpath=" //span[text()='View Open Orders']") WebElement Open_Orders;
 	 @FindBy(xpath="//span[text()='View Invoice History']") WebElement Invoicehistory;
-	 @FindBy(xpath = "//span[@class='price-uom'][1]") WebElement Uom;
-	   @FindBy(xpath="//button[@class='swal2-close']") WebElement CancelBtn ;
-
-	//BRANDS
-		
+	
+	
+	@FindBy(xpath = "//div[@class='quick-order-label']")
+	WebElement QuickOrderPad;
+	@FindBy(xpath = "//div[@class='quick-order-modal']")
+	WebElement QuickOrderPopup;
+	@FindBy(xpath = "//span[@class='price-uom'][1]") WebElement Uom;
+	@FindBy(xpath="//p[text()='Our Texas based Florida Water Products & Pool & Electrical Products branches have rebranded to Texas Pool Supply!!!']") WebElement ErrorPopup ; 
+	@FindBy(xpath="//a[text()=' Texas Pool Supply ']") WebElement TPS_link ;
+//	@FindBy(xpath ="//span[text()='Shop Products']") WebElement Firstmousehover;
+	@FindBy(xpath="(//li[@class='level1 nav-1-1 category-item first parent ui-menu-item'])[1]") WebElement secondmousehover ; 
+   @FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/ul/li[1]/ul/li[2]") WebElement third ;
+   @FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/ul/li[1]/ul/li[2]/ul/li[2]") WebElement branndclk ;
+	@FindBy(xpath="(//div[@class='item-access-result'])[10]") WebElement Vieworderbox;
+	@FindBy(xpath="(//div[@class='item-access-result'])[11]") WebElement Editorderbox;
+   @FindBy(xpath="//button[@class='swal2-close']") WebElement CancelBtn ;
+   //BRANDS
+	
 
 		@FindBy(xpath="//span[normalize-space()='Brands']")
 		WebElement BrandsHeaders;
@@ -150,11 +179,6 @@ public class HomePage extends BasePage {
 		WebElement LetterK_King;
 		@FindBy(xpath="//a[@title='AQP']//span[@class='ambrands-label']")
 		WebElement AQP_Brand;
-		@FindBy(xpath="//p[text()='Our Texas based Florida Water Products & Pool & Electrical Products branches have rebranded to Texas Pool Supply!!!']") WebElement ErrorPopup ; 
-		@FindBy(xpath="//a[text()=' Texas Pool Supply ']") WebElement TPS_link ;
-		@FindBy(xpath="(//li[@class='level1 nav-1-1 category-item first parent ui-menu-item'])[1]") WebElement secondmousehover ; 
-		   @FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/ul/li[1]/ul/li[2]") WebElement third ;
-		   @FindBy(xpath="//*[@id=\"ui-id-2\"]/li[1]/ul/li[1]/ul/li[2]/ul/li[2]") WebElement branndclk ;
 		
 		//ABB
 		@FindBy(xpath="//a[@title='ABB']//span[@class='ambrands-label']")
@@ -175,17 +199,20 @@ public class HomePage extends BasePage {
 		//peptoqps
 		@FindBy(xpath="//strong[@class='filter-title-closed']")
 		WebElement JainProduct;
-		@FindBy(xpath="(//div[@class='item-access-result'])[11]") WebElement Editorderbox;
 		
-		@FindBy(xpath="(//div[@class='item-access-result'])[10]") WebElement Vieworderbox;
 		
-		@FindBy(xpath="//a[@title='Kichler']//span[@class='ambrands-label']")WebElement Kich;
-		@FindBy(xpath="//a[@title='BASF']//span[@class='ambrands-empty'][normalize-space()='B']")WebElement BASF;
-		@FindBy(xpath="//span[text()='YARA']")WebElement YARA;
+		@FindBy(xpath="//a[@title='Dolphin']//span[@class='ambrands-label']")
+		WebElement Dolphin;
+
+		@FindBy(xpath="//button[@class='ambrands-letter letter-D']")
+		WebElement Letter_D ;
+
+	
+		
 		
 	public HomePage(WebDriver driver)
 	{
-		this.driver=driver;
+		this.driver=driver; 
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -204,22 +231,8 @@ public class HomePage extends BasePage {
 				
 		return new HomePage(driver);
 	}
-	public WebElement  ReorderHover() throws InterruptedException
-
-	{
-		
-		Thread.sleep(2000);
-	  act= new Actions(driver);
-	 
-			act.moveToElement(ReorderPad).perform();
-			
-			return  ReorderPad;
-		
-	}
 	
-	public WebElement Cancelbtn() {
-		return CancelBtn ;
-	}
+	
 	public void mouseHoverToShopByCategory()
 	
 	{
@@ -262,7 +275,7 @@ public class HomePage extends BasePage {
 			act.moveToElement(ShopProducts).build().perform();
 			
 			act.moveToElement(secondmousehover).build().perform();
-		
+			
 			act.moveToElement(third).build().perform();
 			
 			branndclk.click();
@@ -270,7 +283,20 @@ public class HomePage extends BasePage {
 			return driver.getTitle();
 			
 	  }
-	
+	public Boolean confirmLogin() throws InterruptedException {
+		Thread.sleep(5000);
+		act = new Actions(driver);
+		wait = new WebDriverWait(driver, 30);
+		wait.until(ExpectedConditions.visibilityOf(QuickOrderPad));
+		act.moveToElement(QuickOrderPad).build().perform();
+		Thread.sleep(5000);
+		Boolean QuickOrderDisplayed = QuickOrderPopup.isDisplayed();
+		System.out.println("Quick Order Popup is enabled :"+ QuickOrderDisplayed);
+		act.moveToElement(QuickOrderPad).build().perform();
+		return QuickOrderDisplayed;
+		
+
+	}
 	 public WebElement  Locations_Link() throws InterruptedException
 	
 	  {
@@ -284,36 +310,7 @@ public class HomePage extends BasePage {
 
 	  }
 	
-	 public void UnAuthorisedLogin() throws InterruptedException
-
-	 {
-
-	 	Thread.sleep(8000);
-	 	act = new Actions(driver);
-
-	 	// wait = new WebDriverWait(driver,30);
-	 	// wait.until(ExpectedConditions.visibilityOf(Account));
-	 	act.moveToElement(Account).build().perform();
-	 	LoginEmail.sendKeys(prop.getProperty("unAuthorisedLogin_email"));
-	 	Password.sendKeys(prop.getProperty("unAuthorisedLogin_Pswd"));
-	 	Singin.click();
-
-	 }
-	 public void TPS_Login() throws InterruptedException
-
-	 {
-
-	 	Thread.sleep(8000);
-	 	act = new Actions(driver);
-
-	 	// wait = new WebDriverWait(driver,30);
-	 	// wait.until(ExpectedConditions.visibilityOf(Account));
-	 	act.moveToElement(Account).build().perform();
-	 	LoginEmail.sendKeys(prop.getProperty("TPSLogin_email"));
-	 	Password.sendKeys(prop.getProperty("TPSLogin_Pswd"));
-	 	Singin.click();
-
-	 }
+	
 	
 	public void Locations_click() throws InterruptedException
 	{
@@ -336,19 +333,19 @@ public class HomePage extends BasePage {
 
 	 }
 	
-	public String BrandSelection() throws InterruptedException
+public String BrandSelection() throws InterruptedException
 	
 	{
 		
-		 Thread.sleep(11000);
+		 Thread.sleep(1000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	 js.executeScript("arguments[0].scrollIntoView();", HomeLink);
 	
 	   act= new Actions(driver);
 	   
-			act.moveToElement(BrandsHeader).perform();
-			Thread.sleep(1000);
+			act.moveToElement(BrandsHeader).build().perform();
+			Thread.sleep(500);
 			Brand.click();
 			Thread.sleep(500);
 			
@@ -366,55 +363,64 @@ public class HomePage extends BasePage {
 	{
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
 		Thread.sleep(2000);
-		WebDriverWait wait = new WebDriverWait(driver, 50);
+		WebDriverWait wait = new WebDriverWait(driver, 2000);
 		wait.until(ExpectedConditions.visibilityOf(ChangeBranch));
 		ChangeBranch.click();
 		
 //		Thread.sleep(1000);
 		waitUntilElementVisibility(ChangeBranchSelection);
 		Select Brand= new Select(ChangeBranchSelection);
-
-		Brand.selectByValue(prop.getProperty("Change_Branch_val"));
+		//for PCS
+//		Brand.selectByValue("10178");
+		//for QPS
+				Brand.selectByValue(prop.getProperty("changebranch_value"));
+//		for PEP
+//		Brand.selectByValue("10242");
 		
+//		 for Aquagon
+//		Brand.selectByValue("10157");
 //		 Thread.sleep(10000);
-		 
+//		 fro FWP
+//				Brand.selectByValue("10248");	
 			//wait.until(ExpectedConditions.visibilityOf(Confirm));
 		 
-		 
+		
+		
 		 Confirm.click();
-
-//		 ((JavascriptExecutor) driver)
-//		 .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
-
-		 Thread.sleep(5000);
+//		 ChangeBranch.click();
 		 ((JavascriptExecutor) driver)
 		 .executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+
+		 waitUntilElementVisibility(YourBranch);
 		 return YourBranch.getText();
-	 
+//	 
 		 
 	   }
 	
-
-	public void confirmChangeBranch() throws InterruptedException {
+	public String confirmChangeBranch() throws Exception {
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
-
+     waitUntilElementVisibility(ChangeBranch);
 		ChangeBranch.click();
 
 		Thread.sleep(1000);
 
 		Select Brand = new Select(ChangeBranchSelection);
-	//CPS
-//		Brand.selectByValue("10034");
-		//FIS
-		Brand.selectByValue("10072");
+		Brand.selectByValue("10013");
 		Confirm.click();
 		String confirmMsg = ConfirmChangeBranch.getText();
 		System.out.println(confirmMsg);
+		return confirmMsg;
+		
+	
 		
 		
 	}
-
-	public String ChangeShipTo() throws InterruptedException
+public String confirmpopupmsge() throws Exception {
+	waitUntilElementVisibility(ConfirmChangeBranch);
+	String text = ConfirmChangeBranch.getText();
+	return text;
+	}
+	public String ChangeShipTo() throws Exception
 	{
 		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, 200);
@@ -445,22 +451,30 @@ public class HomePage extends BasePage {
 		return yourshipto;
 	
 	 	
+	
+	 	
 		 
     }
 	
+public WebElement vieworder() {
+	return Vieworderbox;
+}
 
+public WebElement editorder() {
+	return Editorderbox;
+}
 
 	public void SearchByKeyword() throws InterruptedException 
 
 
 	{
-Thread.sleep(1000);
+
 	SearchField.clear();
 	SearchField.click();
 
 	  SearchField.sendKeys(prop.getProperty("KeywordSearch"));
 		  SearchField.sendKeys(Keys.ENTER);
-		  Thread.sleep(5000);
+//		  Thread.sleep(5000);
      }
 
 
@@ -480,7 +494,7 @@ Thread.sleep(1000);
 
 	  SearchField.sendKeys(prop.getProperty("KeywordSearch"));
 		  
-		  Thread.sleep(1000);
+//		  Thread.sleep(1000);
      }
 
 	public List<WebElement> LineItemsListAuto()
@@ -495,7 +509,7 @@ public void SearchByPartNo_Autosuggestion() throws InterruptedException
 {
 	driver.navigate().refresh();
 	SearchField.clear();
-Thread.sleep(600);
+
 SearchField.click();
 
 	  SearchField.sendKeys(prop.getProperty("PartNoSearch"));
@@ -527,9 +541,9 @@ public String Sitemap_Footer_click() throws InterruptedException
 	((JavascriptExecutor) driver)
      .executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	
- Thread.sleep(8000);
+ Thread.sleep(1500);
  SiteMapLink.click();
- Thread.sleep(2000);
+ Thread.sleep(500);
 	
 
 
@@ -544,11 +558,11 @@ public String Terms_Footer_click() throws InterruptedException
 	((JavascriptExecutor) driver)
      .executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
- Thread.sleep(8000);
+// Thread.sleep(2500);
  TermsLink.click();
 	
 
- Thread.sleep(2000);
+ Thread.sleep(500);
 return driver.getTitle();
 	
 
@@ -572,28 +586,25 @@ public Reorder_Page Reorder_Hover() throws InterruptedException
 	
 	Thread.sleep(2000);
   act= new Actions(driver);
-
+ 
 		act.moveToElement(ReorderPad).perform();
 		ReorderPad.click();
 		return new Reorder_Page(driver);
 	
 }
+public WebElement  ReorderHover() throws InterruptedException
 
-
-public Boolean confirmLogin() throws InterruptedException {
-	Thread.sleep(5000);
-	act = new Actions(driver);
-	wait = new WebDriverWait(driver, 30);
-	wait.until(ExpectedConditions.visibilityOf(QuickOrderPad));
-	act.moveToElement(QuickOrderPad).build().perform();
-	Thread.sleep(10000);
-	Boolean QuickOrderDisplayed = QuickOrderPopup.isDisplayed();
-	System.out.println("Quick Order Popup is enabled :"+ QuickOrderDisplayed);
-	act.moveToElement(QuickOrderPad).build().perform();
-	return QuickOrderDisplayed;
+{
 	
-
+	Thread.sleep(2000);
+  act= new Actions(driver);
+ 
+		act.moveToElement(ReorderPad).perform();
+		
+		return  ReorderPad;
+	
 }
+
 public void ValidLogin() throws InterruptedException
 
 {
@@ -606,9 +617,40 @@ public void ValidLogin() throws InterruptedException
 	act.moveToElement(Account).build().perform();
 	LoginEmail.sendKeys(prop.getProperty("ValidLogin_email"));
 	Password.sendKeys(prop.getProperty("ValidLogin_Pswd"));
-	Signin.click();
+	Singin.click();
 
 }
+public void UnAuthorisedLogin() throws InterruptedException
+
+{
+
+	Thread.sleep(8000);
+	act = new Actions(driver);
+
+	// wait = new WebDriverWait(driver,30);
+	// wait.until(ExpectedConditions.visibilityOf(Account));
+	act.moveToElement(Account).build().perform();
+	LoginEmail.sendKeys(prop.getProperty("unAuthorisedLogin_email"));
+	Password.sendKeys(prop.getProperty("unAuthorisedLogin_Pswd"));
+	Singin.click();
+
+}
+public void TPS_Login() throws InterruptedException
+
+{
+
+	Thread.sleep(8000);
+	act = new Actions(driver);
+
+	// wait = new WebDriverWait(driver,30);
+	// wait.until(ExpectedConditions.visibilityOf(Account));
+	act.moveToElement(Account).build().perform();
+	LoginEmail.sendKeys(prop.getProperty("TPSLogin_email"));
+	Password.sendKeys(prop.getProperty("TPSLogin_Pswd"));
+	Singin.click();
+
+}
+
 public void InValidLogin() throws InterruptedException
 
 {
@@ -624,6 +666,30 @@ public void InValidLogin() throws InterruptedException
 	Singin.click();
 
 }
+public LoginPage UnApprovedLogin() throws InterruptedException
+
+{
+driver.findElement(By.xpath("//button[@class='swal2-close']")).click();
+	String Username = prop.getProperty("UnApprovedLogin_email");
+	String Passwords = prop.getProperty("UnApprovedLogin_Pswd");
+
+	Thread.sleep(5000);
+
+	act = new Actions(driver);
+
+	wait = new WebDriverWait(driver, 30);
+	wait.until(ExpectedConditions.visibilityOf(Account));
+	act.moveToElement(Account).build().perform();
+	LoginEmail.clear();
+	LoginEmail.sendKeys(Username);
+	Password.clear();
+	Password.sendKeys(Passwords);
+
+	Singin.click();
+	return new LoginPage(driver);
+
+}
+
 public void ValidLoginMultiBrand() throws InterruptedException
 
 {
@@ -636,43 +702,32 @@ public void ValidLoginMultiBrand() throws InterruptedException
 	act.moveToElement(Account).build().perform();
 	LoginEmail.sendKeys(prop.getProperty("ValidLoginMulti_email"));
 	Password.sendKeys(prop.getProperty("ValidLoginMulti_Pswd"));
-	Signin.click();
+	Singin.click();
 
 }	
 
-public void jstclk() throws Exception {
-	waitUntilElementVisibility(jstclk);
-	jstclk.click();
-}
 public String printBranchList() throws InterruptedException {
 	((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
-	Thread.sleep(8000);
-		ChangeBranch.click();
+Thread.sleep(8000);
+	ChangeBranch.click();
 
-		Thread.sleep(1000);
-		Select s = new Select(driver.findElement(By.xpath("//select[@name='branch']")));
-		// getting the list of options in the dropdown with getOptions()
-		List<WebElement> op = s.getOptions();
-		int size = op.size();
-		for (int i = 0; i < size; i++) {
-			String options = op.get(i).getText();
-			System.out.println(options);
-		}
+	Thread.sleep(1000);
+	Select s = new Select(driver.findElement(By.xpath("//select[@name='branch']")));
+	// getting the list of options in the dropdown with getOptions()
+	List<WebElement> op = s.getOptions();
+	int size = op.size();
+	for (int i = 0; i < size; i++) {
+		String options = op.get(i).getText();
+		System.out.println(options);
+	}
 
-		return null;
+	return null;
 }
 public void Account_Hover() {
 	wait = new WebDriverWait(driver, 30);
 	wait.until(ExpectedConditions.visibilityOf(Account));
 	act = new Actions(driver);
 	act.moveToElement(Account).build().perform();
-
-}
-
-public CompanyUsersPage ClickUserManagement() {
-
-	UserMgmnt.click();
-	return new CompanyUsersPage(driver);
 
 }
 public String SignOut() throws Exception {
@@ -692,32 +747,11 @@ public String SignOut() throws Exception {
 	return driver.getTitle();
 
 }
-public String confirmpopupmsge() throws Exception {
-	waitUntilElementVisibility(ConfirmChangeBranch);
-	String text = ConfirmChangeBranch.getText();
-	return text;
-	}
-public LoginPage UnApprovedLogin() throws InterruptedException
 
-{
-	
-	Thread.sleep(3000);
-	String Username = prop.getProperty("UnApprovedLogin_email");
-	String Passwords = prop.getProperty("UnApprovedLogin_Pswd");
+public CompanyUsersPage ClickUserManagement() {
 
-	
-
-	act = new Actions(driver);
-
-	wait = new WebDriverWait(driver, 30);
-	wait.until(ExpectedConditions.visibilityOf(Account));
-	act.moveToElement(Account).build().perform();
-
-	LoginEmail.sendKeys(Username);
-	Password.sendKeys(Passwords);
-
-	Signin.click();
-	return new LoginPage(driver);
+	UserMgmnt.click();
+	return new CompanyUsersPage(driver);
 
 }
 public OpenOrdersPage OpenOrder_Hover() throws InterruptedException
@@ -748,8 +782,14 @@ public InvoicePage   Invoice_History() throws Exception
 public WebElement uom() {
 	return Uom ;
 }
+public WebElement Errorpopupmsg() {
+	return ErrorPopup;
+}
 
-//BrandsList And AllBrands
+public WebElement TPS_redirected_link() {
+	return TPS_link;
+	
+}
 
 //BrandsList And AllBrands
 public void mouseHoverToBrandsA() throws InterruptedException
@@ -757,7 +797,7 @@ public void mouseHoverToBrandsA() throws InterruptedException
 {
 	WebDriverWait wait= new WebDriverWait(driver, 20);
 wait.until(ExpectedConditions.visibilityOf(BrandsHeaders));
-act= new Actions(driver);
+  act= new Actions(driver);
 act.moveToElement(BrandsHeaders).moveToElement(BrandsLetter_A).perform();
 Thread.sleep(3000);
 	//act.contextClick(BrandsLetter_B).build().perform();
@@ -768,29 +808,22 @@ public void mouseHoverToBrandsB() throws InterruptedException
 {
 	WebDriverWait wait= new WebDriverWait(driver, 20);
 wait.until(ExpectedConditions.visibilityOf(BrandsHeaders));
-act= new Actions(driver);
+    act= new Actions(driver);
 act.moveToElement(BrandsHeaders).moveToElement(BrandsLetter_B).perform();
 	//act.contextClick(BrandsLetter_B).build().perform();
 	BrandsLetter_B.click();
-	Thread.sleep(2000);
-	act.moveToElement(Letter_K).perform();
-	Letter_K.click();
-	Thread.sleep(2000);
-	act.moveToElement(BrandsLetter_B).perform();
-	BrandsLetter_B.click();
-	Thread.sleep(2000);
-	act.moveToElement(Letter_K).perform();
-	Letter_K.click();
-	Thread.sleep(2000);
-	act.moveToElement(Kich).perform();
-	Thread.sleep(2000);
-	Kich.click();
-	//span[text()='Kichler']
-	if(driver.findElements(By.xpath("//span[text()='Kichler']")).size()!=0) {
-		 System.out.println("its Available");	
-	}else {
-		 System.out.println("its not-Available");
-	}
+	Thread.sleep(5000);
+	act.moveToElement(Letter_K).click().perform();
+	Thread.sleep(5000);
+	act.moveToElement(BrandsLetter_B).click().perform();
+	Thread.sleep(5000);
+	act.moveToElement(Letter_K).click().perform();
+	Thread.sleep(5000);
+	act.moveToElement(Letter_D).click().perform();
+	Thread.sleep(4000);
+	act.moveToElement(Dolphin).click().perform();
+	
+	
 }
 
 
@@ -800,7 +833,7 @@ public void mouseHoverToallBrands() throws InterruptedException
 {
 	WebDriverWait wait= new WebDriverWait(driver, 20);
 wait.until(ExpectedConditions.visibilityOf(BrandsHeaders));
-act= new Actions(driver);
+  act= new Actions(driver);
 act.moveToElement(BrandsHeaders).build().perform();
 act.moveToElement(BrandsHeaders).moveToElement(AllBrands).perform();
 AllBrands.click();
@@ -809,18 +842,10 @@ act.moveToElement(Letter_A).click().perform();
 Thread.sleep(5000);
 act.moveToElement(Letter_B).click().perform();
 Thread.sleep(5000);
-act.moveToElement(BASF).perform();
-BASF.getText();
-BASF.click();
-
-//act.moveToElement(Product_Balboa).click().perform();
+act.moveToElement(Product_Balboa).click().perform();
 Thread.sleep(5000);
 //act.moveToElement(Letter_C).click().perform();
-if(driver.findElements(By.xpath("//span[text()='BASF']")).size()!=0) {
-	 System.out.println("its Available");	
-}else {
-	 System.out.println("its Not- Available");
-}
+
 	
 }
 
@@ -845,7 +870,7 @@ public WebElement Brandverify() throws InterruptedException {
 
 	Thread.sleep(3000);
 //	WebDriverWait wait= new WebDriverWait(driver, 60);
-//wait.until(ExpectedConditions.visibilityOf(AQP_Brand));
+//  wait.until(ExpectedConditions.visibilityOf(AQP_Brand));
 	return AQP_Brand;
 	
 }
@@ -853,7 +878,7 @@ public WebElement BrandVerifyABB() throws InterruptedException {
 
 	Thread.sleep(3000);
 //	WebDriverWait wait= new WebDriverWait(driver, 120);
-//wait.until(ExpectedConditions.visibilityOf(ABB_Brand));
+//  wait.until(ExpectedConditions.visibilityOf(ABB_Brand));
 	return ABB_Brand;
 }
 
@@ -869,16 +894,6 @@ SearchField.sendKeys(prop.getProperty("KeywordSearch1"));
 Thread.sleep(3000);
 SearchGoButton.click();
 	  Thread.sleep(5000);
-	  JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,300)");
-		Thread.sleep(3000);	
-	if(driver.findElements(By.xpath("(//a[normalize-space()='YARA'])[1]")).size()!=0) {
-		
-		 System.out.println("its Available");	
-	 }else {
-		 System.out.println("its NOt -Available");
-	 }
-
 }
 //PCS TO QPS
 public void SearchByKeywordPCS() throws InterruptedException 
@@ -892,20 +907,7 @@ SearchField.click();
 SearchField.sendKeys(prop.getProperty("KeywordSearch2"));
 Thread.sleep(3000);
 SearchGoButton.click();
-JavascriptExecutor js = (JavascriptExecutor) driver;
-js.executeScript("window.scrollBy(0,400)");
-
-
 	  Thread.sleep(5000);
-	//span[text()='Search Results']
-	  if(driver.findElements(By.xpath("(//a[normalize-space()='XCAD'])[1]")).size()!=0) {
-			
-			 System.out.println("its Available");	
-		 }else {
-			 System.out.println("its NOt -Available");
-		 }
-
-
 }
 public void SearchByKeywordPEP() throws InterruptedException 
 
@@ -919,30 +921,7 @@ SearchField.sendKeys(prop.getProperty("KeywordSearch3"));
 Thread.sleep(3000);
 SearchGoButton.click();
 	  Thread.sleep(5000);
-	  if(driver.findElements(By.xpath("//span[text()='Search Results']")).size()!=0) {
-			 System.out.println("its Not-Available");	
-		 }else {
-			 System.out.println("its Available");
-		 }
-
 }
-
-
-
-public void LegacyPartNo_Autosuggestion() throws InterruptedException 
-
-
-{
-	driver.navigate().refresh();
-	SearchField.clear();
-
-SearchField.click();
-
-	  SearchField.sendKeys(prop.getProperty("Legacy_PartNo"));
-		  
-		  Thread.sleep(1000);
-}
-
 
 public WebElement ResultNotFound() {
 	return NotFound;
@@ -954,18 +933,30 @@ public WebElement ResultNotFoundPEP() {
 	return JainProduct;
 }
 
-public WebElement Errorpopupmsg() {
-	return ErrorPopup;
+//public WebElement Firsthover() {
+//	return Firstmousehover ;
+//}
+public WebElement Secondhover() {
+	return secondmousehover ;
 }
 
-public WebElement TPS_redirected_link() {
-	return TPS_link;
-	
+public WebElement thrid() {
+	return third ;
 }
-public WebElement editorder() {
-	return Editorderbox;
+
+public void LegacyPartNo_Autosuggestion() throws InterruptedException 
+
+
+{
+	driver.navigate().refresh();
+	SearchField.clear();
+SearchField.click();
+
+	  SearchField.sendKeys(prop.getProperty("Legacy_PartNo"));
+		  
+		  Thread.sleep(1000);
 }
-public WebElement vieworder() {
-	return Vieworderbox;
+public WebElement Cancelbtn() {
+	return CancelBtn ;
 }
 }

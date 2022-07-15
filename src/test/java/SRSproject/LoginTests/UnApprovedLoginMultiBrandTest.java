@@ -12,49 +12,49 @@ import SRSproject.SRSproject.BaseTest;
 import Utils.Constants;
 
 public class UnApprovedLoginMultiBrandTest extends BaseTest {
+	
+	//Run  configuration_staging.properties file
 	LoginPage Lp;
 	HomePage_Global Hpg;
 
-	@Test(priority = 1)
-	public void UnApprovedLoginMultiBrandValidationFIS() throws InterruptedException {
+	@Test(priority = 1,enabled = false)
+	public void UnApprovedLoginMultiBrandValidationPCS() throws InterruptedException {
 
 		Hpg = new HomePage_Global(driver);
 
-		//Hpg.UnApprovedLoginMultiBrandFIS();
+		Hpg.UnApprovedLoginMultiBrandPCS();
 		Lp = new LoginPage(driver);
 		Thread.sleep(3000);
-		String FIS_errorMsg = Lp.handlePopup();
-		if (FIS_errorMsg.equals(Constants.NotApprovedErrorMessage)) {
-			System.out.println("FIS - The user is not approved and shows appropriate error message");
+		String PCS_errorMsg = Lp.handlePopup();
+		if (PCS_errorMsg.equals(Constants.NotApprovedErrorMessage)) {
+			System.out.println("PCS - The user is not approved and shows appropriate error message");
 
 		} else {
 			System.out.println("The user is logged in ");
 		}
-		Assert.assertEquals(FIS_errorMsg, Constants.NotApprovedErrorMessage);
+		Assert.assertEquals(PCS_errorMsg, Constants.NotApprovedErrorMessage);
 
-		
+		//driver.close();
 	}
-	
-	@Test(priority = 2)
-	public void UnApprovedLoginMultiBrandValidationCPS() throws InterruptedException {
+		
+		@Test()
+		public void UnApprovedLoginMultiBrandValidationQPS() throws InterruptedException, IOException {
 
+		//BasePage.initializtion();
 		Hpg = new HomePage_Global(driver);
-
-		Hpg.UnApprovedLoginMultiBrandCPS();
-		Lp = new LoginPage(driver);
+		Hpg.UnApprovedLoginMultiBrandQPS();
+		LoginPage Lp = new LoginPage(driver);
 		Thread.sleep(3000);
-		String CPS_errorMsg = Lp.handlePopup();
-		if (CPS_errorMsg.equals(Constants.NotApprovedErrorMessage)) {
-			System.out.println("CPS - The user is not approved and shows appropriate error message");
+		String QPS_errorMsg = Lp.handlePopup();
+		if (QPS_errorMsg.equals(Constants.NotApprovedErrorMessage)) {
+			System.out.println("QPS - The user is not approved and shows appropriate error message");
 
 		} else {
 			System.out.println("The user is logged in ");
 		}
-		Assert.assertEquals(CPS_errorMsg, Constants.NotApprovedErrorMessage);
+		Assert.assertEquals(QPS_errorMsg, Constants.NotApprovedErrorMessage);
 
-		
+
 	}
-		
-		
 
 }

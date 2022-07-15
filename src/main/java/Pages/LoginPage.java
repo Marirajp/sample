@@ -41,6 +41,9 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath="//button[@class='swal2-close']") WebElement popupClose;
 	
 	
+
+	
+	
 public LoginPage(WebDriver driver)
 {
 this.driver=driver;
@@ -60,7 +63,7 @@ PageFactory.initElements(driver, this);
 
 	{
 		
-		Thread.sleep(8000);
+		Thread.sleep(1000);
 	  act= new Actions(driver);
 	
 			//wait = new WebDriverWait(driver,30);

@@ -40,7 +40,7 @@ public class BulkOrderPadTest extends BaseTest {
 	{
 	
 		
-			Thread.sleep(2000);
+			Thread.sleep(5000);
 		
 		Bp.ProductEntry();
 	
@@ -99,7 +99,7 @@ public class BulkOrderPadTest extends BaseTest {
 			@Test(priority=6)
 			public void ListofItem_Validation() throws Exception 
 			{
-				Thread.sleep(15000);
+				Thread.sleep(18000);
 				
 				
 						Bp.Fileupload();
@@ -238,7 +238,7 @@ public class BulkOrderPadTest extends BaseTest {
 			@Test(priority=8)
 			public void InValid_FileUpload_Validation() throws InterruptedException 
 			{
-				Thread.sleep(10000);
+				Thread.sleep(15000);
 				
 				
 						System.out.println(Bp.InvalidFileupload());

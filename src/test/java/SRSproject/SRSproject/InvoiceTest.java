@@ -85,10 +85,10 @@ public class InvoiceTest extends BaseTest {
 	Hp.Account_Hover();
 	Thread.sleep(2000);
 	Hp.Invoice_History();
-	Thread.sleep(8000);
+	Thread.sleep(10000);
 	String poSearch = Ip.POSearch();
 	 invoiceSearch.sendKeys(poSearch);	
-	 Thread.sleep(2000);
+	 Thread.sleep(4000);
 	 Ip.ClickFindIvoiceSearch().click();
 	 
 	 String poName = Ip.PoName().getText();
@@ -135,7 +135,7 @@ public void InvoiceNumbervalidation() throws Exception {
 	public void Invoice_SecondPage_Listing() throws Exception 
 	{
 		Ip.Go_back().click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		Ip.Second_Page_Listing();
 		int order_count= Ip.Invoicecount();
@@ -180,7 +180,7 @@ Thread.sleep(1000);
       FileUtils.cleanDirectory(file);
     
       System.out.println("Files deleted........");
-      Thread.sleep(8000);
+      Thread.sleep(20000);
       Ip.DownloadExcel().click();
       System.out.println("File Downloded");
       Thread.sleep(6000);
@@ -200,7 +200,7 @@ public void Downloaded_File_validation() throws Exception
 	Assert.assertEquals(Invoice_count1, orders);
 	Assert.assertEquals(Invoice_count2, orders);
 	Thread.sleep(3000);
-	driver.close();
+	
 }
 }
 	

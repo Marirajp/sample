@@ -39,7 +39,7 @@ public class Reorder_Page extends BasePage {
 	
 	@FindBy(xpath="(//input[@id='id-items0sku'])[1]") WebElement Product_input;
 	
-	@FindBy(xpath="(//div[@class='pad-title']//a)[1]") WebElement First_List_View;
+	@FindBy(xpath="(//div[@class='pad-title'])[2]") WebElement First_List_View;
 	@FindBy(xpath="//a[@href='https://qps-stg2.heritagepoolplus.com/reorder-pads/index/detail/?id=3636']") WebElement Click_view ; 
 	@FindBy(xpath="(//button[@title='Add All Items To Cart'])[1]") WebElement Add_All_Items_btn;
 	
@@ -177,10 +177,9 @@ public  void EnterProduct() throws InterruptedException
 {
 	 Product_input.sendKeys(prop.getProperty("KeywordSearch"));
 
-		Thread.sleep(8000);
+		Thread.sleep(5000);
 //		WebElement Item=driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div[1]/div[2]/form/div[4]/fieldset/div[2]/div/ul[1]/li[1]/a"));
 		WebElement Item=driver.findElement(By.xpath("(//li[@class='ui-menu-item']//span)[1]"));	
-		Thread.sleep(1000);
 //		WebDriverWait wait = new WebDriverWait(driver, 2000);
 //			wait.until(ExpectedConditions.visibilityOf(Item));
 			Item.click();
@@ -380,18 +379,17 @@ public WebElement  Second_Product_UOM()
 public  void Enter_LegacyPartNo() throws InterruptedException 
 
 {
+	Thread.sleep(2000);
 	Add_New_lineItem.click();
 	 Product2_input.sendKeys(prop.getProperty("Legacy_PartNo"));
 
-		Thread.sleep(8000);
+		Thread.sleep(2000);
 //		WebElement Item=driver.findElement(By.xpath("/html/body/div[1]/main/div[2]/div/div[1]/div[2]/form/div[4]/fieldset/div[2]/div/ul[1]/li[1]/a"));
 		WebElement Item=driver.findElement(By.xpath("(//li[@class='ui-menu-item']//a)[1]"));	
-		
-		Thread.sleep(8000);
-		WebDriverWait wait = new WebDriverWait(driver, 50);
+		WebDriverWait wait = new WebDriverWait(driver, 5000);
 			wait.until(ExpectedConditions.visibilityOf(Item));
 			Item.click();
-		Thread.sleep(5000);
+		Thread.sleep(1000);
 	
 }
 

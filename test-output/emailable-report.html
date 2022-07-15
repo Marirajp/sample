@@ -9,52 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">223,068</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">12</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">368,130</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">SRSproject.SRSproject.OpenOrderTest</td><td><a href="#m0">OpenOrder_SecondPage_Listing</a></td><td rowspan="1">1657600916297</td><td rowspan="1">20471</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">SRSproject.SRSproject.OpenOrderTest</td><td><a href="#m1">Download_Validation</a></td><td rowspan="1">1657600936770</td><td rowspan="1">65288</td></tr><tr class="passedeven"><td><a href="#m2">DownlodFileInvoiceXL</a></td><td rowspan="1">1657601002060</td><td rowspan="1">54518</td></tr><tr class="passedeven"><td><a href="#m3">OpenOrder_Listing</a></td><td rowspan="1">1657600884301</td><td rowspan="1">10137</td></tr><tr class="passedeven"><td><a href="#m4">OpenOrder_Redirection</a></td><td rowspan="1">1657600851049</td><td rowspan="1">33248</td></tr><tr class="passedeven"><td><a href="#m5">Paritaal_invoiced</a></td><td rowspan="1">1657601056580</td><td rowspan="1">13183</td></tr><tr class="passedeven"><td><a href="#m6">Selecting_Openorder</a></td><td rowspan="1">1657600894439</td><td rowspan="1">21857</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="12">SRSproject.SRSproject.CartPageTest</td><td><a href="#m0">AddItemToCart_Validation</a></td><td rowspan="1">1657858302397</td><td rowspan="1">63593</td></tr><tr class="passedeven"><td><a href="#m1">AddItemToCart_ValidationTo_Reorder</a></td><td rowspan="1">1657858431998</td><td rowspan="1">87940</td></tr><tr class="passedeven"><td><a href="#m2">Backorder_Warning</a></td><td rowspan="1">1657858366072</td><td rowspan="1">9339</td></tr><tr class="passedeven"><td><a href="#m3">CartSubtotalValidationfn</a></td><td rowspan="1">1657858284637</td><td rowspan="1">2400</td></tr><tr class="passedeven"><td><a href="#m4">CartUpdateValidation</a></td><td rowspan="1">1657858287039</td><td rowspan="1">8314</td></tr><tr class="passedeven"><td><a href="#m5">Inventory_Count</a></td><td rowspan="1">1657858365992</td><td rowspan="1">77</td></tr><tr class="passedeven"><td><a href="#m6">Leagacy_PartNo_Validation</a></td><td rowspan="1">1657858375414</td><td rowspan="1">26949</td></tr><tr class="passedeven"><td><a href="#m7">MiniCartToCartPage_Redirection</a></td><td rowspan="1">1657858156147</td><td rowspan="1">100431</td></tr><tr class="passedeven"><td><a href="#m8">ProductInformationValidation</a></td><td rowspan="1">1657858256586</td><td rowspan="1">28048</td></tr><tr class="passedeven"><td><a href="#m9">QuatityCount_Displayed_Validation</a></td><td rowspan="1">1657858402366</td><td rowspan="1">97</td></tr><tr class="passedeven"><td><a href="#m10">Reorder_Validation</a></td><td rowspan="1">1657858402466</td><td rowspan="1">29530</td></tr><tr class="passedeven"><td><a href="#m11">UOM_Validation</a></td><td rowspan="1">1657858295355</td><td rowspan="1">7040</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">SRSproject.SRSproject.OpenOrderTest#OpenOrder_SecondPage_Listing</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [1] but found [0]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:907)
-	at org.testng.Assert.assertEquals(Assert.java:917)
-	at SRSproject.SRSproject.OpenOrderTest.OpenOrder_SecondPage_Listing(OpenOrderTest.java:179)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">SRSproject.SRSproject.OpenOrderTest#Download_Validation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">SRSproject.SRSproject.OpenOrderTest#DownlodFileInvoiceXL</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">SRSproject.SRSproject.OpenOrderTest#OpenOrder_Listing</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">SRSproject.SRSproject.OpenOrderTest#OpenOrder_Redirection</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">SRSproject.SRSproject.OpenOrderTest#Paritaal_invoiced</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">SRSproject.SRSproject.OpenOrderTest#Selecting_Openorder</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">SRSproject.SRSproject.CartPageTest#AddItemToCart_Validation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">SRSproject.SRSproject.CartPageTest#AddItemToCart_ValidationTo_Reorder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Items are added from cart to Reorder List selected</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">SRSproject.SRSproject.CartPageTest#Backorder_Warning</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Quantity was present now Backorder Warning is Present</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">SRSproject.SRSproject.CartPageTest#CartSubtotalValidationfn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">SRSproject.SRSproject.CartPageTest#CartUpdateValidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">SRSproject.SRSproject.CartPageTest#Inventory_Count</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Product Inventory count is Present</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">SRSproject.SRSproject.CartPageTest#Leagacy_PartNo_Validation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">SRSproject.SRSproject.CartPageTest#MiniCartToCartPage_Redirection</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">SRSproject.SRSproject.CartPageTest#ProductInformationValidation</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Items price is same in PDP and Cart Page i.e Cart Price : 2.22 = PDP Price : 2.22</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">SRSproject.SRSproject.CartPageTest#QuatityCount_Displayed_Validation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">SRSproject.SRSproject.CartPageTest#Reorder_Validation</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Items are added from cart to Reorder List selected</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">SRSproject.SRSproject.CartPageTest#UOM_Validation</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">UOM EA is Present in PLP</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

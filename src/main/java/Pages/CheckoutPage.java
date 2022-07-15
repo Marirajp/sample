@@ -101,12 +101,14 @@ public class CheckoutPage extends BasePage {
 		
 	}
 	
-public void PO_Number()
+public void PO_Number() throws InterruptedException
 	
 	{
-	WebDriverWait wait= new WebDriverWait(driver, 40);
+	WebDriverWait wait= new WebDriverWait(driver, 50);
 	wait.until(ExpectedConditions.visibilityOf(PO_field));
+
 	PO_field.click();
+	Thread.sleep(200);
 		PO_field.sendKeys("Ab123");
 		
 	}

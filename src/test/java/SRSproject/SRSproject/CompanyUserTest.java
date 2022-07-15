@@ -1,23 +1,14 @@
 package SRSproject.SRSproject;
 
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Pages.AddNewUserRolesPage;
 import Pages.CompanyUsersPage;
 import Pages.HomePage;
-import Pages.HomePage_Global;
-import Pages.LoginPage;
 import Pages.UserRolesPage;
-import SRSproject.SRSproject.BasePage;
-import SRSproject.SRSproject.BaseTest;
 
 public class CompanyUserTest extends BaseTest {
 	
@@ -46,8 +37,7 @@ public class CompanyUserTest extends BaseTest {
 		CUpg.enterFirstName();
 		CUpg.enterLastName();
 		CUpg.enterEmail();
-		Thread.sleep(500);
-		CUpg.selectUserRole("Default user");
+//		CUpg.selectUserRole("Default User");
 		CUpg.selectDefaultBranch(0);
 		CUpg.selectDefaultShipTo(0);
 		CUpg.selectStatus(0);
@@ -72,7 +62,6 @@ public class CompanyUserTest extends BaseTest {
 		Hp.ClickUserManagement();
 		Thread.sleep(5000);
 		CUpg = new CompanyUsersPage(driver);
-		Thread.sleep(500);
 		CUpg.clickEditUserRolesBtn();
 		Thread.sleep(5000);
 		UserRolesPg = new UserRolesPage(driver);

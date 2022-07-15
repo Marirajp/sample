@@ -29,6 +29,7 @@ public class RegistrationFormTest extends BaseTest{
 	{
 		
 		rf= new RegistrationForm(driver);
+		
 		String title=rf.ClickOnRegisternowOnGlobalSite();
 		Assert.assertEquals(title, Constants.REGISTRATIONFORM_URL);
 		
@@ -301,12 +302,12 @@ public void RegistrationForm_FIS_BrandAndBranchValidation() throws InterruptedEx
 */
 @Test(priority=15)
 
-public void RegistrationForm_FIS_BrandAndBranchValidation() throws InterruptedException
+public void RegistrationForm_PCS_BrandAndBranchValidation() throws InterruptedException
 {
 	driver.navigate().refresh();
 	Thread.sleep(6000);
 	//Thread.sleep(1000);
-	rf.Hertiage_Brand_FIS_Selection();
+	rf.Hertiage_Brand_PCS_Selection();
 	Thread.sleep(6000);
 	rf.Scrollup_Branch_SelectionField();
 	Thread.sleep(1000);
@@ -323,7 +324,7 @@ public void RegistrationForm_FIS_BrandAndBranchValidation() throws InterruptedEx
     for(int i =0; i<size ; i++)
     {
        String options = op.get(i).getText();
-       String BranchPref = "FIS";
+       String BranchPref = "POOL CONTRACTORS SUPPLY";
        String BranchdefPref= "Preferred Branch Location";
       // Assert.assertEquals(options.startsWith(BranchPref)||options.startsWith(BranchdefPref), true);
      if((options.contains(BranchPref))||options.contains(BranchdefPref))
@@ -349,11 +350,11 @@ public void RegistrationForm_FIS_BrandAndBranchValidation() throws InterruptedEx
 
 @Test(priority=16)
 
-public void RegistrationForm_WCC_BrandAndBranchValidation() throws InterruptedException
+public void RegistrationForm_QPS_BrandAndBranchValidation() throws InterruptedException
 {
 
 	//Thread.sleep(1000);
-	rf.Hertiage_Brand_WCC_Selection();
+	rf.Hertiage_Brand_QPS_Selection();
 	Thread.sleep(7000);
 	WebElement a = rf.Branch_SelectionField();
 	Thread.sleep(6000);
@@ -368,7 +369,7 @@ public void RegistrationForm_WCC_BrandAndBranchValidation() throws InterruptedEx
     for(int i =0; i<size ; i++)
     {
        String options = op.get(i).getText();
-       String BranchPref = "Wolf Creek Company";
+       String BranchPref = "QUALITY POOL SUPPLY";
        String BranchdefPref= "Preferred Branch Location";
       // Assert.assertEquals(options.startsWith(BranchPref)||options.startsWith(BranchdefPref), true);
      if((options.contains(BranchPref))||options.contains(BranchdefPref))
@@ -395,12 +396,12 @@ public void RegistrationForm_WCC_BrandAndBranchValidation() throws InterruptedEx
 }
 @Test(priority=15)
 
-public void RegistrationForm_CPS__BrandAndBranchValidation() throws InterruptedException
+public void RegistrationForm_Aqua_gon__BrandAndBranchValidation() throws InterruptedException
 {
 	driver.navigate().refresh();
 	Thread.sleep(6000);
 	//Thread.sleep(1000);
-	rf.Hertiage_Brand_CPS_Selection();
+	rf.Hertiage_Brand_Aqua_gon_Selection();
 	Thread.sleep(6000);
 	rf.Scrollup_Branch_SelectionField();
 	Thread.sleep(1000);
@@ -417,7 +418,7 @@ public void RegistrationForm_CPS__BrandAndBranchValidation() throws InterruptedE
     for(int i =0; i<size ; i++)
     {
        String options = op.get(i).getText();
-       String BranchPref = "CPS";
+       String BranchPref = "AQUA-GON";
        String BranchdefPref= "Preferred Branch Location";
       // Assert.assertEquals(options.startsWith(BranchPref)||options.startsWith(BranchdefPref), true);
      if((options.contains(BranchPref))||options.contains(BranchdefPref))
@@ -456,9 +457,9 @@ Thread.sleep(8000);
 	rf.LastName_Entry();
 	rf.Email_Entry_Scenario1();
 	rf.Heritage_Brand_SelectionField();
-	rf.Hertiage_Brand_FIS_Selection();
+	rf.Hertiage_Brand_PCS_Selection();
    rf.Branch_SelectionField();
-	rf.Branch_fisSelection();
+	rf.Branch_pcsSelection();
 	rf.CompanyField_click();
 	rf.Address1Field_click();
 	rf.Address2Field_click();
@@ -488,6 +489,8 @@ Thread.sleep(10000);
 	
 }
 
+
+
 @Test(priority=18)
 
 public void RegistrationForm_KnowHertiageAccount_RegistrationValidation() throws InterruptedException, IOException
@@ -501,9 +504,9 @@ rf= new RegistrationForm(driver);
 	rf.LastName_Entry();
 	rf.Email_Entry_Scenario2();
 	rf.Heritage_Brand_SelectionField();
-	rf.Hertiage_Brand_FIS_Selection();
+	rf.Hertiage_Brand_QPS_Selection();
 	   rf.Branch_SelectionField();
-	rf.Branch_fisSelection();
+	rf.Branch_qpsSelection();
 	rf.CompanyField_click();
 	rf.Address1Field_click();
 	rf.Address2Field_click();
