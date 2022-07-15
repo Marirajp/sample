@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Listeners.ExtentReport"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="SRSproject.SRSproject.BulkOrderPadTest">
+        <methods>
+          <include name="InValid_FileUpload_Validation"/>
+          <include name="setUp"/>
+          <include name="ListofItem_Validation"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.BulkOrderPadTest -->
+      <class name="SRSproject.SRSproject.ProductDetailPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="PDP_RegisterRedirection_GuestValidation"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.ProductDetailPageTest -->
+      <class name="SRSproject.SRSproject.QuickOrderPadTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="Quick_OrderPad_InvalidFileUpload_Validation"/>
+          <include name="Quick_OrderPad_FileUpload_Validation"/>
+        </methods>
+      </class> <!-- SRSproject.SRSproject.QuickOrderPadTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
