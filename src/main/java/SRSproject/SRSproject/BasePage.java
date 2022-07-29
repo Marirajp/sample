@@ -58,7 +58,7 @@ public class BasePage
 	
 	//QPS
 	//	public static String configpath ="src/main/java/config_staging/configuration_staging_qps.properties";
-    //public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
+    public static String configpath ="src/main/java/config_staging2/configuration_staging2_qps.properties";
 	//  public static String configpath ="src/main/java/config_prod/config_prod_qps.properties";
     
 		
@@ -84,7 +84,7 @@ public class BasePage
 		
 	//APS 
     
-	public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
+	//public static String configpath = "src/main/java/config_prod/config_prod_Aps.properties";
     //public static String configpath="src/main/java/config_staging2/configuration_staging2_Aps.properties";
 	  
      
